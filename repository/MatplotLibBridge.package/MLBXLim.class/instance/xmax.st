@@ -1,0 +1,4 @@
+accessing
+xmax
+	<mlbAttribute>
+	^ xmax

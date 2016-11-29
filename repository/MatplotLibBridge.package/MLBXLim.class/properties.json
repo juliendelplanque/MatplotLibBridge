@@ -1,0 +1,15 @@
+{
+	"category" : "MatplotLibBridge",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 11/29/2016 23:14",
+	"instvars" : [
+		"xmin",
+		"xmax" ],
+	"name" : "MLBXLim",
+	"pools" : [
+		 ],
+	"super" : "MLBCommand",
+	"type" : "normal" }
