@@ -1,0 +1,29 @@
+{
+	"category" : "MatplotLibBridge",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 11/29/2016 22:00",
+	"instvars" : [
+		"left",
+		"height",
+		"width",
+		"bottom",
+		"color",
+		"edgecolor",
+		"linewidth",
+		"tick_label",
+		"xerr",
+		"yerr",
+		"ecolor",
+		"capsize",
+		"error_kw",
+		"align",
+		"orientation",
+		"log" ],
+	"name" : "MLBBar",
+	"pools" : [
+		 ],
+	"super" : "MLBCommand",
+	"type" : "normal" }

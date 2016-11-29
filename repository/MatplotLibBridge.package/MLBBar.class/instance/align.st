@@ -1,0 +1,4 @@
+accessing
+align
+	<mlbAttribute>
+	^ align
