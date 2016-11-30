@@ -9,7 +9,10 @@
 		"data",
 		"labels",
 		"color",
-		"barError" ],
+		"errorBar",
+		"errorBarColor",
+		"barWidth",
+		"align" ],
 	"name" : "MLBBarPlot",
 	"pools" : [
 		 ],
