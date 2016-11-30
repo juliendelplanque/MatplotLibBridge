@@ -1,6 +1,6 @@
 baseline
 defineDependencies: spec
 	^ spec
-		project: 'Atlas' with: [
+		baseline: 'Atlas' with: [
 			spec repository: 'github://kilon/Atlas'];
 		yourself
