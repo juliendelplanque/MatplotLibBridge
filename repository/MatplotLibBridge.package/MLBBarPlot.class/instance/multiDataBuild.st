@@ -5,6 +5,7 @@ multiDataBuild
 		height: (self data collect: #first);
 		tick_label: self labels;
 		color: '#' , self color first asHexString;
+		yerr: (self barError ifNotNil: [self barError collect: #first]);
 		executeUsingBridge: self bridge.
 	2 to: self data anyOne size do: [ :i | 
 		MLBBar new
@@ -15,4 +16,5 @@ multiDataBuild
 					collect: [ :d |
 						((1 to: i - 1) collect: [ :j | d at: j ]) sum ]);
 			color: '#' , (self color at: i) asHexString;
+			yerr: (self barError ifNotNil: [self barError collect: [ :e | e at: i ]]);
 			executeUsingBridge: self bridge ]

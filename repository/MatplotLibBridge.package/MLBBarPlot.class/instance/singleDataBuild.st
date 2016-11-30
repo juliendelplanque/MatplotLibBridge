@@ -5,4 +5,5 @@ singleDataBuild
 		height: self data;
 		tick_label: self labels;
 		color: '#' , self color asHexString;
+		yerr: self barError;
 		executeUsingBridge: self bridge
