@@ -1,0 +1,4 @@
+accessing
+labels
+	<mlbAttribute>
+	^ labels

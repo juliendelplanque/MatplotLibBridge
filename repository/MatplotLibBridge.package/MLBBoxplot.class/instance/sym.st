@@ -1,0 +1,4 @@
+accessing
+sym
+	<mlbAttribute>
+	^ sym

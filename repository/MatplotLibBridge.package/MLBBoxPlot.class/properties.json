@@ -1,0 +1,15 @@
+{
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 11/30/2016 20:34",
+	"instvars" : [
+		"dataList",
+		"labels" ],
+	"name" : "MLBBoxPlot",
+	"pools" : [
+		 ],
+	"super" : "MLBPlot",
+	"type" : "normal" }
