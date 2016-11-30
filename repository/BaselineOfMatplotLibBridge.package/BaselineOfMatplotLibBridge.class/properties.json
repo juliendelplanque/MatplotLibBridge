@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfMatplotLibBridge",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfMatplotLibBridge",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
