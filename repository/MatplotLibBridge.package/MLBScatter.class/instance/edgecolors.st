@@ -1,0 +1,4 @@
+accessing
+edgecolors
+	<mlbAttribute>
+	^ edgecolors

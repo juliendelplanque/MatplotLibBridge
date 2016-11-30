@@ -4,12 +4,16 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "JulienDelplanque 11/30/2016 15:18",
+	"commentStamp" : "JulienDelplanque 11/30/2016 15:52",
 	"instvars" : [
 		"title",
 		"xAxisTitle",
 		"yAxisTitle",
-		"labelsRotation" ],
+		"labelsRotation",
+		"xAxisMin",
+		"yAxisMin",
+		"xAxisMax",
+		"yAxisMax" ],
 	"name" : "MLBPlot",
 	"pools" : [
 		 ],

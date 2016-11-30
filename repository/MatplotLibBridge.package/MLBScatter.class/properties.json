@@ -1,0 +1,25 @@
+{
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 11/30/2016 15:29",
+	"instvars" : [
+		"x",
+		"y",
+		"s",
+		"c",
+		"marker",
+		"cmap",
+		"norm",
+		"vmin",
+		"vmax",
+		"alpha",
+		"linewidths",
+		"edgecolors" ],
+	"name" : "MLBScatter",
+	"pools" : [
+		 ],
+	"super" : "MLBCommand",
+	"type" : "normal" }

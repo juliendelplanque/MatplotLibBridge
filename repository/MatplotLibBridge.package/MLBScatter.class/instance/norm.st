@@ -1,0 +1,4 @@
+accessing
+norm
+	<mlbAttribute>
+	^ norm

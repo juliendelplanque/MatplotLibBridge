@@ -1,0 +1,4 @@
+accessing
+cmap
+	<mlbAttribute>
+	^ cmap

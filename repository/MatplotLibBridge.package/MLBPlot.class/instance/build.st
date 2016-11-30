@@ -12,3 +12,11 @@ build
 	MLBXTicks new
 		rotation: self labelsRotation;
 		executeUsingBridge: self bridge.
+	MLBXLim new
+		xmin: self xAxisMin;
+		xmax: self xAxisMax;
+		executeUsingBridge: self bridge.
+	MLBYLim new
+		ymin: self yAxisMin;
+		ymax: self yAxisMax;
+		executeUsingBridge: self bridge.

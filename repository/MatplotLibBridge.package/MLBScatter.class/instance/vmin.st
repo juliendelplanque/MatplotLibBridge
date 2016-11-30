@@ -1,0 +1,4 @@
+accessing
+vmin
+	<mlbAttribute>
+	^ vmin
