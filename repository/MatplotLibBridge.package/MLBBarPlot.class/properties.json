@@ -12,7 +12,8 @@
 		"errorBar",
 		"errorBarColor",
 		"barWidth",
-		"align" ],
+		"align",
+		"logAxis" ],
 	"name" : "MLBBarPlot",
 	"pools" : [
 		 ],

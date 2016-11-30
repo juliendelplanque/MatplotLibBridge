@@ -10,6 +10,7 @@ example
 				{ menMeans at: i. womenMeans at: i } ].
 	std := (1 to: menStd size) collect: [ :i |
 				{ menStd at: i. womenStd at: i } ].
+	MLBBridge importPyplot.
 	MLBBarPlot new
 		data: data;
 		labels: #('G1' 'G2' 'G3' 'G4' 'G5');

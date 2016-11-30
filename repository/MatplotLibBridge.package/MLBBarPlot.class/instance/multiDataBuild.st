@@ -9,6 +9,7 @@ multiDataBuild
 		ecolor: (self errorBarColor ifNotNil: [self errorBarColor first asHexString]);
 		width: self barWidth;
 		align: self align;
+		log: self logAxis;
 		executeUsingBridge: self bridge.
 	2 to: self data anyOne size do: [ :i | 
 		MLBBar new

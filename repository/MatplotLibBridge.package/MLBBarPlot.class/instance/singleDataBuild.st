@@ -9,4 +9,5 @@ singleDataBuild
 		ecolor: self errorBarColor;
 		width: self barWidth;
 		align: self align;
+		log: self logAxis;
 		executeUsingBridge: self bridge
