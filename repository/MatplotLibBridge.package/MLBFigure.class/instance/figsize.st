@@ -1,0 +1,4 @@
+accessing
+figsize
+	<mlbAttribute>
+	^ figsize

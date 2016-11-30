@@ -1,11 +1,12 @@
 executing
 executeUsingBridge: aMLBBridge
-	| functionName attributes |
+	| functionName attributes remoteVar |
 	functionName := self pyplotModuleName , '.' , self functionName.
 	attributes := self mlbAttributesDict.
+	remoteVar := MLBRemoteVariable new.
 	attributes
 		ifEmpty: [
-			aMLBBridge invokePythonFunction: functionName.
-			^ self ].
-	
-	aMLBBridge invokePythonFunction: functionName with: self mlbAttributesDict
+			aMLBBridge invokePythonFunction: functionName storedIn: remoteVar.
+			^ remoteVar ].
+	aMLBBridge invokePythonFunction: functionName with: self mlbAttributesDict storedIn: remoteVar.
+	^ remoteVar

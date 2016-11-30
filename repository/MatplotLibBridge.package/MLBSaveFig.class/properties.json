@@ -1,0 +1,23 @@
+{
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 11/30/2016 14:31",
+	"instvars" : [
+		"filename",
+		"dpi",
+		"facecolor",
+		"edgecolor",
+		"papertype",
+		"format",
+		"transparent",
+		"frameon",
+		"bbox_inches",
+		"pad_inches" ],
+	"name" : "MLBSaveFig",
+	"pools" : [
+		 ],
+	"super" : "MLBCommand",
+	"type" : "normal" }

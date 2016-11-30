@@ -1,3 +1,3 @@
 commands
 invokePythonFunction: functionName withDictArgs: aDictionary
-	Atlas sendMessage: (self buildPythonFunctionInvocation: functionName withDictArgs: aDictionary)
+	self executePythonCode: (self buildPythonFunctionInvocation: functionName withDictArgs: aDictionary)
