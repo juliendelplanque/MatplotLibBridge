@@ -4,13 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "JulienDelplanque 11/30/2016 15:51",
+	"commentStamp" : "JulienDelplanque 12/1/2016 21:52",
 	"instvars" : [
-		"data",
-		"color",
-		"errorBars",
-		"errorBarsColor" ],
-	"name" : "MLBBarPlot",
+		"dataList",
+		"colorList",
+		"errorBarsList",
+		"errorBarsColorList" ],
+	"name" : "MLBStackedBarPlot",
 	"pools" : [
 		 ],
 	"super" : "MLBAbstractBarPlot",

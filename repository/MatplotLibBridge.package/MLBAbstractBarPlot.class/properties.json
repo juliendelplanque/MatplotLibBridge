@@ -1,0 +1,17 @@
+{
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 12/1/2016 22:15",
+	"instvars" : [
+		"align",
+		"barWidth",
+		"logAxis",
+		"labels" ],
+	"name" : "MLBAbstractBarPlot",
+	"pools" : [
+		 ],
+	"super" : "MLBPlot",
+	"type" : "normal" }
