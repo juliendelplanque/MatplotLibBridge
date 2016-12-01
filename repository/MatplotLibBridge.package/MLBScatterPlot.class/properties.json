@@ -8,7 +8,9 @@
 	"instvars" : [
 		"x",
 		"y",
-		"marker" ],
+		"marker",
+		"pointSizes",
+		"colors" ],
 	"name" : "MLBScatterPlot",
 	"pools" : [
 		 ],
