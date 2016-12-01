@@ -1,6 +1,5 @@
 building
-build
+inBuild
 	self data anyOne isCollection
 		ifFalse: [ self singleDataBuild ]
-		ifTrue: [ self multiDataBuild ].
-	super build
+		ifTrue: [ self multiDataBuild ]
