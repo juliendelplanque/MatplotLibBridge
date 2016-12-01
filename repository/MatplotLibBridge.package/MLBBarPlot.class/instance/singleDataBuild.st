@@ -6,7 +6,7 @@ singleDataBuild
 		tick_label: self labels;
 		color: '#' , self color asHexString;
 		yerr: self errorBar;
-		ecolor: self errorBarColor;
+		ecolor: '#' ,self errorBarColor asHexString;
 		width: self barWidth;
 		align: self align;
 		log: self logAxis;
