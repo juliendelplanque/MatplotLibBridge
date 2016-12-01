@@ -10,8 +10,8 @@ example
 		labels: #('G1' 'G2' 'G3' 'G4' 'G5');
 		color: Color blue;
 		labelsRotation: 45;
-		title: 'Scores by group and gender';
-		yAxisTitle: 'Scores';
+		title: 'Barplot example';
+		yAxisTitle: 'Y label';
 		errorBars: std;
 		errorBarsColor: Color black;
 		alignLabelCenter;
