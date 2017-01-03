@@ -1,0 +1,4 @@
+accessing
+animated
+	<mlbAttribute>
+	^ animated

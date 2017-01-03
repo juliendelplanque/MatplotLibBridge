@@ -11,5 +11,5 @@
 	"name" : "MLBBoxPlot",
 	"pools" : [
 		 ],
-	"super" : "MLBPlot",
+	"super" : "MLBAbstractPlot",
 	"type" : "normal" }

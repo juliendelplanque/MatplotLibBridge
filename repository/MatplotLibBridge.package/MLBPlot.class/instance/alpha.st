@@ -1,0 +1,4 @@
+accessing
+alpha
+	<mlbAttribute>
+	^ alpha

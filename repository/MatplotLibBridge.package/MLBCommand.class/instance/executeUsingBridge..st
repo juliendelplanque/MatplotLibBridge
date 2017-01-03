@@ -8,5 +8,10 @@ executeUsingBridge: aMLBBridge
 		ifEmpty: [
 			aMLBBridge invokePythonFunction: functionName storedIn: remoteVar.
 			^ remoteVar ].
-	aMLBBridge invokePythonFunction: functionName with: self mlbAttributesDict storedIn: remoteVar.
+	aMLBBridge
+		invokePythonFunction: functionName
+		withListArgs: ((self mlbPositionalAttributeAccessorsAndPositions sorted: [ :a :b | a tail < b tail ])
+								collect: #head)
+		dictArgs: self mlbAttributesDict
+		storedIn: remoteVar.
 	^ remoteVar

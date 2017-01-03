@@ -5,8 +5,7 @@ buildPythonFunctionInvocation: functionName withListArgs: aListOfString
 		stream
 			<< functionName;
 			<< $(.
-		aListOfString do: [ :arg |
-			arg mlbWritePythonOn: stream ] separatedBy: [ stream << $, ].
+		self buildListArgs: aListOfString on: stream.
 		stream
 			<< $) ].
 	^ atlasCommand
