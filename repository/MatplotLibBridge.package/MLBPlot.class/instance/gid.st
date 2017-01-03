@@ -1,0 +1,4 @@
+accessing
+gid
+	<mlbAttribute>
+	^ gid

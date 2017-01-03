@@ -1,0 +1,4 @@
+accessing
+drawstyle
+	<mlbAttribute>
+	^ drawstyle

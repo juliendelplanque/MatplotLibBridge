@@ -1,0 +1,4 @@
+accessing
+markeredgewidth
+	<mlbAttribute>
+	^ markeredgewidth

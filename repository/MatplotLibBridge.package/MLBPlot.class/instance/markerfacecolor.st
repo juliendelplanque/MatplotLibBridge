@@ -1,0 +1,4 @@
+accessing
+markerfacecolor
+	<mlbAttribute>
+	^ markerfacecolor

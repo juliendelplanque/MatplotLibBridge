@@ -1,0 +1,4 @@
+accessing
+dashes
+	<mlbAttribute>
+	^ dashes

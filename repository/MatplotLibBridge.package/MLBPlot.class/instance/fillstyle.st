@@ -1,0 +1,4 @@
+accessing
+fillstyle
+	<mlbAttribute>
+	^ fillstyle

@@ -1,0 +1,4 @@
+accessing
+markeredgecolor
+	<mlbAttribute>
+	^ markeredgecolor
