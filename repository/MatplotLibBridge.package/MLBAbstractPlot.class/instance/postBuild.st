@@ -4,6 +4,7 @@ postBuild
 	MLBTitle new
 		s: self title;
 		fontdict: self titleFontDict;
+		loc: self titleLocation;
 		executeUsingBridge: self bridge.
 	MLBXLabel new
 		s: self xAxisTitle;

@@ -8,6 +8,7 @@
 	"instvars" : [
 		"title",
 		"titleFontDict",
+		"titleLocation",
 		"xAxisTitle",
 		"yAxisTitle",
 		"labelsRotation",
