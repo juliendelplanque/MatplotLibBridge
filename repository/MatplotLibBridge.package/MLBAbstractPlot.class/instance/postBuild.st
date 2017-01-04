@@ -3,6 +3,7 @@ postBuild
 	| xticks |
 	MLBTitle new
 		s: self title;
+		fontdict: self titleFontDict;
 		executeUsingBridge: self bridge.
 	MLBXLabel new
 		s: self xAxisTitle;

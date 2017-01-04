@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "JulienDelplanque 11/30/2016 14:41",
 	"instvars" : [
-		"s" ],
+		"s",
+		"fontdict" ],
 	"name" : "MLBTitle",
 	"pools" : [
 		 ],
