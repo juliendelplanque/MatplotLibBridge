@@ -16,7 +16,7 @@ postBuild
 					yourself.
 	self xLabels ifNotNil: [ 
 		xticks
-			range: (0 to: self xLabels size - 1) asArray;
+			ticks: (self xTicks ifNil: [(0 to: self xLabels size - 1) asArray]);
 			labels: self xLabels ].
 	xticks executeUsingBridge: self bridge.
 	MLBXLim new

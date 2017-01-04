@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "JulienDelplanque 11/30/2016 13:46",
 	"instvars" : [
-		"range",
+		"ticks",
 		"labels",
 		"rotation" ],
 	"name" : "MLBXTicks",

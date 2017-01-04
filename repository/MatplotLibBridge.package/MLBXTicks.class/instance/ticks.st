@@ -1,4 +1,4 @@
 accessing
-range
+ticks
 	<mlbAttribute: 1>
-	^ range
+	^ ticks
