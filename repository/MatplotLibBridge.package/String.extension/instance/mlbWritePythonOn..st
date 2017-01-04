@@ -2,5 +2,5 @@
 mlbWritePythonOn: aStream
 	aStream
 		<< $';
-		<< self;
+		<< ((self splitOn: '\') joinUsing: '\\');
 		<< $'

@@ -22,7 +22,7 @@ From the documentation, I am configured with:
 - markerfacecoloralt: any matplotlib color
 - markersize: float
 - markevery: [None | int | length-2 tuple of int | slice | list/array of int | float | length-2 tuple of float]
-- picker: float distance in points or callable pick function fn(artist, event)
+- picker: float distance in points or callable pick
 - pickradius: float distance in points
 - rasterized: [true | false | nil]
 - solid_capstyle: [‘butt’ | ‘round’ | ‘projecting’]

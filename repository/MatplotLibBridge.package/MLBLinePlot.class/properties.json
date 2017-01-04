@@ -9,7 +9,11 @@
 		"x",
 		"y",
 		"lineStyle",
-		"marker" ],
+		"marker",
+		"alpha",
+		"color",
+		"dashCapStyle",
+		"dashJoinStyle" ],
 	"name" : "MLBLinePlot",
 	"pools" : [
 		 ],
