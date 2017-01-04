@@ -7,7 +7,8 @@
 	"commentStamp" : "JulienDelplanque 11/30/2016 20:34",
 	"instvars" : [
 		"dataList",
-		"labels" ],
+		"labels",
+		"vertical" ],
 	"name" : "MLBBoxPlot",
 	"pools" : [
 		 ],
