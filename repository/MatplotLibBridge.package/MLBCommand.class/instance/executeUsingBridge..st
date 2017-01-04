@@ -4,8 +4,8 @@ executeUsingBridge: aMLBBridge
 	functionName := self pyplotModuleName , '.' , self functionName.
 	attributes := self mlbAttributesDict.
 	remoteVar := MLBRemoteVariable new.
-	attributes
-		ifEmpty: [
+	(self mlbAttributesDict isEmpty and: [ self mlbPositionalAttributes isEmpty ])
+		ifTrue: [
 			aMLBBridge invokePythonFunction: functionName storedIn: remoteVar.
 			^ remoteVar ].
 	aMLBBridge

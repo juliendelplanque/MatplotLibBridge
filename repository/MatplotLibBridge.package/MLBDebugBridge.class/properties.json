@@ -1,0 +1,14 @@
+{
+	"category" : "MatplotLibBridge-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MLBDebugBridge",
+	"pools" : [
+		 ],
+	"super" : "MLBBridge",
+	"type" : "normal" }

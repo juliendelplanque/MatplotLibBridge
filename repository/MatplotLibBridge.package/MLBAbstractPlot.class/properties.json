@@ -13,7 +13,8 @@
 		"xAxisMin",
 		"yAxisMin",
 		"xAxisMax",
-		"yAxisMax" ],
+		"yAxisMax",
+		"xLabels" ],
 	"name" : "MLBAbstractPlot",
 	"pools" : [
 		 ],
