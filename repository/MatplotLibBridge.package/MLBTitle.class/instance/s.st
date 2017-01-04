@@ -1,4 +1,4 @@
 accessing
 s
-	<mlbAttribute>
+	<mlbAttribute: 1>
 	^ s
