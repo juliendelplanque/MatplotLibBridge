@@ -1,0 +1,17 @@
+{
+	"category" : "MatplotLibBridge-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 1/5/2017 07:24",
+	"instvars" : [
+		"target",
+		"functionName",
+		"positionalArguments",
+		"keywordArguments" ],
+	"name" : "MLBFunctionInvocation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
