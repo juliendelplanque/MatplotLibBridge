@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "JulienDelplanque 1/5/2017 17:07",
 	"instvars" : [
 		"name" ],
 	"name" : "MLBRemoteVariable",
