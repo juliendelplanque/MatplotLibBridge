@@ -1,3 +1,0 @@
-*MatplotLibBridge
-beArgumentsForPythonFunction: functionName invocationFrom: aMLBBridge
-	aMLBBridge invokePythonFunction: functionName withDictArgs: self

@@ -1,3 +1,0 @@
-*MatplotLibBridge
-beArgumentsForPythonFunction: functionName invocationFrom: aMLBBridge storedIn: aMLBRemoveVariable
-	aMLBBridge invokePythonFunction: functionName withListArgs: self storedIn: aMLBRemoveVariable
