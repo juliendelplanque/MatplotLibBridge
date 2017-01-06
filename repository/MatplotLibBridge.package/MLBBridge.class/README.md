@@ -1,3 +1,1 @@
-I ensure communication with Python using Atlas and provide a slightly higher level than pure Atlas use.
-
-See my class side to import modules and invoke Python functions.
+I define methods all bridge should implement in my class side and hold the current bridge used in my #current inst. var.

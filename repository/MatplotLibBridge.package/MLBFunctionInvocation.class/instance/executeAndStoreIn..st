@@ -5,6 +5,6 @@ executeAndStoreIn: aMLBRemoteVariable
 						target: aMLBRemoteVariable;
 						toAssignate: self;
 						yourself.
-	self bridge
+	MLBBridge current
 		executePythonCode: assignment generate.
 	^ aMLBRemoteVariable

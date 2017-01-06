@@ -1,3 +1,3 @@
 python
 executePythonCode: aString
-	self subclassResponsibility
+	Atlas sendMessage: aString

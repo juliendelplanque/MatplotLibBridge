@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	self target: self matplotlibModuleName
+	self moduleName: self matplotlibModuleName

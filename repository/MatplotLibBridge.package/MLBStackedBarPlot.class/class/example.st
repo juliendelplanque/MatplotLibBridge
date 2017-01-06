@@ -11,7 +11,6 @@ example
 	std := (1 to: menStd size) collect: [ :i |
 				{ menStd at: i. womenStd at: i } ].
 	
-	MLBBridge importPyplot.
 	MLBStackedBarPlot new
 		dataList: data;
 		labels: #('G1' 'G2' 'G3' 'G4' 'G5');

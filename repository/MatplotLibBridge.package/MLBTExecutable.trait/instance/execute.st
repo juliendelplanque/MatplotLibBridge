@@ -1,4 +1,4 @@
 executing
 execute
-	self bridge
+	MLBBridge current
 		executePythonCode: self generate

@@ -1,3 +1,3 @@
 python
 executePythonCodeAngGetValue: aString
-	^ self subclassResponsibility
+	^ Atlas getValue: aString

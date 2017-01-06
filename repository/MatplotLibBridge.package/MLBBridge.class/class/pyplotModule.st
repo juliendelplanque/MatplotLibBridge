@@ -1,3 +1,0 @@
-accessing
-pyplotModule
-	^ 'matplotlib.pyplot'
