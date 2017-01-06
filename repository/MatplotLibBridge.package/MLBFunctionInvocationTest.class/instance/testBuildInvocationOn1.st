@@ -5,5 +5,5 @@ testBuildInvocationOn1
 						functionName: 'print';
 						positionalArguments: { 'hello' };
 						yourself.
-	string := String streamContents: [ :s | invocation buildInvocationOn: s ].
+	string := String streamContents: [ :s | invocation mlbWritePythonOn: s ].
 	self assert: string equals: 'print(''hello'')'

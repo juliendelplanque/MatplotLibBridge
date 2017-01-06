@@ -7,8 +7,8 @@
 	"commentStamp" : "JulienDelplanque 1/6/2017 18:02",
 	"instvars" : [
 		 ],
-	"name" : "MLBDebugBridge",
+	"name" : "MLBStatement",
 	"pools" : [
 		 ],
-	"super" : "MLBBridge",
+	"super" : "MLBGenerable",
 	"type" : "normal" }

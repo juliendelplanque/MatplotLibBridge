@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "JulienDelplanque 1/6/2017 18:02",
+	"commentStamp" : "JulienDelplanque 1/6/2017 18:05",
 	"instvars" : [
-		 ],
-	"name" : "MLBDebugBridge",
+		"moduleName" ],
+	"name" : "MLBImport",
 	"pools" : [
 		 ],
-	"super" : "MLBBridge",
+	"super" : "MLBStatement",
 	"type" : "normal" }

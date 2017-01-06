@@ -6,5 +6,5 @@ testBuildInvocationOn2
 						functionName: 'sin';
 						positionalArguments: { 45 };
 						yourself.
-	string := String streamContents: [ :s | invocation buildInvocationOn: s ].
+	string := String streamContents: [ :s | invocation mlbWritePythonOn: s ].
 	self assert: string equals: 'math.sin(45)'

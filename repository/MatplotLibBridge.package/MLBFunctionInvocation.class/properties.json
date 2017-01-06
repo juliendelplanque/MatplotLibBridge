@@ -13,5 +13,5 @@
 	"name" : "MLBFunctionInvocation",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "MLBGenerable",
 	"type" : "normal" }

@@ -5,4 +5,4 @@ testBuildInvocationOn5
 						functionName: 'fct';
 						keywordArguments: { 1 -> 'badkey'. 'key2' -> 42.42 } asDictionary;
 						yourself.
-	self should: [ String streamContents: [ :s | invocation buildInvocationOn: s ] ] raise: Error.
+	self should: [ String streamContents: [ :s | invocation mlbWritePythonOn: s ] ] raise: Error.

@@ -1,5 +1,10 @@
 executing
 executeAndStoreIn: aMLBRemoteVariable
+	| assignment |
+	assignment := MLBAssignment new
+						target: aMLBRemoteVariable;
+						toAssignate: self;
+						yourself.
 	self bridge
-		executePythonCode: (self generateAndStoreIn: aMLBRemoteVariable).
+		executePythonCode: assignment generate.
 	^ aMLBRemoteVariable

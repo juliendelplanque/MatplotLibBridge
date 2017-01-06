@@ -1,5 +1,5 @@
-building
-buildInvocationOn: aStream
+translating
+mlbWritePythonOn: aStream
 	self target
 		ifNotNil: [ 
 			aStream

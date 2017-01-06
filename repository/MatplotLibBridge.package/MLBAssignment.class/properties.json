@@ -4,11 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "JulienDelplanque 1/6/2017 18:02",
+	"commentStamp" : "JulienDelplanque 1/6/2017 18:06",
 	"instvars" : [
-		 ],
-	"name" : "MLBDebugBridge",
+		"target",
+		"toAssignate" ],
+	"name" : "MLBAssignment",
 	"pools" : [
 		 ],
-	"super" : "MLBBridge",
+	"super" : "MLBStatement",
 	"type" : "normal" }
