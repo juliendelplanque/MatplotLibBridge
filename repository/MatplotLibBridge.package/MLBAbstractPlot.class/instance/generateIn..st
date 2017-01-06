@@ -4,4 +4,4 @@ generateIn: aFileReference
 	MLBSaveFig new
 		filename: aFileReference fullName;
 		bbox_inches: 'tight';
-		executeUsingBridge: self bridge
+		execute

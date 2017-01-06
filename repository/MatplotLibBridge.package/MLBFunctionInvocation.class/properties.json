@@ -1,7 +1,8 @@
 {
 	"category" : "MatplotLibBridge-Core",
 	"classinstvars" : [
-		"bridge" ],
+		 ],
+	"classtraitcomposition" : "MLBTExecutable classTrait",
 	"classvars" : [
 		 ],
 	"commentStamp" : "JulienDelplanque 1/5/2017 07:24",
@@ -14,4 +15,5 @@
 	"pools" : [
 		 ],
 	"super" : "MLBGenerable",
+	"traitcomposition" : "MLBTExecutable",
 	"type" : "normal" }

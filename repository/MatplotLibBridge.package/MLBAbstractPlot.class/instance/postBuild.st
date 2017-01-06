@@ -5,26 +5,26 @@ postBuild
 		s: self title;
 		fontdict: self titleFontDict;
 		loc: self titleLocation;
-		executeUsingBridge: self bridge.
+		execute.
 	MLBXLabel new
 		s: self xAxisTitle;
-		executeUsingBridge: self bridge.
+		execute.
 	MLBYLabel new
 		s: self yAxisTitle;
-		executeUsingBridge: self bridge.
+		execute.
 	xticks := MLBXTicks new
-					rotation: self labelsRotation;
-					yourself.
-	self xLabels ifNotNil: [ 
-		xticks
-			ticks: (self xTicks ifNil: [(0 to: self xLabels size - 1) asArray]);
-			labels: self xLabels ].
-	xticks executeUsingBridge: self bridge.
+		rotation: self labelsRotation;
+		yourself.
+	self xLabels
+		ifNotNil: [ xticks
+				ticks: (self xTicks ifNil: [ (0 to: self xLabels size - 1) asArray ]);
+				labels: self xLabels ].
+	xticks execute.
 	MLBXLim new
 		xmin: self xAxisMin;
 		xmax: self xAxisMax;
-		executeUsingBridge: self bridge.
+		execute.
 	MLBYLim new
 		ymin: self yAxisMin;
 		ymax: self yAxisMax;
-		executeUsingBridge: self bridge.
+		execute

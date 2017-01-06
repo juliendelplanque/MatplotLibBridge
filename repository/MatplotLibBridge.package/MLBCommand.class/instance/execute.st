@@ -1,5 +1,5 @@
 executing
-executeUsingBridge: aMLBBridge
+execute
 	| remoteVar |
 	remoteVar := MLBRemoteVariable new.
 	MLBFunctionInvocation new

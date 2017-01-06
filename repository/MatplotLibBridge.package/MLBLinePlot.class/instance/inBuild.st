@@ -7,4 +7,4 @@ inBuild
 		marker: self marker;
 		alpha: self alpha;
 		color: '#' , self color asHexString;
-		executeUsingBridge: self bridge.
+		execute

@@ -1,7 +1,7 @@
 {
 	"category" : "MatplotLibBridge-Core",
 	"classinstvars" : [
-		 ],
+		"bridge" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "JulienDelplanque 1/6/2017 18:11",

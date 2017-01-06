@@ -4,4 +4,4 @@ inBuild
 		x: self dataList;
 		labels: self labels;
 		vert: self vertical;
-		executeUsingBridge: self bridge
+		execute
