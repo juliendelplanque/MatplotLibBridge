@@ -12,5 +12,5 @@
 	"name" : "MLBTitle",
 	"pools" : [
 		 ],
-	"super" : "MLBCommand",
+	"super" : "MLBPyplotCommand",
 	"type" : "normal" }

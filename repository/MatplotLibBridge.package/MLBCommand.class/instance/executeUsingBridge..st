@@ -3,7 +3,7 @@ executeUsingBridge: aMLBBridge
 	| remoteVar |
 	remoteVar := MLBRemoteVariable new.
 	MLBFunctionInvocation new
-		target: self pyplotModuleName;
+		target: self target;
 		functionName: self functionName;
 		positionalArguments: self mlbPositionalAttributes;
 		keywordArguments: self mlbAttributesDict;

@@ -14,5 +14,5 @@
 	"name" : "MLBFigure",
 	"pools" : [
 		 ],
-	"super" : "MLBCommand",
+	"super" : "MLBPyplotCommand",
 	"type" : "normal" }

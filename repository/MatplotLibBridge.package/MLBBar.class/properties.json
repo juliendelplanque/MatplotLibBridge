@@ -25,5 +25,5 @@
 	"name" : "MLBBar",
 	"pools" : [
 		 ],
-	"super" : "MLBCommand",
+	"super" : "MLBPyplotCommand",
 	"type" : "normal" }

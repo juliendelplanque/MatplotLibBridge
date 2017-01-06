@@ -12,5 +12,5 @@
 	"name" : "MLBXTicks",
 	"pools" : [
 		 ],
-	"super" : "MLBCommand",
+	"super" : "MLBPyplotCommand",
 	"type" : "normal" }

@@ -4,12 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "JulienDelplanque 11/30/2016 14:06",
+	"commentStamp" : "JulienDelplanque 1/6/2017 14:31",
 	"instvars" : [
-		"index",
-		"remoteVar" ],
-	"name" : "MLBArrayAccess",
+		 ],
+	"name" : "MLBMatplotlibCommand",
 	"pools" : [
 		 ],
-	"super" : "MLBPyplotCommand",
+	"super" : "MLBCommand",
 	"type" : "normal" }
