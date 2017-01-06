@@ -7,7 +7,7 @@ buildAllButFirst
 			bottom:
 				(self dataList
 					collect: [ :d | ((1 to: i - 1) collect: [ :j | d at: j ]) sum ]);
-			color: '#' , (self colorList at: i) asHexString;
+			color: (self colorList at: i);
 			yerr:
 				(self errorBarsList
 					ifNotNil: [ self errorBarsList collect: [ :e | e at: i ] ]);
