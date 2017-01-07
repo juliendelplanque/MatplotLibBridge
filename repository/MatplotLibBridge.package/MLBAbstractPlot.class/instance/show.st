@@ -1,4 +1,5 @@
 showing
 show
 	self build.
-	MLBShow new execute
+	self commandList add: MLBShow new.
+	self execute

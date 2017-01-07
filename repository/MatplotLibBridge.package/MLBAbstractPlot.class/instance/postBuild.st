@@ -1,17 +1,19 @@
 building
 postBuild
 	| xticks |
-	MLBTitle new
-		s: self title;
-		fontdict: self titleFontDict;
-		loc: self titleLocation;
-		execute.
-	MLBXLabel new
-		s: self xAxisTitle;
-		execute.
-	MLBYLabel new
-		s: self yAxisTitle;
-		execute.
+	self commandList
+		addAll:
+			{(MLBTitle new
+				s: self title;
+				fontdict: self titleFontDict;
+				loc: self titleLocation;
+				yourself).
+			(MLBXLabel new
+				s: self xAxisTitle;
+				yourself).
+			(MLBYLabel new
+				s: self yAxisTitle;
+				yourself)}.
 	xticks := MLBXTicks new
 		rotation: self labelsRotation;
 		yourself.
@@ -19,12 +21,14 @@ postBuild
 		ifNotNil: [ xticks
 				ticks: (self xTicks ifNil: [ (0 to: self xLabels size - 1) asArray ]);
 				labels: self xLabels ].
-	xticks execute.
-	MLBXLim new
-		xmin: self xAxisMin;
-		xmax: self xAxisMax;
-		execute.
-	MLBYLim new
-		ymin: self yAxisMin;
-		ymax: self yAxisMax;
-		execute
+	self commandList add: xticks.
+	self commandList
+		addAll:
+			{(MLBXLim new
+				xmin: self xAxisMin;
+				xmax: self xAxisMax;
+				yourself).
+			(MLBYLim new
+				ymin: self yAxisMin;
+				ymax: self yAxisMax;
+				yourself)}

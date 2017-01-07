@@ -1,7 +1,9 @@
 generating
 generateIn: aFileReference
 	self build.
-	MLBSaveFig new
-		filename: aFileReference fullName;
-		bbox_inches: 'tight';
-		execute
+	self commandList 
+		add: (MLBSaveFig new
+					filename: aFileReference fullName;
+					bbox_inches: 'tight';
+					yourself).
+	self execute

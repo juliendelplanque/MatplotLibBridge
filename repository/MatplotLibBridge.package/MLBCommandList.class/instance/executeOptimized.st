@@ -1,0 +1,3 @@
+execute
+executeOptimized
+	self optimizeGeneratedInstructions execute
