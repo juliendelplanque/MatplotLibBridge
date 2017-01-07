@@ -1,3 +1,3 @@
 translating
-mlbWritePythonOn: aStream
+writePython3On: aStream
 	aStream << self name

@@ -2,9 +2,9 @@ executing
 execute
 	| remoteVar |
 	remoteVar := MLBRemoteVariable new.
-	(MLBImport moduleNamed: self moduleName)
+	(P3GImport moduleNamed: self moduleName)
 		execute.
-	MLBFunctionInvocation new
+	P3GFunctionInvocation new
 		target: self moduleName;
 		functionName: self functionName;
 		positionalArguments: self mlbPositionalAttributes;

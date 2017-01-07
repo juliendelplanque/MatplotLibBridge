@@ -1,14 +1,14 @@
 {
 	"category" : "MatplotLibBridge-Core",
 	"classinstvars" : [
-		"current" ],
+		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "JulienDelplanque 1/7/2017 00:12",
 	"instvars" : [
 		 ],
-	"name" : "MLBBridge",
+	"name" : "MLBAtlasInterpreter",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "P3GInterpreter",
 	"type" : "normal" }

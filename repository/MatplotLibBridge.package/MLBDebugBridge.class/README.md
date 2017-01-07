@@ -1,1 +1,0 @@
-I am a bridge that just print the code it receive in Transcript. I am useful for debugging.

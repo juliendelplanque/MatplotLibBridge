@@ -1,10 +1,10 @@
-executing
+*MatplotLibBridge
 executeAndStoreIn: aMLBRemoteVariable
 	| assignment |
-	assignment := MLBAssignment new
+	assignment := P3GAssignment new
 						target: aMLBRemoteVariable;
 						toAssignate: self;
 						yourself.
-	MLBBridge current
+	P3GInterpreter current
 		executePythonCode: assignment generate.
 	^ aMLBRemoteVariable

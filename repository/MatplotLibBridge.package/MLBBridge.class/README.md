@@ -1,1 +1,0 @@
-I define methods all bridge should implement in my class side and hold the current bridge used in my #current inst. var.
