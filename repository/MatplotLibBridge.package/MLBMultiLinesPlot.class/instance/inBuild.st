@@ -10,4 +10,5 @@ inBuild
 						color: (self colors ifNotNil: [ self colors at: i ]);
 						linestyle: (self lineStyles ifNotNil: [ self lineStyles at: i ]);
 						marker: (self markers ifNotNil: [ self markers at: i ]);
+						alpha: (self alphas ifNotNil: [ self alphas at: i ]);
 						yourself ])

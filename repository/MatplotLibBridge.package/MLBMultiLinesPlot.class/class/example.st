@@ -9,4 +9,5 @@ example
 		y: y;
 		lineStyles: {'-' . '--' . 'dotted'};
 		colors: {Color green . Color blue . Color red};
+		alphas: { 0.5 . 0.75 . 1.0 };
 		show

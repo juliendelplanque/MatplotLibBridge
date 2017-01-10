@@ -10,7 +10,8 @@
 		"y",
 		"lineStyles",
 		"colors",
-		"markers" ],
+		"markers",
+		"alphas" ],
 	"name" : "MLBMultiLinesPlot",
 	"pools" : [
 		 ],
