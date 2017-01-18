@@ -2,7 +2,7 @@ building
 buildFirst
 	self commandList
 		add:
-			(MLBBar new
+			(MLBBarCommand new
 				left: (0 to: self dataList size - 1);
 				height: (self dataList collect: #first);
 				tick_label: self labels;

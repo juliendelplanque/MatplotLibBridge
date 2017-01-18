@@ -1,0 +1,14 @@
+{
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 1/6/2017 14:41",
+	"instvars" : [
+		 ],
+	"name" : "MLBRcDefaultsCommand",
+	"pools" : [
+		 ],
+	"super" : "MLBMatplotlibCommand",
+	"type" : "normal" }

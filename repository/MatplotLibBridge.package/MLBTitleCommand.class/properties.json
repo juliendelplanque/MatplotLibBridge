@@ -1,0 +1,16 @@
+{
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 11/30/2016 14:41",
+	"instvars" : [
+		"s",
+		"fontdict",
+		"loc" ],
+	"name" : "MLBTitleCommand",
+	"pools" : [
+		 ],
+	"super" : "MLBPyplotCommand",
+	"type" : "normal" }

@@ -2,7 +2,7 @@ building
 inBuild
 	self commandList
 		add:
-			(MLBScatter new
+			(MLBScatterCommand new
 				x: self x;
 				y: self y;
 				s: self pointSizes;

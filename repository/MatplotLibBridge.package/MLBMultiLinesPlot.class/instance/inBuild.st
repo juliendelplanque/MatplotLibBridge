@@ -4,7 +4,7 @@ inBuild
 		addAll:
 			((1 to: self x anyOne size)
 				collect: [ :i | 
-					MLBPlot new
+					MLBPlotCommand new
 						x: (self x collect: [ :array | array at: i ]);
 						y: (self y collect: [ :array | array at: i ]);
 						color: (self colors ifNotNil: [ self colors at: i ]);

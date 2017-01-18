@@ -3,7 +3,7 @@ buildAllButFirst
 	2 to: self dataList anyOne size do: [ :i | 
 		self commandList
 			add:
-				(MLBBar new
+				(MLBBarCommand new
 					left: (0 to: self dataList size - 1);
 					height: (self dataList collect: [ :d | d at: i ]);
 					bottom:

@@ -3,18 +3,18 @@ postBuild
 	| xticks |
 	self commandList
 		addAll:
-			{(MLBTitle new
+			{(MLBTitleCommand new
 				s: self title;
 				fontdict: self titleFontDict;
 				loc: self titleLocation;
 				yourself).
-			(MLBXLabel new
+			(MLBXLabelCommand new
 				s: self xAxisTitle;
 				yourself).
-			(MLBYLabel new
+			(MLBYLabelCommand new
 				s: self yAxisTitle;
 				yourself)}.
-	xticks := MLBXTicks new
+	xticks := MLBXTicksCommand new
 		rotation: self labelsRotation;
 		yourself.
 	self xLabels
@@ -24,11 +24,11 @@ postBuild
 	self commandList add: xticks.
 	self commandList
 		addAll:
-			{(MLBXLim new
+			{(MLBXLimCommand new
 				xmin: self xAxisMin;
 				xmax: self xAxisMax;
 				yourself).
-			(MLBYLim new
+			(MLBYLimCommand new
 				ymin: self yAxisMin;
 				ymax: self yAxisMax;
 				yourself)}

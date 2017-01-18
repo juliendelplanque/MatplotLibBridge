@@ -2,7 +2,7 @@ building
 inBuild
 	self commandList
 		add:
-			(MLBPlot new
+			(MLBPlotCommand new
 				x: self x;
 				y: self y;
 				linestyle: self lineStyle;

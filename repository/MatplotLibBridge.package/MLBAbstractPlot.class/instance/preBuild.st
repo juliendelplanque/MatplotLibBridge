@@ -1,3 +1,3 @@
 building
 preBuild
-	self commandList add: MLBClf new
+	self commandList add: MLBClfCommand new

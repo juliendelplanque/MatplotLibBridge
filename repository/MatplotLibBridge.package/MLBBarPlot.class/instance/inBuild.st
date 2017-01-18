@@ -2,7 +2,7 @@ building
 inBuild
 	self commandList
 		add:
-			(MLBBar new
+			(MLBBarCommand new
 				left: (0 to: self data size - 1);
 				height: self data;
 				tick_label: self labels;

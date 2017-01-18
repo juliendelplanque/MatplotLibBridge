@@ -1,0 +1,18 @@
+{
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 11/30/2016 14:16",
+	"instvars" : [
+		"num",
+		"figsize",
+		"dpi",
+		"facecolor",
+		"edgecolor" ],
+	"name" : "MLBFigureCommand",
+	"pools" : [
+		 ],
+	"super" : "MLBPyplotCommand",
+	"type" : "normal" }

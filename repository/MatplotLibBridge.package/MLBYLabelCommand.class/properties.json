@@ -1,0 +1,14 @@
+{
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 11/29/2016 23:06",
+	"instvars" : [
+		"s" ],
+	"name" : "MLBYLabelCommand",
+	"pools" : [
+		 ],
+	"super" : "MLBPyplotCommand",
+	"type" : "normal" }
