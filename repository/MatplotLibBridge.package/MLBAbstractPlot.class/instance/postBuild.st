@@ -1,6 +1,6 @@
 building
 postBuild
-	| xticks |
+	| xticks yticks |
 	self commandList
 		addAll:
 			{(MLBTitleCommand new
@@ -18,10 +18,20 @@ postBuild
 		rotation: self labelsRotation;
 		yourself.
 	self xLabels
-		ifNotNil: [ xticks
+		ifNotNil: [ 
+			xticks
 				ticks: (self xTicks ifNil: [ (0 to: self xLabels size - 1) asArray ]);
 				labels: self xLabels ].
 	self commandList add: xticks.
+	yticks := MLBYTicksCommand new
+		rotation: self yLabelsRotation;
+		yourself.
+	self yLabels
+		ifNotNil: [ 
+			yticks
+				ticks: (self yTicks ifNil: [ (0 to: self yLabels size - 1) asArray ]);
+				labels: self yLabels ].
+	self commandList add: yticks.
 	self commandList
 		addAll:
 			{(MLBXLimCommand new

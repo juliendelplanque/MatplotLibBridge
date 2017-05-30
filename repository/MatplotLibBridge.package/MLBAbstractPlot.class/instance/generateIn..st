@@ -5,5 +5,6 @@ generateIn: aFileReference
 		add: (MLBSaveFigCommand new
 					filename: aFileReference fullName;
 					bbox_inches: 'tight';
+					transparent: true;
 					yourself).
 	self execute

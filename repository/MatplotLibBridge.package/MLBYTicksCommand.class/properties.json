@@ -1,0 +1,16 @@
+{
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"ticks",
+		"labels",
+		"rotation" ],
+	"name" : "MLBYTicksCommand",
+	"pools" : [
+		 ],
+	"super" : "MLBPyplotCommand",
+	"type" : "normal" }
