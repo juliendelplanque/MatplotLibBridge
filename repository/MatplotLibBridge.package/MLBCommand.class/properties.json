@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "JulienDelplanque 1/6/2017 14:34",
 	"instvars" : [
-		"moduleName" ],
+		"module" ],
 	"name" : "MLBCommand",
 	"pools" : [
 		 ],

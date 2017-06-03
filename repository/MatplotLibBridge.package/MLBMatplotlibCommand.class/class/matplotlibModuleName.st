@@ -1,3 +1,3 @@
 accessing
 matplotlibModuleName
-	^ 'matplotlib'
+	^ 'matplotlib' asP3GIdentifier

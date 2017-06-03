@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	self moduleName: self pyplotModuleName
+	self module: self pyplotModuleName

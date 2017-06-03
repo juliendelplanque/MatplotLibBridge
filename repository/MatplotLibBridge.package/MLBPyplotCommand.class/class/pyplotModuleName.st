@@ -1,3 +1,3 @@
 accessing
 pyplotModuleName
-	^ 'matplotlib.pyplot'
+	^ 'matplotlib' asP3GIdentifier => 'pyplot'
