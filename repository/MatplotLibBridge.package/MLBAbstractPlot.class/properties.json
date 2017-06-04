@@ -22,7 +22,8 @@
 		"yTicks",
 		"yLabels",
 		"yLabelsRotation",
-		"style" ],
+		"style",
+		"annotations" ],
 	"name" : "MLBAbstractPlot",
 	"pools" : [
 		 ],

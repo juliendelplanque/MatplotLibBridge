@@ -41,4 +41,5 @@ postBuild
 			(MLBYLimCommand new
 				ymin: self yAxisMin;
 				ymax: self yAxisMax;
-				yourself)}
+				yourself)};
+		addAll: self annotations

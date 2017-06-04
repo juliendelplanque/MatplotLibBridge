@@ -1,0 +1,4 @@
+accessing
+xycoords
+	<mlbAttribute>
+	^ xycoords

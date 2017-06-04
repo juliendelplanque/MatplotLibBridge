@@ -5,4 +5,5 @@ initialize
 		commandList: MLBCommandList new;
 		title: '';
 		xAxisTitle: '';
-		yAxisTitle: ''
+		yAxisTitle: '';
+		annotations: OrderedCollection new

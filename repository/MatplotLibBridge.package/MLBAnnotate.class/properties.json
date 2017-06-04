@@ -1,0 +1,20 @@
+{
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 6/4/2017 23:10",
+	"instvars" : [
+		"s",
+		"xy",
+		"xytext",
+		"xycoords",
+		"textcoords",
+		"arrowprops",
+		"annotation_clip" ],
+	"name" : "MLBAnnotate",
+	"pools" : [
+		 ],
+	"super" : "MLBPyplotCommand",
+	"type" : "normal" }
