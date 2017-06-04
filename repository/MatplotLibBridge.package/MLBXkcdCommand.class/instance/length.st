@@ -1,0 +1,4 @@
+accessing
+length
+	<mlbAttribute>
+	^ length

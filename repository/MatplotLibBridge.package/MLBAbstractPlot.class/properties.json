@@ -21,7 +21,8 @@
 		"xTicks",
 		"yTicks",
 		"yLabels",
-		"yLabelsRotation" ],
+		"yLabelsRotation",
+		"style" ],
 	"name" : "MLBAbstractPlot",
 	"pools" : [
 		 ],

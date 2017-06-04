@@ -1,0 +1,16 @@
+{
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 6/4/2017 22:47",
+	"instvars" : [
+		"scale",
+		"length",
+		"randomness" ],
+	"name" : "MLBXkcdCommand",
+	"pools" : [
+		 ],
+	"super" : "MLBPyplotCommand",
+	"type" : "normal" }
