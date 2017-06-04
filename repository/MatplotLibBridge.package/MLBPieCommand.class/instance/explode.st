@@ -1,0 +1,4 @@
+accessing
+explode
+	<mlbAttribute>
+	^ explode

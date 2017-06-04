@@ -1,0 +1,4 @@
+accessing
+pctdistance
+	<mlbAttribute>
+	^ pctdistance

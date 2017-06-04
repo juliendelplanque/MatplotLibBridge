@@ -1,0 +1,4 @@
+accessing
+labeldistance
+	<mlbAttribute>
+	^ labeldistance

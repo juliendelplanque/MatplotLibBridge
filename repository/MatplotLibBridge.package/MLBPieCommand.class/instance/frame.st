@@ -1,0 +1,4 @@
+accessing
+frame
+	<mlbAttribute>
+	^ frame

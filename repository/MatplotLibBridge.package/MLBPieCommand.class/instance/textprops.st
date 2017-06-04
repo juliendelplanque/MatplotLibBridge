@@ -1,0 +1,4 @@
+accessing
+textprops
+	<mlbAttribute>
+	^ textprops

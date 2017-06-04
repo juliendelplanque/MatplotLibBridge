@@ -1,4 +1,4 @@
-I am a wrapper for the matplotlib.annotate.bar function.
+I am a wrapper for the matplotlib.annotate function.
 
 - s : str
 

@@ -1,0 +1,4 @@
+accessing
+wedgeprops
+	<mlbAttribute>
+	^ wedgeprops

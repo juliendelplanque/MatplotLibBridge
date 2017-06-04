@@ -42,4 +42,7 @@ postBuild
 				ymin: self yAxisMin;
 				ymax: self yAxisMax;
 				yourself)};
-		addAll: self annotations
+		addAll: self annotations;
+		add: (MLBAxis new
+					v: self axis;
+					yourself)

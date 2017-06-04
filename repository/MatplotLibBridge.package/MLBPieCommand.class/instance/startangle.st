@@ -1,0 +1,4 @@
+accessing
+startangle
+	<mlbAttribute>
+	^ startangle

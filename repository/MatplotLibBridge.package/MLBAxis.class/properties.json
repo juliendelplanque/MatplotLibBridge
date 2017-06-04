@@ -4,16 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "JulienDelplanque 6/4/2017 23:40",
+	"commentStamp" : "JulienDelplanque 6/4/2017 23:39",
 	"instvars" : [
-		"s",
-		"xy",
-		"xytext",
-		"xycoords",
-		"textcoords",
-		"arrowprops",
-		"annotation_clip" ],
-	"name" : "MLBAnnotateCommand",
+		"v" ],
+	"name" : "MLBAxis",
 	"pools" : [
 		 ],
 	"super" : "MLBPyplotCommand",
