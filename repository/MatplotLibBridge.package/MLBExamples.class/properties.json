@@ -1,0 +1,14 @@
+{
+	"category" : "MatplotLibBridge-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 6/5/2017 13:23",
+	"instvars" : [
+		 ],
+	"name" : "MLBExamples",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
