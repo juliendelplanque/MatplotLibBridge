@@ -5,6 +5,7 @@ generateCommandsIn: aMLBCommandList
 			object: self;
 			selector: #position;
 			signal ].
+	self verifyArrowProperties: self arrowProperties.
 	aMLBCommandList
 		add: (MLBAnnotateCommand new
 								s: self content;
