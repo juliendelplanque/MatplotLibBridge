@@ -1,5 +1,5 @@
 examples
-pieplotExample
+examplePieplot
 	MLBPiePlot new
 		data: #(50 20 30);
 		labels: #(One Two Three);

@@ -1,3 +1,3 @@
 example
 example
-	MLBExamples pieplotExample
+	MLBExamples examplePieplot

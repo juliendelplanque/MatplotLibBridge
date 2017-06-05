@@ -1,5 +1,5 @@
 examples
-lineplotExample
+exampleLineplot
 	| x y |
 	x := (1 to: 50 by: 2) asArray.
 	y := x collect: [ :i | i ** 2 ].

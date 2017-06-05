@@ -1,3 +1,3 @@
 example
 example
-	MLBExamples stackedBarplotExample
+	MLBExamples exampleStackedBarplot

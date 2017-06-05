@@ -1,5 +1,5 @@
 examples
-boxplotExample
+exampleBoxplot
 	MLBBoxPlot new
 		dataList: {((1 to: 100) collect: [ :i | (1 to: 10) atRandom ])};
 		beHorizontal;

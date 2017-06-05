@@ -1,3 +1,3 @@
 example
 example
-	MLBExamples barplotExample
+	MLBExamples exampleBarplot

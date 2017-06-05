@@ -1,5 +1,5 @@
 examples
-barplotExample
+exampleBarplot
 	|data std |
 	data := #(20 35 30 35 27).
 	std := #(2 3 4 1 2).

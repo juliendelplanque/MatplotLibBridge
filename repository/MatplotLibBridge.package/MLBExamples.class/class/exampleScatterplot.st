@@ -1,5 +1,5 @@
 examples
-scatterplotExample
+exampleScatterplot
 	MLBScatterPlot new
 		x: ((1 to: 10) collect: [ :i |(1 to: 15) atRandom ]);
 		y: ((1 to: 10) collect: [ :i |(1 to: 15) atRandom ]);

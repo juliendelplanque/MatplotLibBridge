@@ -1,3 +1,3 @@
 example
 example
-	MLBExamples multilineplotExample
+	MLBExamples exampleMultilineplot

@@ -1,5 +1,5 @@
 examples
-stackedBarplotExample
+exampleStackedBarplot
 	| menMeans womenMeans menStd womenStd data std |
 	menMeans := #(20 35 30 35 27).
 	womenMeans := #(25 32 34 20 25).

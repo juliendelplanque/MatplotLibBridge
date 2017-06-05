@@ -1,5 +1,5 @@
 examples
-multilineplotExample
+exampleMultilineplot
 	| x y |
 	x := (1 to: 10) collect: [ :i | { i . i . i } ].
 	y := x collect: [ :i | {i first . i second ** 2 . i third log} ].
