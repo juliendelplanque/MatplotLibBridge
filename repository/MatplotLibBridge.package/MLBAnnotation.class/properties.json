@@ -1,0 +1,18 @@
+{
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 6/5/2017 12:43",
+	"instvars" : [
+		"content",
+		"position",
+		"textPosition",
+		"arrowProperties",
+		"onlyVisibleInsideAxes" ],
+	"name" : "MLBAnnotation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

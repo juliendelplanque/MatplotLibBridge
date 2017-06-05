@@ -6,9 +6,10 @@ postBuild
 				fontdict: self titleFontDict;
 				loc: self titleLocation;
 				yourself);
-		addAll: self annotations;
 		add: (MLBAxis new
 					v: self axis;
 					yourself).
 	self xAxis generateCommandsIn: self commandList.
-	self yAxis generateCommandsIn: self commandList
+	self yAxis generateCommandsIn: self commandList.
+	self annotations do: [ :annotation |
+		annotation generateCommandsIn: self commandList ]

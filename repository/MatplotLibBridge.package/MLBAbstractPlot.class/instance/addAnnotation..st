@@ -1,3 +1,3 @@
 annotations
-addAnnotation: aMLBAnnotate
-	self annotations add: aMLBAnnotate
+addAnnotation: aMLBAnnotation
+	self annotations add: aMLBAnnotation
