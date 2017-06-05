@@ -4,6 +4,6 @@ initialize
 	self
 		commandList: MLBCommandList new;
 		title: '';
-		xAxisTitle: '';
-		yAxisTitle: '';
-		annotations: OrderedCollection new
+		annotations: OrderedCollection new;
+		xAxis: MLBXAxis new;
+		yAxis: MLBYAxis new

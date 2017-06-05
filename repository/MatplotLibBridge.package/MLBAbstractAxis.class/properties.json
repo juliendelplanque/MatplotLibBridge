@@ -1,0 +1,19 @@
+{
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 6/5/2017 12:28",
+	"instvars" : [
+		"labels",
+		"labelsRotation",
+		"ticks",
+		"max",
+		"min",
+		"title" ],
+	"name" : "MLBAbstractAxis",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

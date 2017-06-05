@@ -1,3 +1,0 @@
-accessing
-yLabels
-	^ yLabels

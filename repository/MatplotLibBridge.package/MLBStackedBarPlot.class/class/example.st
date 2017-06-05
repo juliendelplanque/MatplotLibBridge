@@ -13,11 +13,15 @@ example
 	
 	MLBStackedBarPlot new
 		dataList: data;
-		labels: #('G1' 'G2' 'G3' 'G4' 'G5');
 		colorList: {Color blue. Color pink};
-		labelsRotation: 45;
 		title: 'Scores by group and gender';
-		yAxisTitle: 'Scores';
+		configXAxis: [ :xAxis |
+			xAxis
+				labelsRotation: 45;
+				labels: #('G1' 'G2' 'G3' 'G4' 'G5') ];
+		configYAxis: [ :yAxis |
+			yAxis
+				title: 'Scores' ];
 		errorBarsList: std;
 		errorBarsColorList: { Color black . Color black };
 		alignLabelCenter;

@@ -1,0 +1,14 @@
+{
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 6/5/2017 12:28",
+	"instvars" : [
+		 ],
+	"name" : "MLBYAxis",
+	"pools" : [
+		 ],
+	"super" : "MLBAbstractAxis",
+	"type" : "normal" }

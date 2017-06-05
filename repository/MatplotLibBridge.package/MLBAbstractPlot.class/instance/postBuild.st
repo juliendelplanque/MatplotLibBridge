@@ -1,48 +1,14 @@
 building
 postBuild
-	| xticks yticks |
 	self commandList
-		addAll:
-			{(MLBTitleCommand new
+		add: (MLBTitleCommand new
 				s: self title;
 				fontdict: self titleFontDict;
 				loc: self titleLocation;
-				yourself).
-			(MLBXLabelCommand new
-				s: self xAxisTitle;
-				yourself).
-			(MLBYLabelCommand new
-				s: self yAxisTitle;
-				yourself)}.
-	xticks := MLBXTicksCommand new
-		rotation: self labelsRotation;
-		yourself.
-	self xLabels
-		ifNotNil: [ 
-			xticks
-				ticks: (self xTicks ifNil: [ (0 to: self xLabels size - 1) asArray ]);
-				labels: self xLabels ].
-	self commandList add: xticks.
-	yticks := MLBYTicksCommand new
-		rotation: self yLabelsRotation;
-		yourself.
-	self yLabels
-		ifNotNil: [ 
-			yticks
-				ticks: (self yTicks ifNil: [ (0 to: self yLabels size - 1) asArray ]);
-				labels: self yLabels ].
-	self commandList add: yticks.
-	self commandList
-		addAll:
-			{(MLBXLimCommand new
-				xmin: self xAxisMin;
-				xmax: self xAxisMax;
-				yourself).
-			(MLBYLimCommand new
-				ymin: self yAxisMin;
-				ymax: self yAxisMax;
-				yourself)};
+				yourself);
 		addAll: self annotations;
 		add: (MLBAxis new
 					v: self axis;
-					yourself)
+					yourself).
+	self xAxis generateCommandsIn: self commandList.
+	self yAxis generateCommandsIn: self commandList

@@ -1,12 +1,13 @@
 optimizing
 removeDuplicatedImport: aP3GInstructionsList
 	| alreadyImported newInstructions |
+	self flag: #todo. "Fix dirty hack below."
 	alreadyImported := OrderedCollection new.
 	newInstructions := OrderedCollection new.
 	aP3GInstructionsList do: [ :inst |
 		inst isImport
 			ifTrue: [ 
-				(alreadyImported includes: inst)
+				((alreadyImported collect: #generate) includes: inst generate) "Dirty fix, TODO"
 					ifFalse: [ 
 						newInstructions add: inst.
 						alreadyImported add: inst ] ]

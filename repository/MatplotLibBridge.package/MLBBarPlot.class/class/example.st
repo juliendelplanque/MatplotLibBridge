@@ -8,9 +8,13 @@ example
 		data: data;
 		labels: #('G1' 'G2' 'G3' 'G4' 'G5');
 		color: Color blue;
-		labelsRotation: 45;
+		configXAxis: [ :xAxis |
+			xAxis
+				labelsRotation: 45 ];
+		configYAxis: [ :yAxis |
+			yAxis
+				title: 'Y label' ];
 		title: 'Barplot example';
-		yAxisTitle: 'Y label';
 		errorBars: std;
 		errorBarsColor: Color black;
 		alignLabelCenter;

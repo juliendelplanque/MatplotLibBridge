@@ -1,0 +1,3 @@
+private
+ticksCommandClass
+	^ self subclassResponsibility
