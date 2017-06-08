@@ -7,20 +7,18 @@ exampleAnnotations
 				style: 'solid';
 				marker: 'None';
 				color: (Color r: 0 g: 0 b: 0 alpha: 0.3) ];
-		addAnnotation:
-			(MLBAnnotation new
+		addAnnotation: [ :annotation |
+			annotation
 				content: 'a thing';
 				position: 10 @(10**3);
 				textPosition: 10 @(10**4);
-				arrowProperties: {('arrowstyle' -> '<|-')} asDictionary;
-				yourself);
-		addAnnotation:
-			(MLBAnnotation new
+				arrowProperties: {('arrowstyle' -> '<|-')} asDictionary ];
+		addAnnotation: [ :annotation |
+			annotation
 				content: 'another thing';
 				position: 30 @ (30 ** 3);
 				textPosition: 35 @ (30 ** 3 + 10);
 				arrowProperties:
 					{('facecolor' -> 'black').
-					('shrink' -> 4)} asDictionary;
-				yourself);
+					('shrink' -> 4) } asDictionary ];
 		show
