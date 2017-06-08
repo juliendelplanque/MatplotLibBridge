@@ -1,15 +1,12 @@
 examples
 exampleAnnotations
-	| x y |
-	x := (1 to: 50 by: 2) asArray.
-	y := x collect: [ :i | i ** 3 ].
 	MLBLinePlot new
-		x: x;
-		y: y;
-		lineStyle: 'solid';
-		marker: 'None';
-		color: Color black;
-		alpha: 0.75;
+		addLine: [ :line |
+			line
+				points: ((1 to: 50 by: 2) collect: [ :i | i@(i**3) ]);
+				style: 'solid';
+				marker: 'None';
+				color: (Color r: 0 g: 0 b: 0 alpha: 0.3) ];
 		addAnnotation:
 			(MLBAnnotation new
 				content: 'a thing';

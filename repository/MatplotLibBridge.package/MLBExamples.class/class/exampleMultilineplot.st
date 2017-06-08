@@ -1,13 +1,16 @@
 examples
 exampleMultilineplot
-	| x y |
-	x := (1 to: 10) collect: [ :i | { i . i . i } ].
-	y := x collect: [ :i | {i first . i second ** 2 . i third log} ].
-	
-	MLBMultiLinesPlot new
-		x: x;
-		y: y;
-		lineStyles: {'-' . '--' . 'dotted'};
-		colors: {Color green . Color blue . Color red};
-		alphas: { 0.5 . 0.75 . 1.0 };
+	MLBLinePlot new
+		addLine: [ :line |
+			line points: ((0 to: 1000) collect: [ :i | i@i sqrt ]) ];
+		addLine: [ :line |
+			line
+				points: ((0 to: 1000) collect: [ :i | i@(i nthRoot: 3) ]);
+				color: Color red;
+				style: '--' ];
+		addLine: [ :line |
+			line
+				points: ((0 to: 1000) collect: [ :i | i@(i nthRoot: 4) ]);
+				color: Color blue;
+				style: 'dotted' ];
 		show
