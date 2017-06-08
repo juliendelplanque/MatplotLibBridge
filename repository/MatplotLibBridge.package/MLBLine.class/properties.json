@@ -9,7 +9,8 @@
 		"points",
 		"style",
 		"marker",
-		"color" ],
+		"color",
+		"label" ],
 	"name" : "MLBLine",
 	"pools" : [
 		 ],

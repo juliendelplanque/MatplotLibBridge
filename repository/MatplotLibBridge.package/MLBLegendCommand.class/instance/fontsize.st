@@ -1,0 +1,4 @@
+accessing
+fontsize
+	<mlbAttribute>
+	^ fontsize

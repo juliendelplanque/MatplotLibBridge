@@ -1,0 +1,4 @@
+accessing
+numpoints
+	<mlbAttribute>
+	^ numpoints

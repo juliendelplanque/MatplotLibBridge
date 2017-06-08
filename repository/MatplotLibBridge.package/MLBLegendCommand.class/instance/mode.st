@@ -1,0 +1,4 @@
+accessing
+mode
+	<mlbAttribute>
+	^ mode

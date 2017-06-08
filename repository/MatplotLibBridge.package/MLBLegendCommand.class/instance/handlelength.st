@@ -1,0 +1,4 @@
+accessing
+handlelength
+	<mlbAttribute>
+	^ handlelength

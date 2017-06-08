@@ -9,4 +9,5 @@ generateCommandsIn: aMLBCommandList
 				marker: self marker;
 				alpha: self alpha;
 				color: self colorHexString;
+				label: self label;
 				yourself)

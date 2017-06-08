@@ -1,0 +1,20 @@
+{
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 6/8/2017 18:26",
+	"instvars" : [
+		"location",
+		"numberOfColumns",
+		"fontSize",
+		"hasFancyBox",
+		"hasShadow",
+		"frameTransparency",
+		"title" ],
+	"name" : "MLBLegend",
+	"pools" : [
+		 ],
+	"super" : "MLBCommandsGenerator",
+	"type" : "normal" }

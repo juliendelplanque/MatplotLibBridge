@@ -1,0 +1,4 @@
+accessing
+handletextpad
+	<mlbAttribute>
+	^ handletextpad

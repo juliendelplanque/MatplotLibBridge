@@ -1,0 +1,4 @@
+accessing
+title
+	<mlbAttribute>
+	^ title

@@ -1,0 +1,4 @@
+accessing
+markerscale
+	<mlbAttribute>
+	^ markerscale
