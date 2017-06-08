@@ -1,3 +1,3 @@
-accessing
+private
 pointSizes
-	^ pointSizes
+	^ self circles collect: #size

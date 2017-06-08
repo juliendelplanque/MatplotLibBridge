@@ -1,3 +1,3 @@
-accessing
+private
 y
-	^ y
+	^ self circles collect: #y

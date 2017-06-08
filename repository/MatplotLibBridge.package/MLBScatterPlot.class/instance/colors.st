@@ -1,3 +1,3 @@
-accessing
+private
 colors
-	^ colors
+	^ self circles collect: #color

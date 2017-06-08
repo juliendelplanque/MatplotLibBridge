@@ -4,12 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "JulienDelplanque 11/30/2016 15:52",
+	"commentStamp" : "JulienDelplanque 6/8/2017 14:51",
 	"instvars" : [
-		"circles",
-		"marker" ],
-	"name" : "MLBScatterPlot",
+		"position",
+		"size",
+		"color" ],
+	"name" : "MLBCircle",
 	"pools" : [
 		 ],
-	"super" : "MLBAbstractPlot",
+	"super" : "Object",
 	"type" : "normal" }
