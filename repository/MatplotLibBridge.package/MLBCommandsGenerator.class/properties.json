@@ -1,0 +1,14 @@
+{
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JulienDelplanque 6/8/2017 15:04",
+	"instvars" : [
+		 ],
+	"name" : "MLBCommandsGenerator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

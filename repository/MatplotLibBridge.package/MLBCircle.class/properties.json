@@ -12,5 +12,5 @@
 	"name" : "MLBCircle",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "MLBCommandsGenerator",
 	"type" : "normal" }

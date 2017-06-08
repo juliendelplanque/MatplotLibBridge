@@ -1,0 +1,3 @@
+command generation
+generateCommandsIn: aMLBCommandList
+	self subclassResponsibility

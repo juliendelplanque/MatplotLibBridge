@@ -14,5 +14,5 @@
 	"name" : "MLBAnnotation",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "MLBCommandsGenerator",
 	"type" : "normal" }

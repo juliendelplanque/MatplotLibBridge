@@ -15,5 +15,5 @@
 	"name" : "MLBAbstractAxis",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "MLBCommandsGenerator",
 	"type" : "normal" }
