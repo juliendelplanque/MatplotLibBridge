@@ -1,18 +1,17 @@
 {
-	"category" : "MatplotLibBridge-API",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 6/8/2017 12:33",
+	"super" : "MLBCommandsGenerator",
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"points",
 		"style",
 		"marker",
 		"color",
-		"label" ],
+		"label"
+	],
 	"name" : "MLBLine",
-	"pools" : [
-		 ],
-	"super" : "MLBCommandsGenerator",
-	"type" : "normal" }
+	"type" : "normal"
+}

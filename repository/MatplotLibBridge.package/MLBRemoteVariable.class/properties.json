@@ -1,14 +1,13 @@
 {
-	"category" : "MatplotLibBridge-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 1/5/2017 17:07",
-	"instvars" : [
-		"name" ],
-	"name" : "MLBRemoteVariable",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "MatplotLibBridge-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name"
+	],
+	"name" : "MLBRemoteVariable",
+	"type" : "normal"
+}

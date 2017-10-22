@@ -1,10 +1,10 @@
 {
-	"category" : "MatplotLibBridge-Commands",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 6/8/2017 17:47",
+	"super" : "MLBPyplotCommand",
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"loc",
 		"bbox_to_anchor",
@@ -31,9 +31,8 @@
 		"handletextpad",
 		"borderaxespad",
 		"columnspacing",
-		"handler_map" ],
+		"handler_map"
+	],
 	"name" : "MLBLegendCommand",
-	"pools" : [
-		 ],
-	"super" : "MLBPyplotCommand",
-	"type" : "normal" }
+	"type" : "normal"
+}

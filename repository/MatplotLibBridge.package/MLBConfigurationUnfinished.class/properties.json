@@ -1,15 +1,14 @@
 {
-	"category" : "MatplotLibBridge-Errors",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 6/5/2017 12:58",
+	"super" : "Error",
+	"category" : "MatplotLibBridge-Errors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"object",
-		"selector" ],
+		"selector"
+	],
 	"name" : "MLBConfigurationUnfinished",
-	"pools" : [
-		 ],
-	"super" : "Error",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,10 +1,10 @@
 {
-	"category" : "MatplotLibBridge-Commands",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 11/30/2016 20:27",
+	"super" : "MLBPyplotCommand",
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"x",
 		"notch",
@@ -20,9 +20,8 @@
 		"labels",
 		"manage_xticks",
 		"autorange",
-		"meanline" ],
+		"meanline"
+	],
 	"name" : "MLBBoxplotCommand",
-	"pools" : [
-		 ],
-	"super" : "MLBPyplotCommand",
-	"type" : "normal" }
+	"type" : "normal"
+}

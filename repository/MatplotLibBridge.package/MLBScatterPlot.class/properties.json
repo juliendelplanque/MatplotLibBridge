@@ -1,15 +1,14 @@
 {
-	"category" : "MatplotLibBridge-API",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 11/30/2016 15:52",
+	"super" : "MLBAbstractPlot",
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"circles",
-		"marker" ],
+		"marker"
+	],
 	"name" : "MLBScatterPlot",
-	"pools" : [
-		 ],
-	"super" : "MLBAbstractPlot",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,16 +1,15 @@
 {
-	"category" : "MatplotLibBridge-Commands",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 11/30/2016 13:46",
+	"super" : "MLBPyplotCommand",
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"ticks",
 		"labels",
-		"rotation" ],
+		"rotation"
+	],
 	"name" : "MLBXTicksCommand",
-	"pools" : [
-		 ],
-	"super" : "MLBPyplotCommand",
-	"type" : "normal" }
+	"type" : "normal"
+}

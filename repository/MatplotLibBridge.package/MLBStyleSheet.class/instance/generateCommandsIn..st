@@ -1,0 +1,3 @@
+command generation
+generateCommandsIn: aMLBCommandList
+	aMLBCommandList addAll: rcCommands

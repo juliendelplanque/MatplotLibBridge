@@ -1,10 +1,10 @@
 {
-	"category" : "MatplotLibBridge-API",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 6/4/2017 23:43",
+	"super" : "MLBAbstractPlot",
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"data",
 		"labels",
@@ -12,9 +12,8 @@
 		"explode",
 		"startAngle",
 		"radius",
-		"isCounterClock" ],
+		"isCounterClock"
+	],
 	"name" : "MLBPiePlot",
-	"pools" : [
-		 ],
-	"super" : "MLBAbstractPlot",
-	"type" : "normal" }
+	"type" : "normal"
+}

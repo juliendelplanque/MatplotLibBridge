@@ -1,15 +1,16 @@
 {
-	"category" : "MatplotLibBridge-Commands",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 1/6/2017 14:04",
+	"super" : "MLBMatplotlibCommand",
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"group",
-		"labelsize" ],
+		"attributesDict",
+		"labelsize",
+		"titlesize"
+	],
 	"name" : "MLBRcCommand",
-	"pools" : [
-		 ],
-	"super" : "MLBMatplotlibCommand",
-	"type" : "normal" }
+	"type" : "normal"
+}

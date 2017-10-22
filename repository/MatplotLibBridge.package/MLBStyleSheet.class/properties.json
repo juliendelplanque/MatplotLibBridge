@@ -1,18 +1,13 @@
 {
-	"commentStamp" : "JulienDelplanque 6/5/2017 12:28",
+	"commentStamp" : "JulienDelplanque 10/22/2017 15:35",
 	"super" : "MLBCommandsGenerator",
 	"category" : "MatplotLibBridge-API",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"labels",
-		"labelsRotation",
-		"ticks",
-		"max",
-		"min",
-		"title"
+		"rcCommands"
 	],
-	"name" : "MLBAbstractAxis",
+	"name" : "MLBStyleSheet",
 	"type" : "normal"
 }

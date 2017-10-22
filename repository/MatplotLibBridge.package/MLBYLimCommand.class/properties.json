@@ -1,15 +1,14 @@
 {
-	"category" : "MatplotLibBridge-Commands",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 11/29/2016 23:18",
+	"super" : "MLBPyplotCommand",
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"ymin",
-		"ymax" ],
+		"ymax"
+	],
 	"name" : "MLBYLimCommand",
-	"pools" : [
-		 ],
-	"super" : "MLBPyplotCommand",
-	"type" : "normal" }
+	"type" : "normal"
+}

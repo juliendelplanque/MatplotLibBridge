@@ -1,10 +1,10 @@
 {
-	"category" : "MatplotLibBridge-Commands",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 11/30/2016 14:31",
+	"super" : "MLBPyplotCommand",
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"filename",
 		"dpi",
@@ -15,9 +15,8 @@
 		"transparent",
 		"frameon",
 		"bbox_inches",
-		"pad_inches" ],
+		"pad_inches"
+	],
 	"name" : "MLBSaveFigCommand",
-	"pools" : [
-		 ],
-	"super" : "MLBPyplotCommand",
-	"type" : "normal" }
+	"type" : "normal"
+}

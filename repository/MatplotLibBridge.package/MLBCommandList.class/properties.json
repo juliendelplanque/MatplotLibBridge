@@ -1,14 +1,13 @@
 {
-	"category" : "MatplotLibBridge-Commands",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 1/7/2017 23:25",
-	"instvars" : [
-		"commands" ],
-	"name" : "MLBCommandList",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"commands"
+	],
+	"name" : "MLBCommandList",
+	"type" : "normal"
+}

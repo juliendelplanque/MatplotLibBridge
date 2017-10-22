@@ -1,4 +1,0 @@
-accessing
-labelsize
-	<mlbAttribute>
-	^ labelsize

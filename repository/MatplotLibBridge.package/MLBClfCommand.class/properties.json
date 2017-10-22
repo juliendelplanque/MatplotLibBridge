@@ -1,14 +1,11 @@
 {
-	"category" : "MatplotLibBridge-Commands",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 12/1/2016 19:26",
-	"instvars" : [
-		 ],
-	"name" : "MLBClfCommand",
-	"pools" : [
-		 ],
 	"super" : "MLBPyplotCommand",
-	"type" : "normal" }
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MLBClfCommand",
+	"type" : "normal"
+}

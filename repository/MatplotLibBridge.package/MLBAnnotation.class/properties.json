@@ -1,18 +1,17 @@
 {
-	"category" : "MatplotLibBridge-API",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 6/5/2017 12:43",
+	"super" : "MLBCommandsGenerator",
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"content",
 		"position",
 		"textPosition",
 		"arrowProperties",
-		"onlyVisibleInsideAxes" ],
+		"onlyVisibleInsideAxes"
+	],
 	"name" : "MLBAnnotation",
-	"pools" : [
-		 ],
-	"super" : "MLBCommandsGenerator",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,16 +1,15 @@
 {
-	"category" : "MatplotLibBridge-API",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 11/30/2016 20:34",
+	"super" : "MLBAbstractPlot",
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"dataList",
 		"labels",
-		"vertical" ],
+		"vertical"
+	],
 	"name" : "MLBBoxPlot",
-	"pools" : [
-		 ],
-	"super" : "MLBAbstractPlot",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,16 +1,15 @@
 {
-	"category" : "MatplotLibBridge-API",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "JulienDelplanque 6/8/2017 14:51",
+	"super" : "MLBCommandsGenerator",
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"position",
 		"size",
-		"color" ],
+		"color"
+	],
 	"name" : "MLBCircle",
-	"pools" : [
-		 ],
-	"super" : "MLBCommandsGenerator",
-	"type" : "normal" }
+	"type" : "normal"
+}
