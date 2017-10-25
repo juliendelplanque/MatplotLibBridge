@@ -5,5 +5,6 @@ optimizeGeneratedInstructions
 	| instructionsList |
 	instructionsList := self generateInstructions.
 	self
-		removeDuplicatedImport: instructionsList.
+		removeDuplicatedImport: instructionsList;
+		setImportInstructionsFirst: instructionsList.
 	^ instructionsList
