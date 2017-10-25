@@ -1,0 +1,3 @@
+example
+exampleVertical
+	MLBExamples exampleVerticalBoxplot

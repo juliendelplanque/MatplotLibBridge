@@ -3,7 +3,6 @@ exampleStyleSheet
 	"For more information: https://matplotlib.org/users/customizing.html"
 	| style |
 	style := MLBStyleSheet new
-					setProperty: 'labelsize' ofGroup: 'axes' to: 25;
 					setProperty: 'color' ofGroup: 'text' to: 'red';
 					setProperty: 'weight' ofGroup: 'font' to: 'bold';
 					yourself.
