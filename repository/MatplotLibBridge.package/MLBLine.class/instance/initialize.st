@@ -3,4 +3,5 @@ initialize
 	super initialize.
 	self
 		points: #();
-		color: Color black
+		color: Color black;
+		width: 1.0

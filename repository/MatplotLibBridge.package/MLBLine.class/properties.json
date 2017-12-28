@@ -10,7 +10,8 @@
 		"style",
 		"marker",
 		"color",
-		"label"
+		"label",
+		"width"
 	],
 	"name" : "MLBLine",
 	"type" : "normal"

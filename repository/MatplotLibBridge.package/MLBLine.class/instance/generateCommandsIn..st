@@ -10,4 +10,5 @@ generateCommandsIn: aMLBCommandList
 				alpha: self alpha;
 				color: self colorHexString;
 				label: self label;
+				linewidth: self width;
 				yourself)
