@@ -1,5 +1,6 @@
 examples
 exampleLegend
+	<mlbExampleNumber: 8 named: 'Using LaTeX in legend' description: 'The following code snippet shows you how to create a line plot with LaTeX code for lines'' labels. In fact, with MatplotLibBridge, you can use LaTeX in any String you provide.'>
 	| interval |
 	interval := 1 to: 1000.
 	MLBLinePlot new

@@ -1,5 +1,6 @@
 examples
 exampleAnnotations
+	<mlbExampleNumber: 9 named: 'Annotations' description: 'On any plot, you can add annotations. An annotation is an extra graphical element you add on your plot such as for example an arrow pointing to a certain interesting location on the plot.'>
 	MLBLinePlot new
 		addLine: [ :line |
 			line
