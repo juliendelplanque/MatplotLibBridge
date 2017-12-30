@@ -1,5 +1,6 @@
 examples
 exampleChangingLineWidthOfLineplot
+	<mlbExampleNumber: 2.1 named: 'Changing line width in line plot or multi-lines plot' description: 'It is possible to configure the width of each line in a line plot using `#width:`.'>
 	MLBLinePlot new
 		addLine: [ :line |
 			line

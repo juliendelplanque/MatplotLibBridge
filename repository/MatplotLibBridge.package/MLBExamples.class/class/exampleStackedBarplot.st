@@ -1,5 +1,6 @@
 examples
 exampleStackedBarplot
+	<mlbExampleNumber: 4 named: 'Creating a stacked bar plot' description: 'The following code snippet creates a stacked bar plot for some data and to display their standard deviation. The `#dataList` of a `MLBStackedBarPlot` should be a collection of collections of the same arity. It also shows how to rotate the labels of an axis.'>
 	| menMeans womenMeans menStd womenStd data std |
 	menMeans := #(20 35 30 35 27).
 	womenMeans := #(25 32 34 20 25).
