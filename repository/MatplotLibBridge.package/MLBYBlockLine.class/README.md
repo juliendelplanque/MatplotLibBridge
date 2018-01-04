@@ -1,0 +1,1 @@
+A line defined by its x values and a block to generate y-values from x-values.

@@ -1,6 +1,6 @@
 adding
 addLine: aBlock
-	| line |
-	line := MLBLine new.
-	aBlock value: line.
-	self lines add: line
+	self
+		deprecated: 'Please use #addPointsLine: instead'
+		transformWith: '`@receiver addLine: `@statements' -> '`@receiver addPointsLine: `@statements'.
+	self addPointsLine: aBlock

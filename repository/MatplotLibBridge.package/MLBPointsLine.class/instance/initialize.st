@@ -2,5 +2,4 @@ initialization
 initialize
 	super initialize.
 	self
-		color: Color black;
-		width: 1.0
+		points: #()

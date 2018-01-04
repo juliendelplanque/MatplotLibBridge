@@ -1,1 +1,1 @@
-I represent a 2-dimension line. I am used by certain kind of plots (e.g. MLBLinePlot).
+I represent an abstract 2-dimensions line. I am used by certain kind of plots (e.g. MLBLinePlot).

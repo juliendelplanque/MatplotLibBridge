@@ -1,3 +1,3 @@
 private
 y
-	^ self points collect: #y
+	^ self subclassResponsibility
