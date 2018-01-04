@@ -1,4 +1,4 @@
-adding
+deprecated
 addLine: aBlock
 	self
 		deprecated: 'Please use #addPointsLine: instead'
