@@ -1,8 +1,6 @@
 examples
 exampleDiscontinuousLineplot
-	<mlbExampleNumber: 2.2 named: 'Discontinuous lines in line plot or multi-lines plot'
-	description:
-		'If you create points having `Float nan` as x or y, it allows to create discontinuous lines.'>
+	<mlbExampleNumber: 2.2 named: 'Discontinuous lines in line plot or multi-lines plot' description: 'If you create points having `Float nan` as x or y, it allows to create discontinuous lines.'>
 	MLBLinePlot new
 		addPointsLine: [ :line | 
 			line
