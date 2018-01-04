@@ -18,35 +18,48 @@ Metacello new
 Once MatplotLibBridge is installed in your image, you need to configure [Python3Generator](https://github.com/juliendelplanque/Python3Generator) to use the Python interpreter you prefer. My advise is to use the FFI interpreter using: `P3GInterpreter useFFIInterpreter`. If your `python3` binary is located in a standard path in your file system, it should be fine, else you can manually set the path to `python3` binary using for example: `P3GInterpreter current pathToPython: '/usr/bin/python3'`.
 
 ## How to use MatplotLibBridge?
-This page provides some examples to illustrate how to use MatplotLibBridge. For each example, the method `#show` is called when the plot is built. This method open an interactive window showing a preview of the plot. If you want to export the plot in a file, you can use `#generateIn:` which takes a `FileReference` as argument. This method creates an image file with a format corresponding to the extension of the file reference. The available formats are `eps`, `pdf`, `pgf`, `png`, `ps`, `raw`, `rgba`, `svg` and `svgz`. For example: `plot generateIn: '/tmp/foo.png' asFileReference` will generate the `plot` in the file `/tmp/foo.png` in png format.
+This page provides some examples to illustrate how to use MatplotLibBridge. For each example, the method `#show` is called when the plot is built. This method open an interactive window showing a preview of the plot. If you want to export the plot in a file, you can use `#generateIn:` which takes a `FileReference` as argument. This method creates an image file with a format corresponding to the extension of the file reference. The available formats are `.png`, `.svg` and `.pdf`. For example: `plot generateIn: '/tmp/foo.png'` will generate the `plot` in the file `/tmp/foo.png` in png format.
 
 ### Creating a line plot
 The following code snippet creates a line plot for the factorial function between 0 and 10. It also illustrates that it is possible to use LaTeX code as marker for the points. Using `#label:` message allows to give name to the line that will be displayed in a corner of the plot.
 ```
 	MLBLinePlot new
-		addLine: [ :line |
+		addPointsLine: [ :line |
 			line
-				points: ((0 to: 10) collect: [ :i | i@i factorial ]);
+				points: ((0 to: 10) collect: [ :i | i @ i factorial ]);
 				marker: '$\triangledown$';
 				label: 'Factorial' ];
 		show
 ```
 
 ![exampleLineplot](https://raw.githubusercontent.com/juliendelplanque/MatplotLibBridge/master/plots/exampleLineplot.png)
+### Creating a line plot using Y-Block line
+The following code snippet creates a line plot for the factorial function between 0 and 10 using MLBYBlockLine. It is totally equivalent to the preceding example (in the result) but this is another way to express the plot using MatplotLibBridge.
+```
+	MLBLinePlot new
+		addYBlockLine: [ :line |
+			line
+				x: (0 to: 10);
+				yBlock: #factorial;
+				marker: '$\triangledown$';
+				label: 'Factorial' ];
+		show
+```
+
+![exampleLineplotYBlockLine](https://raw.githubusercontent.com/juliendelplanque/MatplotLibBridge/master/plots/exampleLineplotYBlockLine.png)
 ### Creating multi-lines plot
 The following code snippet creates a multi-lines plot for the square root function, the third-root function and the fourth-root function between 0 and 1000. It also shows how to change the color of a line (using `#color:`) and how to change its style (using `#style:`). Available styles for a line can be accessed using `MLBLine>>#lineStyles`
 ```
 	MLBLinePlot new
-		addLine: [ :line |
-			line points: ((0 to: 1000) collect: [ :i | i@i sqrt ]) ];
-		addLine: [ :line |
+		addPointsLine: [ :line | line points: ((0 to: 1000) collect: [ :i | i @ i sqrt ]) ];
+		addPointsLine: [ :line |
 			line
-				points: ((0 to: 1000) collect: [ :i | i@(i nthRoot: 3) ]);
+				points: ((0 to: 1000) collect: [ :i | i @ (i nthRoot: 3) ]);
 				color: Color red;
 				style: '--' ];
-		addLine: [ :line |
+		addPointsLine: [ :line |
 			line
-				points: ((0 to: 1000) collect: [ :i | i@(i nthRoot: 4) ]);
+				points: ((0 to: 1000) collect: [ :i | i @ (i nthRoot: 4) ]);
 				color: Color blue;
 				style: 'dotted' ];
 		show
@@ -57,19 +70,20 @@ The following code snippet creates a multi-lines plot for the square root functi
 It is possible to configure the width of each line in a line plot using `#width:`.
 ```
 	MLBLinePlot new
-		addLine: [ :line |
+		addPointsLine: [ :line |
 			line
-				points: ((0 to: 10) collect: [ :i | i@i ]);
+				points: ((0 to: 10) collect: [ :i | i @ i ]);
 				width: 5;
 				color: Color blue ];
-		addLine: [ :line |
+		addPointsLine: [ :line |
 			line
-				points: ((0 to: 10) collect: [ :i | i@(i*2) ]);
+				points: ((0 to: 10) collect: [ :i | i @ (i * 2) ]);
 				width: 3;
 				color: Color red ];
-		addLine: [ :line | "#width = 1 if not specified."
+		addPointsLine: [ :line |
+			"#width = 1 if not specified."
 			line
-				points: ((0 to: 10) collect: [ :i | i@(i*3) ]);
+				points: ((0 to: 10) collect: [ :i | i @ (i * 3) ]);
 				color: Color green ];
 		show
 ```
@@ -79,14 +93,18 @@ It is possible to configure the width of each line in a line plot using `#width:
 If you create points having `Float nan` as x or y, it allows to create discontinuous lines.
 ```
 	MLBLinePlot new
-		addLine: [ :line |
+		addPointsLine: [ :line |
 			line
-				points: ((-10 to: -0) collect: [ :i | i@1 negated ]) , { 0@Float nan } , ((0 to: 10) collect: [ :i | i@1 ]);
+				points:
+					((-10 to: -0) collect: [ :i | i @ 1 negated ]) , {(0 @ Float nan)}
+						, ((0 to: 10) collect: [ :i | i @ 1 ]);
 				label: 'Discontinous line';
 				color: Color red ];
-		addLine: [ :line |
+		addPointsLine: [ :line |
 			line
-				points: ((-10 to: -0) collect: [ :i | i@0.5 negated ]) , ((0 to: 10) collect: [ :i | i@0.5 ]);
+				points:
+					((-10 to: -0) collect: [ :i | i @ 0.5 negated ])
+						, ((0 to: 10) collect: [ :i | i @ 0.5 ]);
 				label: 'Continous line';
 				color: Color blue ];
 		show
@@ -207,22 +225,25 @@ The following code snippet shows you how to create a line plot with LaTeX code f
 	| interval |
 	interval := 1 to: 1000.
 	MLBLinePlot new
-		lines:
-			{(MLBLine points: (interval collect: [ :i | i @ i sqrt ]))
+		addPointsLine: [ :line |
+			line
+				points: (interval collect: [ :i | i @ i sqrt ]);
 				color: Color green;
-				label: '$\sqrt[2]{x}$';
-				yourself.
-			(MLBLine points: (interval collect: [ :i | i @ (i nthRoot: 3) ]))
+				label: '$\sqrt[2]{x}$' ];
+		addPointsLine: [ :line |
+			line
+				points: (interval collect: [ :i | i @ (i nthRoot: 3) ]);
 				color: Color red;
-				label: '$\sqrt[3]{x}$';
-				yourself.
-			(MLBLine new points: (interval collect: [ :i | i @ (i nthRoot: 4) ]))
+				label: '$\sqrt[3]{x}$' ];
+		addPointsLine: [ :line |
+			line
+				points: (interval collect: [ :i | i @ (i nthRoot: 4) ]);
 				color: Color blue;
-				label: '$\sqrt[4]{x}$';
-				yourself.
-			(MLBLine points: (interval collect: [ :i | i @ i log ]))
-				label: '$log(x)$';
-				yourself.};
+				label: '$\sqrt[4]{x}$' ];
+		addPointsLine: [ :line |
+			line
+				points: (interval collect: [ :i | i @ i log ]);
+				label: '$log(x)$' ];
 		configXAxis: [ :axis | axis min: 0 ];
 		configYAxis: [ :axis | axis min: 0 ];
 		addLegend;
@@ -234,17 +255,22 @@ The following code snippet shows you how to create a line plot with LaTeX code f
 On any plot, you can add annotations. An annotation is an extra graphical element you add on your plot such as for example an arrow pointing to a certain interesting location on the plot.
 ```
 	MLBLinePlot new
-		addLine: [ :line |
+		addPointsLine: [ :line |
 			line
-				points: ((1 to: 50 by: 2) collect: [ :i | i@(i**3) ]);
+				points: ((1 to: 50 by: 2) collect: [ :i | i @ (i ** 3) ]);
 				style: 'solid';
 				marker: 'None';
-				color: (Color r: 0 g: 0 b: 0 alpha: 0.3) ];
+				color:
+					(Color
+						r: 0
+						g: 0
+						b: 0
+						alpha: 0.3) ];
 		addAnnotation: [ :annotation |
 			annotation
 				content: 'a thing';
-				position: 10 @(10**3);
-				textPosition: 10 @(10**4);
+				position: 10 @ (10 ** 3);
+				textPosition: 10 @ (10 ** 4);
 				arrowProperties: {('arrowstyle' -> '<|-')} asDictionary ];
 		addAnnotation: [ :annotation |
 			annotation
@@ -253,7 +279,7 @@ On any plot, you can add annotations. An annotation is an extra graphical elemen
 				textPosition: 35 @ (30 ** 3 + 10);
 				arrowProperties:
 					{('facecolor' -> 'black').
-					('shrink' -> 4) } asDictionary ];
+					('shrink' -> 4)} asDictionary ];
 		show
 ```
 
