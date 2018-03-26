@@ -9,4 +9,5 @@ inBuild
 					startangle: self startAngle;
 					radius: self radius;
 					counterclock: self isCounterClock;
+					colors: self colors;
 					yourself)

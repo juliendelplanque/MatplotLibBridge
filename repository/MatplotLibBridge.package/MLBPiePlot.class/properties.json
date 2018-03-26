@@ -12,7 +12,8 @@
 		"explode",
 		"startAngle",
 		"radius",
-		"isCounterClock"
+		"isCounterClock",
+		"colors"
 	],
 	"name" : "MLBPiePlot",
 	"type" : "normal"
