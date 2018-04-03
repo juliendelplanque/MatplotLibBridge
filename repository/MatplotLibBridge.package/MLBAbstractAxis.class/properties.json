@@ -11,7 +11,8 @@
 		"ticks",
 		"max",
 		"min",
-		"title"
+		"title",
+		"scale"
 	],
 	"name" : "MLBAbstractAxis",
 	"type" : "normal"

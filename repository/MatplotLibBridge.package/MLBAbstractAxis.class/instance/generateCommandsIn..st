@@ -13,4 +13,9 @@ generateCommandsIn: aMLBCommandList
 			ticks: (self ticks ifNil: [ (0 to: self labels size - 1) asArray ]);
 			labels: self labels ].
 	aMLBCommandList
-		add: tempTicks
+		add: tempTicks.
+	self scale ifNotNil: [ 
+		aMLBCommandList
+			add: (self scaleCommandClass new
+						scale: self scale;
+						yourself) ]

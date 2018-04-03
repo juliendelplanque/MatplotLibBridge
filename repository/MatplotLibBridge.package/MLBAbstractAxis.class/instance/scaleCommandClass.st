@@ -1,0 +1,3 @@
+private
+scaleCommandClass
+	^ self subclassResponsibility
