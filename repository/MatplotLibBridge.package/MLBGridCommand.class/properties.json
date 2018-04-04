@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JulienDelplanque 4/4/2018 10:04",
+	"super" : "MLBPyplotCommand",
+	"category" : "MatplotLibBridge-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"axis"
+	],
+	"name" : "MLBGridCommand",
+	"type" : "normal"
+}

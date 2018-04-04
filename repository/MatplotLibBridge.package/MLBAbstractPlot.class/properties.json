@@ -14,7 +14,8 @@
 		"yAxis",
 		"style",
 		"annotations",
-		"axis"
+		"axis",
+		"gridOnAxis"
 	],
 	"name" : "MLBAbstractPlot",
 	"type" : "normal"

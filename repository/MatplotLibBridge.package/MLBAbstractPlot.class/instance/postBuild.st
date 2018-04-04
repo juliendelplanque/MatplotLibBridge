@@ -12,4 +12,9 @@ postBuild
 	self xAxis generateCommandsIn: self commandList.
 	self yAxis generateCommandsIn: self commandList.
 	self annotations do: [ :annotation |
-		annotation generateCommandsIn: self commandList ]
+		annotation generateCommandsIn: self commandList ].
+	self gridOnAxis ifNotNil: [ 
+		self commandList
+			add: (MLBGridCommand new
+						axis: self gridOnAxis;
+						yourself) ]
