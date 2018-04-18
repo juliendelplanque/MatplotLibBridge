@@ -1,0 +1,1 @@
+I am some data used in a MLBScatterPlot2.

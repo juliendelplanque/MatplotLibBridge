@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "JulienDelplanque 4/18/2018 20:33",
+	"super" : "MLBCommandsGenerator",
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"position",
+		"color",
+		"size",
+		"marker"
+	],
+	"name" : "MLBScatterData",
+	"type" : "normal"
+}

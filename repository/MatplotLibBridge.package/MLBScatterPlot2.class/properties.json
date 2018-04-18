@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "JulienDelplanque 4/18/2018 20:31",
+	"super" : "MLBAbstractPlot",
+	"category" : "MatplotLibBridge-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"data",
+		"markersOrder"
+	],
+	"name" : "MLBScatterPlot2",
+	"type" : "normal"
+}
