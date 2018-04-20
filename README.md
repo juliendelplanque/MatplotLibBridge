@@ -221,7 +221,20 @@ The following code snippet creates a pie box plot for some data that sum to 100.
 ```
 
 ![examplePieplot](https://raw.githubusercontent.com/juliendelplanque/MatplotLibBridge/master/plots/examplePieplot.png)
-### Creating a scatter plot
+### Creating a scatter plot (new API)
+The following code snippet creates a scatter plot for some random data. The principle is to create MLBScatterData, to set them a position, a color, a size and a shape
+```
+	MLBScatterPlot2 new
+		data: ((1 to: 20) collect: [ :i | 
+			(MLBScatterData position: (1 to: 15) atRandom @ (1 to: 15) atRandom size: (20 to: 500) atRandom)
+				color: Color random;
+				marker: MLBConstants markers atRandom;
+				yourself ]);
+		show
+```
+
+![exampleScatterplot2](https://raw.githubusercontent.com/juliendelplanque/MatplotLibBridge/master/plots/exampleScatterplot2.png)
+### Creating a scatter plot (old API)
 The following code snippet creates a scatter plot for some random data. Here we create `MLBCircle`s with a random position, a random diameter and a random color and provide them to the `MLBScatterPlot` instance.
 ```
 	MLBScatterPlot new
