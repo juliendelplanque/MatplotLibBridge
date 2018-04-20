@@ -11,9 +11,11 @@ To install this project in your image, open a playground and execute the followi
 ```
 Metacello new
     baseline: 'MatplotLibBridge';
-    repository: 'github://juliendelplanque/MatplotLibBridge/repository';
+    repository: 'github://juliendelplanque/MatplotLibBridge:0.1/repository';
     load
 ```
+
+This will install version 0.1 of the project. You should only depend on released versions for your projects. The master branch of this repository contains latest commits and might not be stable.
 
 Once MatplotLibBridge is installed in your image, you need to configure [Python3Generator](https://github.com/juliendelplanque/Python3Generator) to use the Python interpreter you prefer. My advise is to use the FFI interpreter using: `P3GInterpreter useFFIInterpreter`. If your `python3` binary is located in a standard path in your file system, it should be fine, else you can manually set the path to `python3` binary using for example: `P3GInterpreter current pathToPython: '/usr/bin/python3'`.
 
