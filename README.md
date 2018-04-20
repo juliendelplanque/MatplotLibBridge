@@ -3,10 +3,10 @@ A bridge to provide the ability to Pharo user to use Python's Matplotlib.
 
 ## Install
 This project has been tested on Linux and Mac OS. If someone manage to use it on Windows, please let me know.
-## Python side
+### Python side
 Obviously, you need to have Python 3 installed on your machine. Furthermore, you need matplotlib package installed as well. The following link explains how to do it [install matplotlib](https://matplotlib.org/faq/installing_faq.html).
 
-## Pharo side
+### Pharo side
 To install this project in your image, open a playground and execute the following code snippet:
 ```
 Metacello new
