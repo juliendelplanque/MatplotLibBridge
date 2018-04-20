@@ -1,0 +1,1 @@
+I hold constants defined in Matplolib and that are required in multiple classes.
