@@ -25,4 +25,5 @@ generateMarkdownOn: aStream
 				<< '](https://raw.githubusercontent.com/juliendelplanque/MatplotLibBridge/master/plots/';
 				<< selector;
 				<< '.png)';
+				<< Character lf;
 				<< Character lf ]

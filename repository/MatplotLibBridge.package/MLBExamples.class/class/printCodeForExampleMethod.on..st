@@ -10,7 +10,7 @@ printCodeForExampleMethod: aCompiledMethod on: aStream
 		<< Character lf.
 	lines allButFirst allButFirst do: [ :line |
 		aStream
-			<< line;
+			<< line allButFirst; "Remove first tab character."
 			<< Character lf ].
 	aStream
 		<< '```';
