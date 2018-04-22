@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "JulienDelplanque 1/7/2017 00:12",
 	"super" : "P3GInterpreter",
-	"category" : "MatplotLibBridge-Core",
+	"category" : "MatplotLibBridge-Atlas",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
