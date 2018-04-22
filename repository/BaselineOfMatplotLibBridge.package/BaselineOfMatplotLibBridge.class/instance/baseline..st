@@ -6,4 +6,5 @@ baseline: spec
 		do: [ 
 			self
 				definePackages: spec;
-				defineDependencies: spec ]
+				defineDependencies: spec;
+				defineGroups: spec ]
