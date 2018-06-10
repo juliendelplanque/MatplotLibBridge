@@ -13,7 +13,8 @@ buildFirst
 				ecolor:
 					(self errorBarsColorList
 						ifNotNil: [ self errorBarsColorList asOrderedCollection first ]);
-				width: self barWidth;
+				"Next line is due to some kind of hack in matplotlib to align labels on right edge."
+				width: (alignLabelRightEdge ifTrue: [ self barWidth negated ] ifFalse: [ self barWidth ]);
 				align: self align;
 				log: self logAxis;
 				yourself)

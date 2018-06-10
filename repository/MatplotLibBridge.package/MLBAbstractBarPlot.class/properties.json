@@ -9,7 +9,8 @@
 		"align",
 		"barWidth",
 		"logAxis",
-		"labels"
+		"labels",
+		"alignLabelRightEdge"
 	],
 	"name" : "MLBAbstractBarPlot",
 	"type" : "normal"

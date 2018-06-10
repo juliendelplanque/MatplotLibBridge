@@ -9,7 +9,8 @@ inBuild
 				color: self color;
 				yerr: self errorBars;
 				ecolor: self errorBarsColor;
-				width: self barWidth;
+				"Next line is due to some kind of hack in matplotlib to align labels on right edge."
+				width: (alignLabelRightEdge ifTrue: [ self barWidth negated ] ifFalse: [ self barWidth ]);
 				align: self align;
 				log: self logAxis;
 				yourself)

@@ -16,6 +16,7 @@ buildAllButFirst
 					ecolor:
 						(self errorBarsColorList
 							ifNotNil: [ (self errorBarsColorList asOrderedCollection at: i) asHexString ]);
-					width: self barWidth;
+					"Next line is due to some kind of hack in matplotlib to align labels on right edge."
+					width: (alignLabelRightEdge ifTrue: [ self barWidth negated ] ifFalse: [ self barWidth ]);
 					align: self align;
 					yourself) ]
