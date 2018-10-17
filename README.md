@@ -11,7 +11,7 @@ To install this project in your image, open a playground and execute the followi
 ```
 Metacello new
     baseline: 'MatplotLibBridge';
-    repository: 'github://juliendelplanque/MatplotLibBridge:0.1/repository';
+    repository: 'github://juliendelplanque/MatplotLibBridge/src';
     load
 ```
 
