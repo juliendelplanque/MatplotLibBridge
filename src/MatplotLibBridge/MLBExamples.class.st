@@ -17,11 +17,7 @@ MLBExamples class >> exampleAnnotations [
 				style: 'solid';
 				marker: 'None';
 				color:
-					(Color
-						r: 0
-						g: 0
-						b: 0
-						alpha: 0.3) ];
+					(Color black alpha: 0.3) ];
 		addAnnotation: [ :annotation | 
 			annotation
 				content: 'a thing';
