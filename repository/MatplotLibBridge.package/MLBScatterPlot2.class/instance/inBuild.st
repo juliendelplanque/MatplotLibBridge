@@ -2,11 +2,11 @@ building
 inBuild
 	((self data groupedBy: #marker) associations
 		sorted: [ :a :b | 
-			(self markersOrder indexOf: a head) < (self markersOrder indexOf: b head) ])
+			(self markersOrder indexOf: a key) < (self markersOrder indexOf: b key) ])
 		do: [ :assoc |
 		|marker scatterData|
-		marker := assoc head.
-		scatterData := assoc tail.
+		marker := assoc key.
+		scatterData := assoc value.
 		self commandList
 		add:
 			(MLBScatterCommand new
