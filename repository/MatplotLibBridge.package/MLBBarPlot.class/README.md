@@ -1,1 +1,0 @@
-I am a high-level object to draw bar plot from matplotlib.

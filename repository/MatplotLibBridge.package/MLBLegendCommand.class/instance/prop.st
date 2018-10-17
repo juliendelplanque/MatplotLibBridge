@@ -1,4 +1,0 @@
-accessing
-prop
-	<mlbAttribute>
-	^ prop

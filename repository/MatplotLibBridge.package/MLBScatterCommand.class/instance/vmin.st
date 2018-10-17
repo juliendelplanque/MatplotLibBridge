@@ -1,4 +1,0 @@
-accessing
-vmin
-	<mlbAttribute>
-	^ vmin

@@ -1,1 +1,0 @@
-I represent the legend of a line plot.

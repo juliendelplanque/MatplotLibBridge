@@ -1,4 +1,0 @@
-accessing
-fancybox
-	<mlbAttribute>
-	^ fancybox

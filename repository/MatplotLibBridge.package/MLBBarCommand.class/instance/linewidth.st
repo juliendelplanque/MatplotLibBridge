@@ -1,4 +1,0 @@
-accessing
-linewidth
-	<mlbAttribute>
-	^ linewidth

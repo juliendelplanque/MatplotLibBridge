@@ -1,4 +1,0 @@
-accessing
-frameon
-	<mlbAttribute>
-	^ frameon

@@ -1,4 +1,0 @@
-accessing
-filename
-	<mlbAttribute>
-	^ filename

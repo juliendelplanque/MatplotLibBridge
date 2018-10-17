@@ -1,4 +1,0 @@
-accessing
-labelspacing
-	<mlbAttribute>
-	^ labelspacing

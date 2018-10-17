@@ -1,4 +1,0 @@
-accessing
-markerscale
-	<mlbAttribute>
-	^ markerscale

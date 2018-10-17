@@ -1,4 +1,0 @@
-accessing
-orientation
-	<mlbAttribute>
-	^ orientation

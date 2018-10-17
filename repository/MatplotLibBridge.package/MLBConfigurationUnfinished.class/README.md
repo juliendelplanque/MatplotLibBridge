@@ -1,1 +1,0 @@
-I am the error raised when the configuration of a MLB object is not finished making the command generation impossible.

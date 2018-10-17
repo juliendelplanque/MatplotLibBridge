@@ -1,3 +1,0 @@
-testing
-isVertical
-	^ self vertical

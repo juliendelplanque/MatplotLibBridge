@@ -1,1 +1,0 @@
-I am a command using a function from the matplotlib.pyplot Python module.

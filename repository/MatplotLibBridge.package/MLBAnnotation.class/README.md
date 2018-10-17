@@ -1,1 +1,0 @@
-I am an annotation on the plot.

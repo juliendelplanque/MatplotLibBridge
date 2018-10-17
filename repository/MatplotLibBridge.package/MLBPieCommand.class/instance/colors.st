@@ -1,4 +1,0 @@
-accessing
-colors
-	<mlbAttribute>
-	^ colors

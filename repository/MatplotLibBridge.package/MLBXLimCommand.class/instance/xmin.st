@@ -1,4 +1,0 @@
-accessing
-xmin
-	<mlbAttribute>
-	^ xmin

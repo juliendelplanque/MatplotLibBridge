@@ -1,4 +1,0 @@
-accessing
-borderpad
-	<mlbAttribute>
-	^ borderpad

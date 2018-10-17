@@ -1,4 +1,0 @@
-accessing
-log
-	<mlbAttribute>
-	^ log

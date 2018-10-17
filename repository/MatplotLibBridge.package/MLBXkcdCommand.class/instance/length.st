@@ -1,4 +1,0 @@
-accessing
-length
-	<mlbAttribute>
-	^ length

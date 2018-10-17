@@ -1,3 +1,0 @@
-private
-y
-	^ y

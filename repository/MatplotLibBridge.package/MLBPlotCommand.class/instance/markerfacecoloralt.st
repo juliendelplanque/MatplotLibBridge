@@ -1,4 +1,0 @@
-accessing
-markerfacecoloralt
-	<mlbAttribute>
-	^ markerfacecoloralt

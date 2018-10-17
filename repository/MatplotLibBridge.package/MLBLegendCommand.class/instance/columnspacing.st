@@ -1,4 +1,0 @@
-accessing
-columnspacing
-	<mlbAttribute>
-	^ columnspacing

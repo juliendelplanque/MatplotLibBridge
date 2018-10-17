@@ -1,1 +1,0 @@
-I am the description of an Y axis of a plot.

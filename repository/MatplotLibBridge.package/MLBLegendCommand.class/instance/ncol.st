@@ -1,4 +1,0 @@
-accessing
-ncol
-	<mlbAttribute>
-	^ ncol

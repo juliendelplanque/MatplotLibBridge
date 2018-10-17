@@ -1,4 +1,0 @@
-accessing
-autopct
-	<mlbAttribute>
-	^ autopct

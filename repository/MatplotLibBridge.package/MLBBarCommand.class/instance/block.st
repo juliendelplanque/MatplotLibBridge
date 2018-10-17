@@ -1,4 +1,0 @@
-accessing
-block
-	<mlbAttribute>
-	^ capsize

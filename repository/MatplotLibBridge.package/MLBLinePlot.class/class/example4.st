@@ -1,3 +1,0 @@
-example
-example4
-	MLBExamples exampleChangingLineWidthOfLineplot

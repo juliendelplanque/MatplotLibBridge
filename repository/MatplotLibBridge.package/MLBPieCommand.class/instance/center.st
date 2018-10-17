@@ -1,4 +1,0 @@
-accessing
-center
-	<mlbAttribute>
-	^ center

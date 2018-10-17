@@ -1,3 +1,0 @@
-example
-exampleHorizontal
-	MLBExamples exampleHorizontalBoxplot

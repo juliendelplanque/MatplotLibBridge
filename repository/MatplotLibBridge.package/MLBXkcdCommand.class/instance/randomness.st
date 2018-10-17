@@ -1,4 +1,0 @@
-accessing
-randomness
-	<mlbAttribute>
-	^ randomness

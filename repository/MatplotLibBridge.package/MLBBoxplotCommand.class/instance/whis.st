@@ -1,4 +1,0 @@
-accessing
-whis
-	<mlbAttribute>
-	^ whis

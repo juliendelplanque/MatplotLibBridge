@@ -1,4 +1,0 @@
-accessing
-widths
-	<mlbAttribute>
-	^ widths

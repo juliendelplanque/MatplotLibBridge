@@ -1,4 +1,0 @@
-accessing
-markersize
-	<mlbAttribute>
-	^ markersize

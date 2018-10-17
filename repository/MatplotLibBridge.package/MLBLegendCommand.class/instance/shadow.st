@@ -1,4 +1,0 @@
-accessing
-shadow
-	<mlbAttribute>
-	^ shadow

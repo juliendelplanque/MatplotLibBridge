@@ -1,1 +1,0 @@
-I am an abstract object that is able to #generateCommandsIn:.

@@ -1,4 +1,0 @@
-accessing
-rasterized
-	<mlbAttribute>
-	^ rasterized

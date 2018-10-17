@@ -1,4 +1,0 @@
-accessing
-fontdict
-	<mlbAttribute>
-	^ fontdict

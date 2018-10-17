@@ -1,4 +1,0 @@
-accessing
-vert
-	<mlbAttribute>
-	^ vert

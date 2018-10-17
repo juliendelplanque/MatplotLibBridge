@@ -1,3 +1,0 @@
-private
-limCommandClass
-	^ self subclassResponsibility

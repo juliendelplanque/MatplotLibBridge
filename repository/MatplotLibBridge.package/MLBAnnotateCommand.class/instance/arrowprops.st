@@ -1,4 +1,0 @@
-accessing
-arrowprops
-	<mlbAttribute>
-	^ arrowprops

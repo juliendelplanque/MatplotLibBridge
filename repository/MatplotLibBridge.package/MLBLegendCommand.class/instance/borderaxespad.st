@@ -1,4 +1,0 @@
-accessing
-borderaxespad
-	<mlbAttribute>
-	^ borderaxespad

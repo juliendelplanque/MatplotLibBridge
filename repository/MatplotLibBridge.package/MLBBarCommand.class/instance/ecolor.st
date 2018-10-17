@@ -1,4 +1,0 @@
-accessing
-ecolor
-	<mlbAttribute>
-	^ ecolor

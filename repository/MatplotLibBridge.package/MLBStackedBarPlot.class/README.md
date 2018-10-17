@@ -1,1 +1,0 @@
-I am a high-level object to draw stacked bar plot from matplotlib.

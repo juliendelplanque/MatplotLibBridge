@@ -1,4 +1,0 @@
-accessing
-antialiased
-	<mlbAttribute>
-	^ antialiased

@@ -1,4 +1,0 @@
-accessing
-facecolor
-	<mlbAttribute>
-	^ facecolor

@@ -1,4 +1,0 @@
-alignment
-alignLabelCenter
-	alignLabelRightEdge := false.
-	self align: 'center'

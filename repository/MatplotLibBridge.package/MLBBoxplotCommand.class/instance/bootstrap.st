@@ -1,4 +1,0 @@
-accessing
-bootstrap
-	<mlbAttribute>
-	^ bootstrap

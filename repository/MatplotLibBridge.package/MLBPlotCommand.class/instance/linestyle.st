@@ -1,4 +1,0 @@
-accessing
-linestyle
-	<mlbAttribute>
-	^ linestyle

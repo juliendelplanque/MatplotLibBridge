@@ -1,3 +1,0 @@
-accessing
-dataList
-	^ dataList

@@ -1,4 +1,0 @@
-accessing
-sym
-	<mlbAttribute>
-	^ sym

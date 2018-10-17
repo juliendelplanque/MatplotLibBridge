@@ -1,4 +1,0 @@
-accessing
-dpi
-	<mlbAttribute>
-	^ dpi

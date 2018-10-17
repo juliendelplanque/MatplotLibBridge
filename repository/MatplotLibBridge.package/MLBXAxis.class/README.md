@@ -1,1 +1,0 @@
-I am the description of an X axis of a plot.

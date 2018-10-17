@@ -1,4 +1,0 @@
-accessing
-meanline
-	<mlbAttribute>
-	^ meanline

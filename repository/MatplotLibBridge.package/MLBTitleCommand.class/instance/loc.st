@@ -1,4 +1,0 @@
-accessing
-loc
-	<mlbAttribute>
-	^ loc

@@ -1,4 +1,0 @@
-accessing
-textcoords
-	<mlbAttribute>
-	^ textcoords

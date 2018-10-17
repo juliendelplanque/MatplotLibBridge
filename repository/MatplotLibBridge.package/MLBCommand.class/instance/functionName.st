@@ -1,3 +1,0 @@
-accessing
-functionName
-	^ self subclassResponsibility

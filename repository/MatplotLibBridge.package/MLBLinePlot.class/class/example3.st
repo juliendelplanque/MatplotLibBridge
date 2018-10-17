@@ -1,3 +1,0 @@
-example
-example3
-	MLBExamples exampleDiscontinuousLineplot

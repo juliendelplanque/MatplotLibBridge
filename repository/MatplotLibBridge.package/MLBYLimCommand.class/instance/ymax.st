@@ -1,4 +1,0 @@
-accessing
-ymax
-	<mlbAttribute>
-	^ ymax

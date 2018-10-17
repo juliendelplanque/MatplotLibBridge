@@ -1,3 +1,0 @@
-private
-labelCommandClass
-	^ self subclassResponsibility

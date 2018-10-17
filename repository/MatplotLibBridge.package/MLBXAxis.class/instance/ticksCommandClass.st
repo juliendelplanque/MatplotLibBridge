@@ -1,3 +1,0 @@
-private
-ticksCommandClass
-	^ MLBXTicksCommand

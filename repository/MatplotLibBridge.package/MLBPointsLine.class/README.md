@@ -1,1 +1,0 @@
-A line defined point-by-point.

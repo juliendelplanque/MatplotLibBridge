@@ -1,4 +1,0 @@
-accessing
-format
-	<mlbAttribute>
-	^ format

@@ -1,4 +1,0 @@
-accessing
-papertype
-	<mlbAttribute>
-	^ papertype

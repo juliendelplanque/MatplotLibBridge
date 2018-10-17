@@ -1,4 +1,0 @@
-accessing
-marker
-	<mlbAttribute>
-	^ marker

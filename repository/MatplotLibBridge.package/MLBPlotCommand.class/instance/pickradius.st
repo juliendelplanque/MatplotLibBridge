@@ -1,4 +1,0 @@
-accessing
-pickradius
-	<mlbAttribute>
-	^ pickradius

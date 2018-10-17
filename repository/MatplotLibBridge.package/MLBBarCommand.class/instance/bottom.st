@@ -1,4 +1,0 @@
-accessing
-bottom
-	<mlbAttribute>
-	^ bottom

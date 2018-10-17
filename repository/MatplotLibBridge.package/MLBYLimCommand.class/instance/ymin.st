@@ -1,4 +1,0 @@
-accessing
-ymin
-	<mlbAttribute>
-	^ ymin

@@ -1,4 +1,0 @@
-accessing
-rotation
-	<mlbAttribute>
-	^ rotation

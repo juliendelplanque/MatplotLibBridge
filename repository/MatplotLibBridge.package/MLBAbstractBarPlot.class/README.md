@@ -1,1 +1,0 @@
-I am a super class for all boxplot classes.

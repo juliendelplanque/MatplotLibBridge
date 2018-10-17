@@ -1,4 +1,0 @@
-accessing
-xerr
-	<mlbAttribute>
-	^ xerr
