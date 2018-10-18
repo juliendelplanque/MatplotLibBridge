@@ -3,14 +3,14 @@ I am some data used in a MLBScatterPlot2.
 "
 Class {
 	#name : #MLBScatterData,
-	#superclass : #MLBCommandsGenerator,
+	#superclass : #Object,
 	#instVars : [
 		'position',
 		'color',
 		'size',
 		'marker'
 	],
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-API'
 }
 
 { #category : #'instance creation' }
