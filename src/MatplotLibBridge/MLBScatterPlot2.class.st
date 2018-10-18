@@ -15,6 +15,11 @@ Class {
 	#category : 'MatplotLibBridge-API'
 }
 
+{ #category : #example }
+MLBScatterPlot2 class >> example [
+	MLBExamples exampleScatterplot2
+]
+
 { #category : #accessing }
 MLBScatterPlot2 >> data [
 	^ data
