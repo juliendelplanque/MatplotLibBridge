@@ -19,6 +19,14 @@ MLBPointsLine class >> example [
 		yourself
 ]
 
+{ #category : #example }
+MLBPointsLine class >> example2 [
+	"Alternative way to instantiate a MLBPointsLine. Specify x and y as separated arrays."
+	^ MLBPointsLine new
+		x: #(1 2 3) y: #(1 2 3);
+		yourself
+]
+
 { #category : #initialization }
 MLBPointsLine >> initialize [
 	super initialize.
@@ -39,6 +47,11 @@ MLBPointsLine >> points: anObject [
 { #category : #private }
 MLBPointsLine >> x [
 	^ self points collect: #x
+]
+
+{ #category : #accessing }
+MLBPointsLine >> x: anArrayOfXs y: anArrayOfYs [
+	self points: anArrayOfXs @ anArrayOfYs
 ]
 
 { #category : #private }
