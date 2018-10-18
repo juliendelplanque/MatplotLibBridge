@@ -35,7 +35,7 @@ MLBCommand >> generateInstructions [
 
 { #category : #accessing }
 MLBCommand >> mlbAttributeAccessors [
-	^ (Pragma allNamed: #mlbAttribute in: self class) collect: #methodSelector
+	^ self mlbKeywordAttributePragmas collect: #methodSelector
 ]
 
 { #category : #accessing }
@@ -46,8 +46,18 @@ MLBCommand >> mlbAttributesDict [
 ]
 
 { #category : #accessing }
+MLBCommand >> mlbKeywordAttributePragmas [
+	^ Pragma allNamed: #mlbAttribute in: self class
+]
+
+{ #category : #accessing }
+MLBCommand >> mlbPositionalAttributePragmas [
+	^ Pragma allNamed: #mlbAttribute: in: self class
+]
+
+{ #category : #accessing }
 MLBCommand >> mlbPositionalAttributes [
-	^ (((Pragma allNamed: #mlbAttribute: in: self class)
+	^ ((self mlbPositionalAttributePragmas
 		select: [ :p | (p methodSelector value: self) isNotNil ]
 		thenCollect: [ :p | (p methodSelector value: self) -> p arguments first ])
 		sorted: [ :a :b | a value < b value ]) collect: #key
