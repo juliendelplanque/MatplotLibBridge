@@ -38,7 +38,7 @@ MLBScatterData >> color: anObject [
 	color := anObject
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 MLBScatterData >> initialize [
 	super initialize.
 	self
