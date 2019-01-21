@@ -11,6 +11,11 @@ Class {
 	#category : 'MatplotLibBridge-API'
 }
 
+{ #category : #visiting }
+MLBXBlockLine >> acceptVisitor: visitor [
+	^ visitor visitMLBXBlockLine: self
+]
+
 { #category : #private }
 MLBXBlockLine >> x [
 	^ self y collect: [ :data | self xBlock value: data ]

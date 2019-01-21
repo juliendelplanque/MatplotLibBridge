@@ -16,6 +16,11 @@ MLBScatterPlot class >> example [
 	MLBExamples exampleScatterplot
 ]
 
+{ #category : #visiting }
+MLBScatterPlot >> acceptVisitor: visitor [
+	^ visitor visitMLBScatterPlot: self
+]
+
 { #category : #accessing }
 MLBScatterPlot >> circles [
 	^ circles

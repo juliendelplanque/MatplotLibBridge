@@ -16,6 +16,11 @@ Class {
 	#category : #'MatplotLibBridge-API'
 }
 
+{ #category : #visiting }
+MLBLegend >> acceptVisitor: visitor [
+	^ visitor visitMLBLegend: self
+]
+
 { #category : #accessing }
 MLBLegend >> fontSize [
 	^ fontSize

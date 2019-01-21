@@ -7,6 +7,11 @@ Class {
 	#category : 'MatplotLibBridge-API'
 }
 
+{ #category : #visiting }
+MLBXAxis >> acceptVisitor: visitor [
+	^ visitor visitMLBXAxis: self
+]
+
 { #category : #'command generation' }
 MLBXAxis >> generateCommandsIn: aMLBCommandList [
 	super generateCommandsIn: aMLBCommandList.

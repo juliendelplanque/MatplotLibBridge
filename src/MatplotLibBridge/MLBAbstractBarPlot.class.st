@@ -70,6 +70,11 @@ MLBAbstractBarPlot >> initialize [
 		logAxis: false
 ]
 
+{ #category : #testing }
+MLBAbstractBarPlot >> isAlignLabelRightEdge [
+	^ alignLabelRightEdge
+]
+
 { #category : #accessing }
 MLBAbstractBarPlot >> labels [
 	^ labels

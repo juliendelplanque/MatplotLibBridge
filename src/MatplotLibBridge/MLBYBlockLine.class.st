@@ -11,6 +11,11 @@ Class {
 	#category : 'MatplotLibBridge-API'
 }
 
+{ #category : #visiting }
+MLBYBlockLine >> acceptVisitor: visitor [
+	^ visitor visitMLBYBlockLine: self
+]
+
 { #category : #private }
 MLBYBlockLine >> x [
 	^ x

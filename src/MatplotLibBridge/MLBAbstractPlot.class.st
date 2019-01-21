@@ -33,6 +33,11 @@ MLBAbstractPlot class >> isValidGrid: aString [
 	^ self availableGrids includes: aString
 ]
 
+{ #category : #visiting }
+MLBAbstractPlot >> acceptVisitor: visitor [
+	^ self subclassResponsibility
+]
+
 { #category : #annotations }
 MLBAbstractPlot >> addAnnotation: aBlock [
 	| annotation |

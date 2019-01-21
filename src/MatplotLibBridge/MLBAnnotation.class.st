@@ -14,6 +14,11 @@ Class {
 	#category : #'MatplotLibBridge-API'
 }
 
+{ #category : #visiting }
+MLBAnnotation >> acceptVisitor: visitor [
+	^ visitor visitMLBAnnotation: self
+]
+
 { #category : #accessing }
 MLBAnnotation >> arrowProperties [
 	^ arrowProperties

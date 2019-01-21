@@ -18,6 +18,11 @@ MLBStackedBarPlot class >> example [
 	MLBExamples exampleStackedBarplot
 ]
 
+{ #category : #visiting }
+MLBStackedBarPlot >> acceptVisitor: visitor [
+	^ visitor visitMLBStackedBarPlot: self
+]
+
 { #category : #building }
 MLBStackedBarPlot >> buildAllButFirst [
 	2 to: self dataList anyOne size do: [ :i | 

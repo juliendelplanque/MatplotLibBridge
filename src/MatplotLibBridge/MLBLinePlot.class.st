@@ -31,6 +31,11 @@ MLBLinePlot class >> example4 [
 	MLBExamples exampleChangingLineWidthOfLineplot
 ]
 
+{ #category : #visiting }
+MLBLinePlot >> acceptVisitor: visitor [
+	^ visitor visitMLBLinePlot: self
+]
+
 { #category : #adding }
 MLBLinePlot >> addLegend [
 	self addLegend: [ :l| ]

@@ -22,6 +22,11 @@ MLBBoxPlot class >> exampleVertical [
 	MLBExamples exampleVerticalBoxplot
 ]
 
+{ #category : #visiting }
+MLBBoxPlot >> acceptVisitor: visitor [
+	^ visitor visitMLBBoxPlot: self
+]
+
 { #category : #setting }
 MLBBoxPlot >> beHorizontal [
 	self vertical: false

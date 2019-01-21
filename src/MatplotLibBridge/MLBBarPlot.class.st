@@ -18,6 +18,11 @@ MLBBarPlot class >> example [
 	MLBExamples exampleBarplot
 ]
 
+{ #category : #visiting }
+MLBBarPlot >> acceptVisitor: visitor [
+	^ visitor visitMLBBarPlot: self
+]
+
 { #category : #accessing }
 MLBBarPlot >> color [
 	^ color

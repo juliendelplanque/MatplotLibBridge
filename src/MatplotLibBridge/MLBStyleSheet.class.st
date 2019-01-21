@@ -12,6 +12,11 @@ Class {
 	#category : 'MatplotLibBridge-API'
 }
 
+{ #category : #visiting }
+MLBStyleSheet >> acceptVisitor: visitor [
+	^ visitor visitMLBStyleSheet: self
+]
+
 { #category : #'private - adding' }
 MLBStyleSheet >> addRcCommand: aMLBRcCommand [
 	"Low level way to add a rc command.

@@ -22,6 +22,11 @@ MLBPiePlot class >> example [
 	MLBExamples examplePieplot
 ]
 
+{ #category : #visiting }
+MLBPiePlot >> acceptVisitor: visitor [
+	^ visitor visitMLBPiePlot: self
+]
+
 { #category : #accessing }
 MLBPiePlot >> colors [
 	^ colors

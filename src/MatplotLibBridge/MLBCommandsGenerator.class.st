@@ -7,6 +7,11 @@ Class {
 	#category : #'MatplotLibBridge-API'
 }
 
+{ #category : #visiting }
+MLBCommandsGenerator >> acceptVisitor: visitor [
+	^ self subclassResponsibility
+]
+
 { #category : #'command generation' }
 MLBCommandsGenerator >> generateCommandsIn: aMLBCommandList [
 	self subclassResponsibility

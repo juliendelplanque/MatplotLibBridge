@@ -20,6 +20,11 @@ MLBScatterPlot2 class >> example [
 	MLBExamples exampleScatterplot2
 ]
 
+{ #category : #visiting }
+MLBScatterPlot2 >> acceptVisitor: visitor [
+	^ visitor visitMLBScatterPlot2: self
+]
+
 { #category : #accessing }
 MLBScatterPlot2 >> data [
 	^ data

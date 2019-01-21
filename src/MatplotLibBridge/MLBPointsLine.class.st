@@ -27,6 +27,11 @@ MLBPointsLine class >> example2 [
 		yourself
 ]
 
+{ #category : #visiting }
+MLBPointsLine >> acceptVisitor: visitor [
+	^ visitor visitMLBPointsLine: self
+]
+
 { #category : #initialization }
 MLBPointsLine >> initialize [
 	super initialize.
