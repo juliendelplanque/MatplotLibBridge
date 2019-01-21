@@ -3,7 +3,7 @@ I am a circle used in a MLBScatterPlot.
 "
 Class {
 	#name : #MLBCircle,
-	#superclass : #MLBCommandsGenerator,
+	#superclass : #Object,
 	#instVars : [
 		'position',
 		'size',
