@@ -103,6 +103,48 @@ MLBCommandListGenerator >> visitMLBBarPlot: aMLBBarPlot [
 ]
 
 { #category : #visiting }
+MLBCommandListGenerator >> visitMLBStackedBarPlot: aMLBStackedBarPlot [
+	self commandList
+		add:
+			(MLBBarCommand new
+				left: (0 to: aMLBStackedBarPlot dataList size - 1);
+				height: (aMLBStackedBarPlot dataList collect: #first);
+				tick_label: aMLBStackedBarPlot labels;
+				color: aMLBStackedBarPlot colorList first;
+				yerr:
+					(aMLBStackedBarPlot errorBarsList
+						ifNotNil: [ :list | list collect: #first ]);
+				ecolor:
+					(aMLBStackedBarPlot errorBarsColorList
+						ifNotNil: [ :list | list asOrderedCollection first ]);
+				"Next line is due to some kind of hack in matplotlib to align labels on right edge."
+				width: (aMLBStackedBarPlot isAlignLabelRightEdge ifTrue: [ aMLBStackedBarPlot barWidth negated ] ifFalse: [ aMLBStackedBarPlot barWidth ]);
+				align: aMLBStackedBarPlot align;
+				log: aMLBStackedBarPlot logAxis;
+				yourself).
+	2 to: aMLBStackedBarPlot dataList anyOne size do: [ :i | 
+		self commandList
+			add:
+				(MLBBarCommand new
+					left: (0 to: aMLBStackedBarPlot dataList size - 1);
+					height: (aMLBStackedBarPlot dataList collect: [ :d | d at: i ]);
+					bottom:
+						(aMLBStackedBarPlot dataList
+							collect: [ :d | ((1 to: i - 1) collect: [ :j | d at: j ]) sum ]);
+					color: (aMLBStackedBarPlot colorList at: i);
+					yerr:
+						(aMLBStackedBarPlot errorBarsList
+							ifNotNil: [ :list | list collect: [ :e | e at: i ] ]);
+					ecolor:
+						(aMLBStackedBarPlot errorBarsColorList
+							ifNotNil: [ :list | (list asOrderedCollection at: i) asHexString ]);
+					"Next line is due to some kind of hack in matplotlib to align labels on right edge."
+					width: (aMLBStackedBarPlot isAlignLabelRightEdge ifTrue: [ aMLBStackedBarPlot barWidth negated ] ifFalse: [ aMLBStackedBarPlot barWidth ]);
+					align: aMLBStackedBarPlot align;
+					yourself) ]
+]
+
+{ #category : #visiting }
 MLBCommandListGenerator >> visitMLBXAxis: aMLBXAxis [
 	self visitMLBAbstractAxis: aMLBXAxis.
 	self commandList
