@@ -19,7 +19,7 @@ MLBCommandList >> = anObject [
 		ifTrue: [ ^ true ].
 	self class = anObject class
 		ifFalse: [ ^ false ].
-	^ commands = anObject commands
+	^ self commands = anObject commands
 ]
 
 { #category : #adding }

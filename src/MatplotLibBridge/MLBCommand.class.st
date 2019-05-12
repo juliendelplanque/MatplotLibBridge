@@ -22,7 +22,7 @@ MLBCommand >> = anObject [
 		ifTrue: [ ^ true ].
 	self class = anObject class
 		ifFalse: [ ^ false ].
-	^ module = anObject module
+	^ self module = anObject module
 		and: [ self functionName = anObject functionName
 			and: [ self mlbPositionalAttributes = anObject mlbPositionalAttributes
 				and: [ self mlbAttributesDict = anObject mlbAttributesDict ] ] ]
