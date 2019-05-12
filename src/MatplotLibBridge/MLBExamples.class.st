@@ -7,10 +7,10 @@ Class {
 	#category : #'MatplotLibBridge-Examples'
 }
 
-{ #category : #examples }
-MLBExamples class >> exampleAnnotations [
+{ #category : #samples }
+MLBExamples class >> annotationsSample [
 	<mlbExampleNumber: 9 named: 'Annotations' description: 'On any plot, you can add annotations. An annotation is an extra graphical element you add on your plot such as for example an arrow pointing to a certain interesting location on the plot.'>
-	MLBLinePlot new
+	^ MLBLinePlot new
 		addPointsLine: [ :line | 
 			line
 				points: ((1 to: 50 by: 2) collect: [ :i | i @ (i ** 3) ]);
@@ -32,17 +32,17 @@ MLBExamples class >> exampleAnnotations [
 				arrowProperties:
 					{('facecolor' -> 'black').
 					('shrink' -> 4)} asDictionary ];
-		show
+		yourself
 ]
 
-{ #category : #examples }
-MLBExamples class >> exampleBarplot [
+{ #category : #samples }
+MLBExamples class >> barplotSample [
 	<mlbExampleNumber: 3 named: 'Creating a bar plot' description: 'The following code snippet creates a bar plot for some data and to display their standard deviation. This example also illustrates how to do some basic configuration of x and y axes (`#configXAxis:` and `#configYAxis:`).'>
 	|data std |
 	data := #(20 35 30 35 27).
 	std := #(2 3 4 1 2).
 	
-	MLBBarPlot new
+	^ MLBBarPlot new
 		data: data;
 		labels: #('G1' 'G2' 'G3' 'G4' 'G5');
 		color: Color blue;
@@ -56,13 +56,13 @@ MLBExamples class >> exampleBarplot [
 		errorBars: std;
 		errorBarsColor: Color black;
 		alignLabelCenter;
-		show.
+		yourself.
 ]
 
-{ #category : #examples }
-MLBExamples class >> exampleChangingLineWidthOfLineplot [
+{ #category : #samples }
+MLBExamples class >> changingLineWidthOfLineplotSample [
 	<mlbExampleNumber: 2.1 named: 'Changing line width in line plot or multi-lines plot' description: 'It is possible to configure the width of each line in a line plot using `#width:`.'>
-	MLBLinePlot new
+	^ MLBLinePlot new
 		addPointsLine: [ :line | 
 			line
 				points: ((0 to: 10) collect: [ :i | i @ i ]);
@@ -78,13 +78,13 @@ MLBExamples class >> exampleChangingLineWidthOfLineplot [
 			line
 				points: ((0 to: 10) collect: [ :i | i @ (i * 3) ]);
 				color: Color green ];
-		show
+		yourself
 ]
 
-{ #category : #examples }
-MLBExamples class >> exampleDiscontinuousLineplot [
+{ #category : #samples }
+MLBExamples class >> discontinuousLineplotSample [
 	<mlbExampleNumber: 2.2 named: 'Discontinuous lines in line plot or multi-lines plot' description: 'If you create points having `Float nan` as x or y, it allows to create discontinuous lines.'>
-	MLBLinePlot new
+	^ MLBLinePlot new
 		addPointsLine: [ :line | 
 			line
 				points:
@@ -99,201 +99,87 @@ MLBExamples class >> exampleDiscontinuousLineplot [
 						, ((0 to: 10) collect: [ :i | i @ 0.5 ]);
 				label: 'Continous line';
 				color: Color blue ];
-		show
+		yourself
+]
+
+{ #category : #examples }
+MLBExamples class >> exampleAnnotations [
+	self annotationsSample show
+]
+
+{ #category : #examples }
+MLBExamples class >> exampleBarplot [
+	self barplotSample show.
+]
+
+{ #category : #examples }
+MLBExamples class >> exampleChangingLineWidthOfLineplot [
+	self changingLineWidthOfLineplotSample show
+]
+
+{ #category : #examples }
+MLBExamples class >> exampleDiscontinuousLineplot [
+	self discontinuousLineplotSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleHorizontalBoxplot [
-	<mlbExampleNumber: 4 named: 'Creating an horizontal box plot' description: 'The following code snippet creates an horizontal box plot for some random data.'>
-	MLBBoxPlot new
-		dataList: {((1 to: 100) collect: [ :i | (1 to: 10) atRandom ]) . ((1 to: 100) collect: [ :i | (1 to: 10) atRandom ])};
-		beHorizontal;
-		configYAxis: [ :axis|
-			axis
-				labels: #('Data 1' 'Data 2') ];
-		show
+	self horizontalBoxplotSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleLegend [
-	<mlbExampleNumber: 8 named: 'Using LaTeX in legend' description: 'The following code snippet shows you how to create a line plot with LaTeX code for lines'' labels. In fact, with MatplotLibBridge, you can use LaTeX in any String you provide.'>
-	| interval |
-	interval := 1 to: 1000.
-	MLBLinePlot new
-		addPointsLine: [ :line |
-			line
-				points: (interval collect: [ :i | i @ i sqrt ]);
-				color: Color green;
-				label: '$\sqrt[2]{x}$' ];
-		addPointsLine: [ :line |
-			line
-				points: (interval collect: [ :i | i @ (i nthRoot: 3) ]);
-				color: Color red;
-				label: '$\sqrt[3]{x}$' ];
-		addPointsLine: [ :line |
-			line
-				points: (interval collect: [ :i | i @ (i nthRoot: 4) ]);
-				color: Color blue;
-				label: '$\sqrt[4]{x}$' ];
-		addPointsLine: [ :line |
-			line
-				points: (interval collect: [ :i | i @ i log ]);
-				label: '$log(x)$' ];
-		configXAxis: [ :axis | axis min: 0 ];
-		configYAxis: [ :axis | axis min: 0 ];
-		addLegend;
-		show
+	self legendSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleLineplot [
-	<mlbExampleNumber: 1 named: 'Creating a line plot' description: 'The following code snippet creates a line plot for the factorial function between 0 and 10. It also illustrates that it is possible to use LaTeX code as marker for the points. Using `#label:` message allows to give name to the line that will be displayed in a corner of the plot.'>
-	MLBLinePlot new
-		addPointsLine: [ :line | 
-			line
-				points: ((0 to: 10) collect: [ :i | i @ i factorial ]);
-				marker: '$\triangledown$';
-				label: 'Factorial' ];
-		show
+	self lineplotSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleLineplotYBlockLine [
-	<mlbExampleNumber: 1.1 named: 'Creating a line plot using Y-Block line' description: 'The following code snippet creates a line plot for the factorial function between 0 and 10 using MLBYBlockLine. It is totally equivalent to the preceding example (in the result) but this is another way to express the plot using MatplotLibBridge.'>
-	MLBLinePlot new
-		addYBlockLine: [ :line | 
-			line
-				x: (0 to: 10);
-				yBlock: #factorial;
-				marker: '$\triangledown$';
-				label: 'Factorial' ];
-		show
+	self lineplotYBlockLineSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleLogscaleLineplot [
-	<mlbExampleNumber: 2.3 named: 'Set an axis to be in logarithmic scale' description: 'Calling the method `#logScale` in #configYAxis block makes the scale of the concerned axis logarithmic. Other scales are available, see `MLBAbstractAxis>>validScales`.'>
-	MLBLinePlot new
-		addPointsLine: [ :line | 
-			line
-				points: ((0 to: 100) collect: [ :i | i @ i exp ]);
-				label: 'exp(x)' ];
-		configYAxis: [ :yAxis |
-			yAxis logScale ];
-		show
+	self logscaleLineplotSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleMultilineplot [
-	<mlbExampleNumber: 2 named: 'Creating multi-lines plot' description: 'The following code snippet creates a multi-lines plot for the square root function, the third-root function and the fourth-root function between 0 and 1000. It also shows how to change the color of a line (using `#color:`) and how to change its style (using `#style:`). Available styles for a line can be accessed using `MLBLine>>#lineStyles`'>
-	MLBLinePlot new
-		addPointsLine: [ :line | line points: ((0 to: 1000) collect: [ :i | i @ i sqrt ]) ];
-		addPointsLine: [ :line | 
-			line
-				points: ((0 to: 1000) collect: [ :i | i @ (i nthRoot: 3) ]);
-				color: Color red;
-				style: '--' ];
-		addPointsLine: [ :line | 
-			line
-				points: ((0 to: 1000) collect: [ :i | i @ (i nthRoot: 4) ]);
-				color: Color blue;
-				style: 'dotted' ];
-		show
+	self multilineplotSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> examplePieplot [
-	<mlbExampleNumber: 6 named: 'Creating a pie plot' description: 'The following code snippet creates a pie box plot for some data that sum to 100. You can optionally add `labels:`, set the a shadow or not (`hasShadow:`), configure the `axis:` (here we want to have a round pie, so we set it to `''equal''`), explode each part of the pie at different degrees (here only the part concerning `30` data is exploded) and choose the start angle.'>
-	MLBPiePlot new
-		data: #(50 20 30);
-		labels: #(One Two Three);
-		hasShadow: false;
-		axis: 'equal';
-		explode: #(0 0 0.1);
-		startAngle: -90;
-		show
+	self pieplotSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleScatterplot [
-	<mlbExampleNumber: 7.2 named: 'Creating a scatter plot (old API)' description: 'The following code snippet creates a scatter plot for some random data. Here we create `MLBCircle`s with a random position, a random diameter and a random color and provide them to the `MLBScatterPlot` instance.'>
-	MLBScatterPlot new
-		circles: ((1 to: 10) collect: [ :i | 
-			(MLBCircle position: (1 to: 15) atRandom @ (1 to: 15) atRandom size: (20 to: 500) atRandom)
-				color: Color random;
-				yourself ]);
-		show
+	self scatterplotSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleScatterplot2 [
-	<mlbExampleNumber: 7.1 named: 'Creating a scatter plot (new API)' description: 'The following code snippet creates a scatter plot for some random data. The principle is to create MLBScatterData, to set them a position, a color, a size and a shape'>
-	MLBScatterPlot2 new
-		data: ((1 to: 20) collect: [ :i | 
-			(MLBScatterData position: (1 to: 15) atRandom @ (1 to: 15) atRandom size: (20 to: 500) atRandom)
-				color: Color random;
-				marker: MLBConstants markers atRandom;
-				yourself ]);
-		show
+	self scatterplot2Sample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleStackedBarplot [
-	<mlbExampleNumber: 4 named: 'Creating a stacked bar plot' description: 'The following code snippet creates a stacked bar plot for some data and to display their standard deviation. The `#dataList` of a `MLBStackedBarPlot` should be a collection of collections of the same arity. It also shows how to rotate the labels of an axis.'>
-	| menMeans womenMeans menStd womenStd data std |
-	menMeans := #(20 35 30 35 27).
-	womenMeans := #(25 32 34 20 25).
-	menStd := #(2 3 4 1 2).
-	womenStd := #(3 5 2 3 3).
-	
-	data := (1 to: menMeans size) collect: [ :i |
-				{ menMeans at: i. womenMeans at: i } ].
-	std := (1 to: menStd size) collect: [ :i |
-				{ menStd at: i. womenStd at: i } ].
-	
-	MLBStackedBarPlot new
-		dataList: data;
-		colorList: {Color blue. Color pink};
-		title: 'Scores by group and gender';
-		configXAxis: [ :xAxis |
-			xAxis
-				labelsRotation: 45;
-				labels: #('G1' 'G2' 'G3' 'G4' 'G5') ];
-		configYAxis: [ :yAxis |
-			yAxis
-				title: 'Scores' ];
-		errorBarsList: std;
-		errorBarsColorList: { Color black . Color black };
-		alignLabelCenter;
-		show.
+	self stackedBarplotSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleStyleSheet [
-	<mlbExampleNumber: 10 named: 'Style sheet' description: 'MatplotLib allows to use stylesheet to reuse/change easily plot styles. The bridge actually expose this API with the `MLBStyleSheet` object. The name of properties are the same as in the python version. For more information see the official documentation of matplotlib: https://matplotlib.org/users/customizing.html.'>
-	| style |
-	style := MLBStyleSheet new
-					setProperty: 'color' ofGroup: 'text' to: 'red';
-					setProperty: 'weight' ofGroup: 'font' to: 'bold';
-					yourself.
-					
-	MLBBarPlot new
-		data: #(1 2 3);
-		labels: #('Group 1' 'Group 2' 'Group 3');
-		title: 'A title';
-		style: style;
-		show
+	self styleSheetSample show
 ]
 
 { #category : #examples }
 MLBExamples class >> exampleVerticalBoxplot [
-	<mlbExampleNumber: 5 named: 'Creating a vertical box plot' description: 'The following code snippet creates a vertical box plot for some random data. No need to call `#beVertical` since this is the default orientation of the plot.'>
-	MLBBoxPlot new
-		dataList: {((1 to: 100) collect: [ :i | (1 to: 10) atRandom ])};
-		configXAxis: [ :xAxis|
-			xAxis
-				labels: #('Data') ];
-		show
+	self verticalBoxplotSample show
 ]
 
 { #category : #'accessing - documentation' }
@@ -333,31 +219,129 @@ MLBExamples class >> generateMarkdownOn: aStream [
 				<< Character lf ]
 ]
 
-{ #category : #private }
-MLBExamples class >> generatePlotForExampleMethod: aCompiledMethod in: aFileReference [
-	
-	| lines code |
-	lines := (aCompiledMethod sourceCode lines allButFirst: 2) allButLast asOrderedCollection.
-	
-	lines
-		add: 'generateIn: ' , aFileReference storeString.
-		
-	code := lines joinUsing: String cr.
-	
-	Smalltalk compiler evaluate: code
-]
-
 { #category : #'example plots generation' }
 MLBExamples class >> generatePlotsForExamplesIn: aDirectoryFileReference [
 	self assert: aDirectoryFileReference isDirectory.
 	
 	self methodsWithExamplePragma do: [ :selector |
-		self generatePlotForExampleMethod: (self class >> selector) in: aDirectoryFileReference / (selector , '.png') ]
+		(selector value: self class) generateIn: aDirectoryFileReference / (selector , '.png') ]
+]
+
+{ #category : #samples }
+MLBExamples class >> horizontalBoxplotSample [
+	<mlbExampleNumber: 4 named: 'Creating an horizontal box plot' description: 'The following code snippet creates an horizontal box plot for some random data.'>
+	^ MLBBoxPlot new
+		dataList: {((1 to: 100) collect: [ :i | (1 to: 10) atRandom ]) . ((1 to: 100) collect: [ :i | (1 to: 10) atRandom ])};
+		beHorizontal;
+		configYAxis: [ :axis|
+			axis
+				labels: #('Data 1' 'Data 2') ];
+		yourself
+]
+
+{ #category : #samples }
+MLBExamples class >> legendSample [
+	<mlbExampleNumber: 8 named: 'Using LaTeX in legend' description: 'The following code snippet shows you how to create a line plot with LaTeX code for lines'' labels. In fact, with MatplotLibBridge, you can use LaTeX in any String you provide.'>
+	| interval |
+	interval := 1 to: 1000.
+	^ MLBLinePlot new
+		addPointsLine: [ :line |
+			line
+				points: (interval collect: [ :i | i @ i sqrt ]);
+				color: Color green;
+				label: '$\sqrt[2]{x}$' ];
+		addPointsLine: [ :line |
+			line
+				points: (interval collect: [ :i | i @ (i nthRoot: 3) ]);
+				color: Color red;
+				label: '$\sqrt[3]{x}$' ];
+		addPointsLine: [ :line |
+			line
+				points: (interval collect: [ :i | i @ (i nthRoot: 4) ]);
+				color: Color blue;
+				label: '$\sqrt[4]{x}$' ];
+		addPointsLine: [ :line |
+			line
+				points: (interval collect: [ :i | i @ i log ]);
+				label: '$log(x)$' ];
+		configXAxis: [ :axis | axis min: 0 ];
+		configYAxis: [ :axis | axis min: 0 ];
+		addLegend;
+		yourself
+]
+
+{ #category : #samples }
+MLBExamples class >> lineplotSample [
+	<mlbExampleNumber: 1 named: 'Creating a line plot' description: 'The following code snippet creates a line plot for the factorial function between 0 and 10. It also illustrates that it is possible to use LaTeX code as marker for the points. Using `#label:` message allows to give name to the line that will be displayed in a corner of the plot.'>
+	^ MLBLinePlot new
+		addPointsLine: [ :line | 
+			line
+				points: ((0 to: 10) collect: [ :i | i @ i factorial ]);
+				marker: '$\triangledown$';
+				label: 'Factorial' ];
+		yourself
+]
+
+{ #category : #samples }
+MLBExamples class >> lineplotYBlockLineSample [
+	<mlbExampleNumber: 1.1 named: 'Creating a line plot using Y-Block line' description: 'The following code snippet creates a line plot for the factorial function between 0 and 10 using MLBYBlockLine. It is totally equivalent to the preceding example (in the result) but this is another way to express the plot using MatplotLibBridge.'>
+	^ MLBLinePlot new
+		addYBlockLine: [ :line | 
+			line
+				x: (0 to: 10);
+				yBlock: #factorial;
+				marker: '$\triangledown$';
+				label: 'Factorial' ];
+		yourself
+]
+
+{ #category : #samples }
+MLBExamples class >> logscaleLineplotSample [
+	<mlbExampleNumber: 2.3 named: 'Set an axis to be in logarithmic scale' description: 'Calling the method `#logScale` in #configYAxis block makes the scale of the concerned axis logarithmic. Other scales are available, see `MLBAbstractAxis>>validScales`.'>
+	^ MLBLinePlot new
+		addPointsLine: [ :line | 
+			line
+				points: ((0 to: 100) collect: [ :i | i @ i exp ]);
+				label: 'exp(x)' ];
+		configYAxis: [ :yAxis |
+			yAxis logScale ];
+		yourself
 ]
 
 { #category : #'accessing - documentation' }
 MLBExamples class >> methodsWithExamplePragma [
 	^ ((Pragma allNamed: self pragmaForExample in: self class) sorted: [ :a :b | (a argumentAt: 1) < (b argumentAt: 1) ] ) collect: #methodSelector
+]
+
+{ #category : #samples }
+MLBExamples class >> multilineplotSample [
+	<mlbExampleNumber: 2 named: 'Creating multi-lines plot' description: 'The following code snippet creates a multi-lines plot for the square root function, the third-root function and the fourth-root function between 0 and 1000. It also shows how to change the color of a line (using `#color:`) and how to change its style (using `#style:`). Available styles for a line can be accessed using `MLBLine>>#lineStyles`'>
+	^ MLBLinePlot new
+		addPointsLine: [ :line | line points: ((0 to: 1000) collect: [ :i | i @ i sqrt ]) ];
+		addPointsLine: [ :line | 
+			line
+				points: ((0 to: 1000) collect: [ :i | i @ (i nthRoot: 3) ]);
+				color: Color red;
+				style: '--' ];
+		addPointsLine: [ :line | 
+			line
+				points: ((0 to: 1000) collect: [ :i | i @ (i nthRoot: 4) ]);
+				color: Color blue;
+				style: 'dotted' ];
+		yourself
+]
+
+{ #category : #samples }
+MLBExamples class >> pieplotSample [
+	<mlbExampleNumber: 6 named: 'Creating a pie plot' description: 'The following code snippet creates a pie box plot for some data that sum to 100. You can optionally add `labels:`, set the a shadow or not (`hasShadow:`), configure the `axis:` (here we want to have a round pie, so we set it to `''equal''`), explode each part of the pie at different degrees (here only the part concerning `30` data is exploded) and choose the start angle.'>
+	^ MLBPiePlot new
+		data: #(50 20 30);
+		labels: #(One Two Three);
+		hasShadow: false;
+		axis: 'equal';
+		explode: #(0 0 0.1);
+		startAngle: -90;
+		yourself
 ]
 
 { #category : #'accessing - documentation' }
@@ -382,4 +366,86 @@ MLBExamples class >> printCodeForExampleMethod: aCompiledMethod on: aStream [
 	aStream
 		<< '```';
 		<< Character lf.
+]
+
+{ #category : #samples }
+MLBExamples class >> scatterplot2Sample [
+	<mlbExampleNumber: 7.1 named: 'Creating a scatter plot (new API)' description: 'The following code snippet creates a scatter plot for some random data. The principle is to create MLBScatterData, to set them a position, a color, a size and a shape'>
+	^ MLBScatterPlot2 new
+		data: ((1 to: 20) collect: [ :i | 
+			(MLBScatterData position: (1 to: 15) atRandom @ (1 to: 15) atRandom size: (20 to: 500) atRandom)
+				color: Color random;
+				marker: MLBConstants markers atRandom;
+				yourself ]);
+		yourself
+]
+
+{ #category : #samples }
+MLBExamples class >> scatterplotSample [
+	<mlbExampleNumber: 7.2 named: 'Creating a scatter plot (old API)' description: 'The following code snippet creates a scatter plot for some random data. Here we create `MLBCircle`s with a random position, a random diameter and a random color and provide them to the `MLBScatterPlot` instance.'>
+	^ MLBScatterPlot new
+		circles: ((1 to: 10) collect: [ :i | 
+			(MLBCircle position: (1 to: 15) atRandom @ (1 to: 15) atRandom size: (20 to: 500) atRandom)
+				color: Color random;
+				yourself ]);
+		yourself
+]
+
+{ #category : #samples }
+MLBExamples class >> stackedBarplotSample [
+	<mlbExampleNumber: 4 named: 'Creating a stacked bar plot' description: 'The following code snippet creates a stacked bar plot for some data and to display their standard deviation. The `#dataList` of a `MLBStackedBarPlot` should be a collection of collections of the same arity. It also shows how to rotate the labels of an axis.'>
+	| menMeans womenMeans menStd womenStd data std |
+	menMeans := #(20 35 30 35 27).
+	womenMeans := #(25 32 34 20 25).
+	menStd := #(2 3 4 1 2).
+	womenStd := #(3 5 2 3 3).
+	
+	data := (1 to: menMeans size) collect: [ :i |
+				{ menMeans at: i. womenMeans at: i } ].
+	std := (1 to: menStd size) collect: [ :i |
+				{ menStd at: i. womenStd at: i } ].
+	
+	^ MLBStackedBarPlot new
+		dataList: data;
+		colorList: {Color blue. Color pink};
+		title: 'Scores by group and gender';
+		configXAxis: [ :xAxis |
+			xAxis
+				labelsRotation: 45;
+				labels: #('G1' 'G2' 'G3' 'G4' 'G5') ];
+		configYAxis: [ :yAxis |
+			yAxis
+				title: 'Scores' ];
+		errorBarsList: std;
+		errorBarsColorList: { Color black . Color black };
+		alignLabelCenter;
+		yourself.
+]
+
+{ #category : #samples }
+MLBExamples class >> styleSheetSample [
+	<mlbExampleNumber: 10 named: 'Style sheet' description: 'MatplotLib allows to use stylesheet to reuse/change easily plot styles. The bridge actually expose this API with the `MLBStyleSheet` object. The name of properties are the same as in the python version. For more information see the official documentation of matplotlib: https://matplotlib.org/users/customizing.html.'>
+	| style |
+	style := MLBStyleSheet new
+					setProperty: 'color' ofGroup: 'text' to: 'red';
+					setProperty: 'weight' ofGroup: 'font' to: 'bold';
+					yourself.
+					
+	^ MLBBarPlot new
+		data: #(1 2 3);
+		labels: #('Group 1' 'Group 2' 'Group 3');
+		title: 'A title';
+		style: style;
+		yourself
+]
+
+{ #category : #samples }
+MLBExamples class >> verticalBoxplotSample [
+	<mlbExampleNumber: 5 named: 'Creating a vertical box plot' description: 'The following code snippet creates a vertical box plot for some random data. No need to call `#beVertical` since this is the default orientation of the plot.'>
+	^ MLBBoxPlot new
+		dataList: {((1 to: 100) collect: [ :i | (1 to: 10) atRandom ])};
+		configXAxis: [ :xAxis|
+			xAxis
+				labels: #('Data') ];
+		yourself
 ]
