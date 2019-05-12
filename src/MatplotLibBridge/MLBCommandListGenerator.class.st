@@ -85,6 +85,11 @@ MLBCommandListGenerator >> visitMLBAbstractAxis: aMLBAbstractAxis [
 ]
 
 { #category : #visiting }
+MLBCommandListGenerator >> visitMLBAnnotation: aMLBAnnotation [
+	self visitMLBCommandsGenerator: aMLBAnnotation; flag: #TODO
+]
+
+{ #category : #visiting }
 MLBCommandListGenerator >> visitMLBBarPlot: aMLBBarPlot [
 	self buildPlot: aMLBBarPlot withBeforeAfterHooks: [ :plot |
 		self commandList
@@ -103,45 +108,150 @@ MLBCommandListGenerator >> visitMLBBarPlot: aMLBBarPlot [
 ]
 
 { #category : #visiting }
+MLBCommandListGenerator >> visitMLBBoxPlot: aMLBBoxPlot [
+	self buildPlot: aMLBBoxPlot withBeforeAfterHooks: [ :plot |
+		plot isVertical
+			ifTrue: [ 
+				plot configXAxis: [ :x | x ticks: (1 to: x labels size) ] ]
+			ifFalse: [ 
+				plot configYAxis: [ :y | y ticks: (1 to: y labels size) ] ].
+		self commandList
+			add: (MLBBoxplotCommand new
+						x: plot dataList;
+						labels: plot labels;
+						vert: plot vertical;
+						yourself) ]
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBCommandsGenerator: aMLBCommandsGenerator [
+	aMLBCommandsGenerator generateCommandsIn: self commandList
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBLegend: aMLBLegend [
+	self visitMLBCommandsGenerator: aMLBLegend; flag: #TODO
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBLinePlot: aMLBLinePlot [
+	self buildPlot: aMLBLinePlot withBeforeAfterHooks: [ :plot |
+	plot lines do: [ :line |
+		line acceptVisitor: self ].
+
+	(plot lines anySatisfy: #hasLabel)
+		ifTrue: [ 
+			self commandList
+				add: MLBLegendCommand new ].
+	
+	(plot legend isNotNil and: [ (plot lines anySatisfy: #hasLabel) ])
+		ifTrue: [ plot legend acceptVisitor: self ] ]
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBPiePlot: aMLBPiePlot [
+	self buildPlot: aMLBPiePlot withBeforeAfterHooks: [ :plot |
+	self commandList
+		add: (MLBPieCommand new
+					x: plot data;
+					labels: plot labels;
+					shadow: plot hasShadow;
+					explode: plot explode;
+					startangle: plot startAngle;
+					radius: plot radius;
+					counterclock: plot isCounterClock;
+					colors: plot colors;
+					yourself) ]
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBPointsLine: aMLBPointsLine [
+	self visitMLBCommandsGenerator: aMLBPointsLine; flag: #TODO
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBScatterPlot2: aMLBScatterPlots [
+	self buildPlot: aMLBScatterPlots withBeforeAfterHooks: [ :plot |
+	((plot data groupedBy: #marker) associations
+		sorted: [ :a :b | 
+			(plot markersOrder indexOf: a key) < (plot markersOrder indexOf: b key) ])
+		do: [ :assoc |
+			|marker scatterData|
+			marker := assoc key.
+			scatterData := assoc value.
+			self commandList
+			add:
+				(MLBScatterCommand new
+					x: (scatterData collect: #x);
+					y: (scatterData collect: #y);
+					s: (scatterData collect: #size);
+					c: (scatterData collect: #color);
+					marker: marker;
+					yourself) ] ]
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBScatterPlot: aMLBScatterPlot [
+	self buildPlot: aMLBScatterPlot withBeforeAfterHooks: [ :plot |
+	self commandList
+		add:
+			(MLBScatterCommand new
+				x: plot  x;
+				y: plot  y;
+				s: plot  pointSizes;
+				c:
+					(plot  colors isCollection
+						ifTrue: [ plot  colors collect: [ :c | '#' , c asHexString ] ]
+						ifFalse: [ '#' , plot  colors asHexString ]);
+				yourself) ]
+]
+
+{ #category : #visiting }
 MLBCommandListGenerator >> visitMLBStackedBarPlot: aMLBStackedBarPlot [
+	self buildPlot: aMLBStackedBarPlot withBeforeAfterHooks: [ :plot |
 	self commandList
 		add:
 			(MLBBarCommand new
-				left: (0 to: aMLBStackedBarPlot dataList size - 1);
-				height: (aMLBStackedBarPlot dataList collect: #first);
-				tick_label: aMLBStackedBarPlot labels;
-				color: aMLBStackedBarPlot colorList first;
+				left: (0 to: plot dataList size - 1);
+				height: (plot dataList collect: #first);
+				tick_label: plot labels;
+				color: plot colorList first;
 				yerr:
-					(aMLBStackedBarPlot errorBarsList
+					(plot errorBarsList
 						ifNotNil: [ :list | list collect: #first ]);
 				ecolor:
-					(aMLBStackedBarPlot errorBarsColorList
+					(plot errorBarsColorList
 						ifNotNil: [ :list | list asOrderedCollection first ]);
 				"Next line is due to some kind of hack in matplotlib to align labels on right edge."
-				width: (aMLBStackedBarPlot isAlignLabelRightEdge ifTrue: [ aMLBStackedBarPlot barWidth negated ] ifFalse: [ aMLBStackedBarPlot barWidth ]);
-				align: aMLBStackedBarPlot align;
-				log: aMLBStackedBarPlot logAxis;
+				width: (plot isAlignLabelRightEdge ifTrue: [ plot barWidth negated ] ifFalse: [ plot barWidth ]);
+				align: plot align;
+				log: plot logAxis;
 				yourself).
-	2 to: aMLBStackedBarPlot dataList anyOne size do: [ :i | 
+	2 to: plot dataList anyOne size do: [ :i | 
 		self commandList
 			add:
 				(MLBBarCommand new
-					left: (0 to: aMLBStackedBarPlot dataList size - 1);
-					height: (aMLBStackedBarPlot dataList collect: [ :d | d at: i ]);
+					left: (0 to: plot dataList size - 1);
+					height: (plot dataList collect: [ :d | d at: i ]);
 					bottom:
-						(aMLBStackedBarPlot dataList
+						(plot dataList
 							collect: [ :d | ((1 to: i - 1) collect: [ :j | d at: j ]) sum ]);
-					color: (aMLBStackedBarPlot colorList at: i);
+					color: (plot colorList at: i);
 					yerr:
-						(aMLBStackedBarPlot errorBarsList
+						(plot errorBarsList
 							ifNotNil: [ :list | list collect: [ :e | e at: i ] ]);
 					ecolor:
-						(aMLBStackedBarPlot errorBarsColorList
+						(plot errorBarsColorList
 							ifNotNil: [ :list | (list asOrderedCollection at: i) asHexString ]);
 					"Next line is due to some kind of hack in matplotlib to align labels on right edge."
-					width: (aMLBStackedBarPlot isAlignLabelRightEdge ifTrue: [ aMLBStackedBarPlot barWidth negated ] ifFalse: [ aMLBStackedBarPlot barWidth ]);
-					align: aMLBStackedBarPlot align;
-					yourself) ]
+					width: (plot isAlignLabelRightEdge ifTrue: [ plot barWidth negated ] ifFalse: [ plot barWidth ]);
+					align: plot align;
+					yourself) ] ]
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBStyleSheet: aMLBStyleSheet [
+	self visitMLBCommandsGenerator: aMLBStyleSheet; flag: #TODO
 ]
 
 { #category : #visiting }
@@ -155,6 +265,11 @@ MLBCommandListGenerator >> visitMLBXAxis: aMLBXAxis [
 ]
 
 { #category : #visiting }
+MLBCommandListGenerator >> visitMLBXBlockLine: aMLBXBlockLine [
+	self visitMLBCommandsGenerator: aMLBXBlockLine; flag: #TODO
+]
+
+{ #category : #visiting }
 MLBCommandListGenerator >> visitMLBYAxis: aMLBYAxis [
 	self visitMLBAbstractAxis: aMLBYAxis.
 	self commandList
@@ -162,4 +277,9 @@ MLBCommandListGenerator >> visitMLBYAxis: aMLBYAxis [
 				ymin: aMLBYAxis min;
 				ymax: aMLBYAxis max;
 				yourself)
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBYBlockLine: aMLBYBlockLine [
+	self visitMLBCommandsGenerator: aMLBYBlockLine; flag: #TODO
 ]

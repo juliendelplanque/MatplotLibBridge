@@ -183,6 +183,12 @@ MLBExamples class >> exampleVerticalBoxplot [
 ]
 
 { #category : #'accessing - documentation' }
+MLBExamples class >> examples [
+	^ self methodsWithExamplePragma collect: [ :selector |
+		selector value: self ]
+]
+
+{ #category : #'accessing - documentation' }
 MLBExamples class >> generateMarkdown [
 	^ String streamContents: [ :stream |
 		self generateMarkdownOn: stream ]

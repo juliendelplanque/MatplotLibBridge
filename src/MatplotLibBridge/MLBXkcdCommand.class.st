@@ -17,6 +17,11 @@ MLBXkcdCommand >> functionName [
 	^ 'xkcd'
 ]
 
+{ #category : #'as yet unclassified' }
+MLBXkcdCommand >> generateCommandsIn: aMLBCommandList [
+	aMLBCommandList add: self
+]
+
 { #category : #accessing }
 MLBXkcdCommand >> length [
 	<mlbAttribute>
