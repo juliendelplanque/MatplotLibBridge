@@ -11,6 +11,17 @@ Class {
 	#category : 'MatplotLibBridge-Commands'
 }
 
+{ #category : #comparing }
+MLBCommandList >> = anObject [
+	"Answer whether the receiver and anObject represent the same object."
+
+	self == anObject
+		ifTrue: [ ^ true ].
+	self class = anObject class
+		ifFalse: [ ^ false ].
+	^ commands = anObject commands
+]
+
 { #category : #adding }
 MLBCommandList >> add: aMLBCommand [
 	self commands add: aMLBCommand
@@ -56,6 +67,13 @@ MLBCommandList >> generateInstructions [
 		command generateInstructions do: [ :inst |
 			instructions add: inst ] ].
 	^ instructions
+]
+
+{ #category : #comparing }
+MLBCommandList >> hash [
+	"Answer an integer value that is related to the identity of the receiver."
+
+	^ commands hash
 ]
 
 { #category : #initialization }

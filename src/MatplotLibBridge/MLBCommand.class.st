@@ -14,6 +14,20 @@ Class {
 	#category : 'MatplotLibBridge-Commands'
 }
 
+{ #category : #comparing }
+MLBCommand >> = anObject [
+	"Answer whether the receiver and anObject represent the same object."
+
+	self == anObject
+		ifTrue: [ ^ true ].
+	self class = anObject class
+		ifFalse: [ ^ false ].
+	^ module = anObject module
+		and: [ self functionName = anObject functionName
+			and: [ self mlbPositionalAttributes = anObject mlbPositionalAttributes
+				and: [ self mlbAttributesDict = anObject mlbAttributesDict ] ] ]
+]
+
 { #category : #execute }
 MLBCommand >> execute [
 	self generateInstructions execute
@@ -31,6 +45,16 @@ MLBCommand >> generateInstructions [
 		add: ((self module => self functionName)
 					callWith: self mlbPositionalAttributes with: self mlbAttributesDict);
 		yourself
+]
+
+{ #category : #comparing }
+MLBCommand >> hash [
+	"Answer an integer value that is related to the identity of the receiver."
+
+	^ ((module hash 
+		bitXor: self functionName hash)
+			bitXor: self mlbPositionalAttributes hash)
+				bitXor: self mlbAttributesDict hash
 ]
 
 { #category : #accessing }

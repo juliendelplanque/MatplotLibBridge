@@ -5,6 +5,11 @@ Class {
 }
 
 { #category : #visiting }
+MLBAbstractVisitor >> visit: anObject [
+	^ anObject acceptVisitor: self
+]
+
+{ #category : #visiting }
 MLBAbstractVisitor >> visitMLBAnnotation: aMLBAnnotation [
 	^ self subclassResponsibility
 ]
