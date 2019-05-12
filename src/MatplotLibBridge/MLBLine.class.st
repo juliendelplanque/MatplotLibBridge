@@ -21,6 +21,11 @@ MLBLine class >> points: aListOfPoints [
 		yourself
 ]
 
+{ #category : #visiting }
+MLBLine >> acceptVisitor: visitor [
+	^ visitor visitMLBLine: self
+]
+
 { #category : #private }
 MLBLine >> alpha [
 	^ self color alpha

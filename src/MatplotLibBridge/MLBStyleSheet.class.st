@@ -35,6 +35,11 @@ MLBStyleSheet >> initialize [
 	rcCommands := OrderedCollection new
 ]
 
+{ #category : #accessing }
+MLBStyleSheet >> rcCommands [
+	^ rcCommands
+]
+
 { #category : #initialization }
 MLBStyleSheet >> setProperty: propertyName ofGroup: groupName to: anObject [
 	self

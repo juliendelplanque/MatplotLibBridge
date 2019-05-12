@@ -86,7 +86,20 @@ MLBCommandListGenerator >> visitMLBAbstractAxis: aMLBAbstractAxis [
 
 { #category : #visiting }
 MLBCommandListGenerator >> visitMLBAnnotation: aMLBAnnotation [
-	self visitMLBCommandsGenerator: aMLBAnnotation; flag: #TODO
+	aMLBAnnotation position ifNil: [ 
+		MLBConfigurationUnfinished new
+			object: self;
+			selector: #position;
+			signal ].
+	aMLBAnnotation verifyArrowProperties: aMLBAnnotation arrowProperties.
+	self commandList
+		add: (MLBAnnotateCommand new
+								s: aMLBAnnotation content;
+								xy: {aMLBAnnotation position x . aMLBAnnotation position y};
+								xytext: {aMLBAnnotation textPosition x . aMLBAnnotation textPosition y};
+								arrowprops: aMLBAnnotation arrowProperties;
+								annotation_clip: aMLBAnnotation onlyVisibleInsideAxes;
+								yourself)
 ]
 
 { #category : #visiting }
@@ -130,7 +143,32 @@ MLBCommandListGenerator >> visitMLBCommandsGenerator: aMLBCommandsGenerator [
 
 { #category : #visiting }
 MLBCommandListGenerator >> visitMLBLegend: aMLBLegend [
-	self visitMLBCommandsGenerator: aMLBLegend; flag: #TODO
+	self commandList
+		add: (MLBLegendCommand new
+					fontsize: aMLBLegend fontSize;
+					framealpha: aMLBLegend frameTransparency;
+					fancybox: aMLBLegend hasFancyBox;
+					shadow: aMLBLegend hasShadow;
+					loc: aMLBLegend location;
+					ncol: aMLBLegend numberOfColumns;
+					title: aMLBLegend title;
+					yourself)
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBLine: aMLBLine [
+	self commandList
+		add:
+			(MLBPlotCommand new
+				x: aMLBLine x;
+				y: aMLBLine y;
+				linestyle: aMLBLine style;
+				marker: aMLBLine marker;
+				alpha: aMLBLine alpha;
+				color: aMLBLine colorHexString;
+				label: aMLBLine label;
+				linewidth: aMLBLine width;
+				yourself)
 ]
 
 { #category : #visiting }
@@ -166,7 +204,7 @@ MLBCommandListGenerator >> visitMLBPiePlot: aMLBPiePlot [
 
 { #category : #visiting }
 MLBCommandListGenerator >> visitMLBPointsLine: aMLBPointsLine [
-	self visitMLBCommandsGenerator: aMLBPointsLine; flag: #TODO
+	self visitMLBLine: aMLBPointsLine
 ]
 
 { #category : #visiting }
@@ -251,7 +289,8 @@ MLBCommandListGenerator >> visitMLBStackedBarPlot: aMLBStackedBarPlot [
 
 { #category : #visiting }
 MLBCommandListGenerator >> visitMLBStyleSheet: aMLBStyleSheet [
-	self visitMLBCommandsGenerator: aMLBStyleSheet; flag: #TODO
+	self commandList
+		addAll: aMLBStyleSheet rcCommands
 ]
 
 { #category : #visiting }
@@ -266,7 +305,7 @@ MLBCommandListGenerator >> visitMLBXAxis: aMLBXAxis [
 
 { #category : #visiting }
 MLBCommandListGenerator >> visitMLBXBlockLine: aMLBXBlockLine [
-	self visitMLBCommandsGenerator: aMLBXBlockLine; flag: #TODO
+	self visitMLBLine: aMLBXBlockLine
 ]
 
 { #category : #visiting }
@@ -281,5 +320,5 @@ MLBCommandListGenerator >> visitMLBYAxis: aMLBYAxis [
 
 { #category : #visiting }
 MLBCommandListGenerator >> visitMLBYBlockLine: aMLBYBlockLine [
-	self visitMLBCommandsGenerator: aMLBYBlockLine; flag: #TODO
+	self visitMLBLine: aMLBYBlockLine
 ]
