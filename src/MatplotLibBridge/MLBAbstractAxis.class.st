@@ -28,29 +28,6 @@ MLBAbstractAxis class >> validScales [
 	^ #('linear' 'log' 'logit' 'symlog')
 ]
 
-{ #category : #'command generation' }
-MLBAbstractAxis >> generateCommandsIn: aMLBCommandList [
-	|tempTicks|
-	aMLBCommandList
-		add: (self labelCommandClass new
-					s: self title;
-					yourself).
-	tempTicks := self ticksCommandClass new
-					rotation: self labelsRotation;
-					yourself.
-	self labels ifNotNil: [ 
-		tempTicks
-			ticks: (self ticks ifNil: [ (0 to: self labels size - 1) asArray ]);
-			labels: self labels ].
-	aMLBCommandList
-		add: tempTicks.
-	self scale ifNotNil: [ 
-		aMLBCommandList
-			add: (self scaleCommandClass new
-						scale: self scale;
-						yourself) ]
-]
-
 { #category : #initialization }
 MLBAbstractAxis >> initialize [
 	super initialize.

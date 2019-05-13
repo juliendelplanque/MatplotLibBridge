@@ -108,10 +108,3 @@ MLBStackedBarPlot >> errorBarsList [
 MLBStackedBarPlot >> errorBarsList: anObject [
 	errorBarsList := anObject
 ]
-
-{ #category : #building }
-MLBStackedBarPlot >> inBuild [
-	self
-		buildFirst;
-		buildAllButFirst
-]

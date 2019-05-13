@@ -12,16 +12,6 @@ MLBXAxis >> acceptVisitor: visitor [
 	^ visitor visitMLBXAxis: self
 ]
 
-{ #category : #'command generation' }
-MLBXAxis >> generateCommandsIn: aMLBCommandList [
-	super generateCommandsIn: aMLBCommandList.
-	aMLBCommandList
-		add: (self limCommandClass new
-				xmin: self min;
-				xmax: self max;
-				yourself)
-]
-
 { #category : #private }
 MLBXAxis >> labelCommandClass [
 	^ MLBXLabelCommand

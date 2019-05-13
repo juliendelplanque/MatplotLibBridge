@@ -12,16 +12,6 @@ MLBYAxis >> acceptVisitor: visitor [
 	^ visitor visitMLBYAxis: self
 ]
 
-{ #category : #'command generation' }
-MLBYAxis >> generateCommandsIn: aMLBCommandList [
-	super generateCommandsIn: aMLBCommandList.
-	aMLBCommandList
-		add: (self limCommandClass new
-				ymin: self min;
-				ymax: self max;
-				yourself)
-]
-
 { #category : #private }
 MLBYAxis >> labelCommandClass [
 	^ MLBYLabelCommand

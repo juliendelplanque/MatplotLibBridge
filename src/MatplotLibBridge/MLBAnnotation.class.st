@@ -39,24 +39,6 @@ MLBAnnotation >> content: anObject [
 	content := anObject
 ]
 
-{ #category : #'command generation' }
-MLBAnnotation >> generateCommandsIn: aMLBCommandList [
-	self position ifNil: [ 
-		MLBConfigurationUnfinished new
-			object: self;
-			selector: #position;
-			signal ].
-	self verifyArrowProperties: self arrowProperties.
-	aMLBCommandList
-		add: (MLBAnnotateCommand new
-								s: self content;
-								xy: {self position x . self position y};
-								xytext: {self textPosition x . self textPosition y};
-								arrowprops: self arrowProperties;
-								annotation_clip: self onlyVisibleInsideAxes;
-								yourself)
-]
-
 { #category : #initialization }
 MLBAnnotation >> initialize [
 	super initialize.

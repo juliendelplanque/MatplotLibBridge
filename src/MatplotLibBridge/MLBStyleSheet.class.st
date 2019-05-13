@@ -24,11 +24,6 @@ MLBStyleSheet >> addRcCommand: aMLBRcCommand [
 	rcCommands add: aMLBRcCommand
 ]
 
-{ #category : #'command generation' }
-MLBStyleSheet >> generateCommandsIn: aMLBCommandList [
-	aMLBCommandList addAll: rcCommands
-]
-
 { #category : #initialization }
 MLBStyleSheet >> initialize [
 	super initialize.

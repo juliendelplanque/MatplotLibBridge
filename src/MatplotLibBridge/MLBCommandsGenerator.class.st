@@ -11,8 +11,3 @@ Class {
 MLBCommandsGenerator >> acceptVisitor: visitor [
 	^ self subclassResponsibility
 ]
-
-{ #category : #'command generation' }
-MLBCommandsGenerator >> generateCommandsIn: aMLBCommandList [
-	self subclassResponsibility
-]

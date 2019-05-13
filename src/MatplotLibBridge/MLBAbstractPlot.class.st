@@ -9,7 +9,6 @@ Class {
 	#name : #MLBAbstractPlot,
 	#superclass : #Object,
 	#instVars : [
-		'commandList',
 		'title',
 		'titleFontDict',
 		'titleLocation',
@@ -20,7 +19,7 @@ Class {
 		'axis',
 		'gridOnAxis'
 	],
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-API'
 }
 
 { #category : #accessing }
@@ -66,22 +65,11 @@ MLBAbstractPlot >> axis: anObject [
 	axis := anObject
 ]
 
-{ #category : #building }
-MLBAbstractPlot >> build [
-	self
-		preBuild;
-		inBuild;
-		postBuild
-]
-
-{ #category : #accessing }
-MLBAbstractPlot >> commandList [
-	^ commandList
-]
-
-{ #category : #accessing }
-MLBAbstractPlot >> commandList: anObject [
-	commandList := anObject
+{ #category : #generating }
+MLBAbstractPlot >> commandsList [
+	^ MLBCommandListGenerator new
+			visit: self;
+			commandList
 ]
 
 { #category : #'axis configuration' }
@@ -94,22 +82,15 @@ MLBAbstractPlot >> configYAxis: aBlock [
 	aBlock value: self yAxis
 ]
 
-{ #category : #executing }
-MLBAbstractPlot >> execute [
-	self commandList executeOptimized.
-	self commandList: MLBCommandList new
-]
-
 { #category : #generating }
 MLBAbstractPlot >> generateIn: aFileReference [
-	self build.
-	self commandList 
+	self commandsList
 		add: (MLBSaveFigCommand new
 					filename: aFileReference fullName;
 					bbox_inches: 'tight';
 					transparent: true;
-					yourself).
-	self execute
+					yourself);
+		executeOptimized
 ]
 
 { #category : #accessing }
@@ -135,56 +116,21 @@ MLBAbstractPlot >> gtInspectorPython3CodeIn: composite [
 					generate ]
 ]
 
-{ #category : #building }
-MLBAbstractPlot >> inBuild [
-	^ self subclassResponsibility
-]
-
 { #category : #initialization }
 MLBAbstractPlot >> initialize [
 	super initialize.
 	self
-		commandList: MLBCommandList new;
 		title: '';
 		annotations: OrderedCollection new;
 		xAxis: MLBXAxis new;
 		yAxis: MLBYAxis new
 ]
 
-{ #category : #building }
-MLBAbstractPlot >> postBuild [
-	self commandList
-		add: (MLBTitleCommand new
-				s: self title;
-				fontdict: self titleFontDict;
-				loc: self titleLocation;
-				yourself);
-		add: (MLBAxis new
-					v: self axis;
-					yourself).
-	self xAxis generateCommandsIn: self commandList.
-	self yAxis generateCommandsIn: self commandList.
-	self annotations do: [ :annotation |
-		annotation generateCommandsIn: self commandList ].
-	self gridOnAxis ifNotNil: [ 
-		self commandList
-			add: (MLBGridCommand new
-						axis: self gridOnAxis;
-						yourself) ]
-]
-
-{ #category : #building }
-MLBAbstractPlot >> preBuild [
-	self commandList add: MLBClfCommand new.
-	style ifNotNil: [ 
-		style generateCommandsIn: self commandList ]
-]
-
 { #category : #showing }
 MLBAbstractPlot >> show [
-	self build.
-	self commandList add: MLBShowCommand new.
-	self execute
+	self commandsList
+		add: MLBShowCommand new;
+		executeOptimized
 ]
 
 { #category : #grid }
