@@ -22,16 +22,6 @@ Class {
 	#category : #'MatplotLibBridge-Model'
 }
 
-{ #category : #accessing }
-MLBAbstractPlot class >> availableGrids [
-	^ #('both' 'x' 'y')
-]
-
-{ #category : #testing }
-MLBAbstractPlot class >> isValidGrid: aString [
-	^ self availableGrids includes: aString
-]
-
 { #category : #visiting }
 MLBAbstractPlot >> acceptVisitor: visitor [
 	^ self subclassResponsibility
@@ -81,21 +71,8 @@ MLBAbstractPlot >> gridOnAxis [
 ]
 
 { #category : #accessing }
-MLBAbstractPlot >> gridOnAxis: aString [
-	(self class isValidGrid: aString)
-		ifFalse: [ self error: ('Invalid grid: {1}' format: { aString }) ].
-	gridOnAxis := aString
-]
-
-{ #category : #'gt-inspector-extension' }
-MLBAbstractPlot >> gtInspectorPython3CodeIn: composite [
-	<gtInspectorPresentationOrder: -10>
-	composite text
-		title: 'Python 3 code';
-		display: [ 
-			(self build; commandList)
-				optimizeGeneratedInstructions
-					generate ]
+MLBAbstractPlot >> gridOnAxis: anObject [
+	gridOnAxis := anObject asMLBGridStyle
 ]
 
 { #category : #initialization }
@@ -110,17 +87,17 @@ MLBAbstractPlot >> initialize [
 
 { #category : #grid }
 MLBAbstractPlot >> showGrid [
-	self gridOnAxis: 'both'
+	self gridOnAxis: 'both' asMLBGridStyle
 ]
 
 { #category : #grid }
 MLBAbstractPlot >> showXGrid [
-	self gridOnAxis: 'x'
+	self gridOnAxis: 'x' asMLBGridStyle
 ]
 
 { #category : #grid }
 MLBAbstractPlot >> showYGrid [
-	self gridOnAxis: 'y'
+	self gridOnAxis: 'y' asMLBGridStyle
 ]
 
 { #category : #accessing }

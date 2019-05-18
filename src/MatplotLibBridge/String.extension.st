@@ -6,6 +6,11 @@ String >> asMLBArrowStyle [
 ]
 
 { #category : #'*MatplotLibBridge' }
+String >> asMLBGridStyle [
+	^ MLBGridStyle styleString: self
+]
+
+{ #category : #'*MatplotLibBridge' }
 String >> asMLBLineStyle [
 	^ MLBLineStyle styleString: self
 ]
