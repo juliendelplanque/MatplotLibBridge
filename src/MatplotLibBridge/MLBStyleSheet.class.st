@@ -7,7 +7,7 @@ Class {
 	#name : #MLBStyleSheet,
 	#superclass : #MLBVisitableObject,
 	#instVars : [
-		'rcCommands'
+		'properties'
 	],
 	#category : #'MatplotLibBridge-Model'
 }
@@ -17,30 +17,28 @@ MLBStyleSheet >> acceptVisitor: visitor [
 	^ visitor visitMLBStyleSheet: self
 ]
 
-{ #category : #'private - adding' }
-MLBStyleSheet >> addRcCommand: aMLBRcCommand [
-	"Low level way to add a rc command.
-	Should not be used directly, use #setProperty:ofGroup:to: instead."
-	rcCommands add: aMLBRcCommand
-]
-
 { #category : #initialization }
 MLBStyleSheet >> initialize [
 	super initialize.
-	rcCommands := OrderedCollection new
+	properties := OrderedCollection new
 ]
 
 { #category : #accessing }
-MLBStyleSheet >> rcCommands [
-	^ rcCommands
+MLBStyleSheet >> properties [
+	^ properties
+]
+
+{ #category : #accessing }
+MLBStyleSheet >> properties: anObject [
+	properties := anObject
 ]
 
 { #category : #initialization }
 MLBStyleSheet >> setProperty: propertyName ofGroup: groupName to: anObject [
-	self
-		addRcCommand:
-			(MLBRcCommand new
-				group: groupName;
-				setProperty: propertyName to: anObject;
-				yourself)
+	self properties
+		add: (MLBStyleSheetProperty new
+					groupName: groupName;
+					name: propertyName;
+					value: anObject;
+					yourself)
 ]

@@ -65,6 +65,11 @@ MLBAbstractVisitor >> visitMLBStyleSheet: aMLBStyleSheet [
 ]
 
 { #category : #visiting }
+MLBAbstractVisitor >> visitMLBStyleSheetProperty: aMLBStyleSheetProperty [
+	^ self subclassResponsibility
+]
+
+{ #category : #visiting }
 MLBAbstractVisitor >> visitMLBXAxis: aMLBXAxis [
 	^ self subclassResponsibility
 ]
