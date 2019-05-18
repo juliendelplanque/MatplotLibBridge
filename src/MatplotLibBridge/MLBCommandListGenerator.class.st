@@ -35,7 +35,7 @@ MLBCommandListGenerator >> afterBuildingPlot: aMLBAbstractPlot [
 MLBCommandListGenerator >> beforeBuildingPlot: aMLBAbstractPlot [
 	self commandList add: MLBClfCommand new.
 	aMLBAbstractPlot style ifNotNil: [ :style | 
-		style generateCommandsIn: self commandList ]
+		style acceptVisitor: self ]
 ]
 
 { #category : #helper }
