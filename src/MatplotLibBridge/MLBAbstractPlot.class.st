@@ -7,7 +7,7 @@ You do not have to bother with Python code at all when using my subclasses. In f
 "
 Class {
 	#name : #MLBAbstractPlot,
-	#superclass : #Object,
+	#superclass : #MLBVisitableObject,
 	#instVars : [
 		'title',
 		'titleFontDict',

@@ -3,7 +3,7 @@ I represent an abstract 2-dimensions line. I am used by certain kind of plots (e
 "
 Class {
 	#name : #MLBLine,
-	#superclass : #MLBCommandsGenerator,
+	#superclass : #MLBVisitableObject,
 	#instVars : [
 		'style',
 		'marker',

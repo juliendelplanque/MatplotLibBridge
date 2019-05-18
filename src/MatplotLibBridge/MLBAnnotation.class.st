@@ -3,7 +3,7 @@ I am an annotation on the plot.
 "
 Class {
 	#name : #MLBAnnotation,
-	#superclass : #MLBCommandsGenerator,
+	#superclass : #MLBVisitableObject,
 	#instVars : [
 		'content',
 		'position',

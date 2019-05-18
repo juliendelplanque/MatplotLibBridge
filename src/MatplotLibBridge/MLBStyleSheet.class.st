@@ -5,7 +5,7 @@ I hold one or many MLBRcCommand.
 "
 Class {
 	#name : #MLBStyleSheet,
-	#superclass : #MLBCommandsGenerator,
+	#superclass : #MLBVisitableObject,
 	#instVars : [
 		'rcCommands'
 	],

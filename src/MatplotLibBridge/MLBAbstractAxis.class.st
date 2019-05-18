@@ -5,7 +5,7 @@ I can generate the commands that allows to configure an axis for a plot.
 "
 Class {
 	#name : #MLBAbstractAxis,
-	#superclass : #MLBCommandsGenerator,
+	#superclass : #MLBVisitableObject,
 	#instVars : [
 		'labels',
 		'labelsRotation',

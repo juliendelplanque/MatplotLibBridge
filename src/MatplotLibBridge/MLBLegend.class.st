@@ -3,7 +3,7 @@ I represent the legend of a line plot.
 "
 Class {
 	#name : #MLBLegend,
-	#superclass : #MLBCommandsGenerator,
+	#superclass : #MLBVisitableObject,
 	#instVars : [
 		'location',
 		'numberOfColumns',
