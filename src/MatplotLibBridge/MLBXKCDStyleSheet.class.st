@@ -1,3 +1,6 @@
+"
+I am pre-defined style-sheet showing your plot in XKDC style.
+"
 Class {
 	#name : #MLBXKCDStyleSheet,
 	#superclass : #MLBStyleSheet,
