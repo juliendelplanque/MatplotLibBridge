@@ -18,16 +18,6 @@ Class {
 	#category : #'MatplotLibBridge-Model'
 }
 
-{ #category : #testing }
-MLBAbstractAxis class >> isValidScale: aString [
-	^ self validScales includes: aString
-]
-
-{ #category : #accessing }
-MLBAbstractAxis class >> validScales [
-	^ #('linear' 'log' 'logit' 'symlog')
-]
-
 { #category : #initialization }
 MLBAbstractAxis >> initialize [
 	super initialize.
@@ -57,17 +47,17 @@ MLBAbstractAxis >> labelsRotation: anObject [
 
 { #category : #scale }
 MLBAbstractAxis >> linearScale [
-	self scale: 'linear'
+	self scale: 'linear' asMLBScaleStyle
 ]
 
 { #category : #scale }
 MLBAbstractAxis >> logScale [
-	self scale: 'log'
+	self scale: 'log' asMLBScaleStyle
 ]
 
 { #category : #scale }
 MLBAbstractAxis >> logitScale [
-	self scale: 'logit'
+	self scale: 'logit' asMLBScaleStyle
 ]
 
 { #category : #accessing }
@@ -96,16 +86,13 @@ MLBAbstractAxis >> scale [
 ]
 
 { #category : #accessing }
-MLBAbstractAxis >> scale: aString [
-	(self class isValidScale: aString)
-		ifFalse: [ self error: ('Invalid scale: {1}' format: { aString }) ].
-	
-	scale := aString
+MLBAbstractAxis >> scale: anObject [
+	scale := anObject asMLBScaleStyle
 ]
 
 { #category : #scale }
 MLBAbstractAxis >> symlogScale [
-	self scale: 'symlog'
+	self scale: 'symlog' asMLBScaleStyle
 ]
 
 { #category : #accessing }

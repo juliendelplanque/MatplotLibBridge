@@ -14,3 +14,8 @@ String >> asMLBLineStyle [
 String >> asMLBMarkerStyle [
 	^ MLBMarkerStyle styleString: self
 ]
+
+{ #category : #'*MatplotLibBridge' }
+String >> asMLBScaleStyle [
+	^ MLBScaleStyle styleString: self
+]
