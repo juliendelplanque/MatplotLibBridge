@@ -65,13 +65,6 @@ MLBAbstractPlot >> axis: anObject [
 	axis := anObject
 ]
 
-{ #category : #generating }
-MLBAbstractPlot >> commandsList [
-	^ MLBCommandListGenerator new
-			visit: self;
-			commandList
-]
-
 { #category : #'axis configuration' }
 MLBAbstractPlot >> configXAxis: aBlock [
 	aBlock value: self xAxis
@@ -80,17 +73,6 @@ MLBAbstractPlot >> configXAxis: aBlock [
 { #category : #'axis configuration' }
 MLBAbstractPlot >> configYAxis: aBlock [
 	aBlock value: self yAxis
-]
-
-{ #category : #generating }
-MLBAbstractPlot >> generateIn: aFileReference [
-	self commandsList
-		add: (MLBSaveFigCommand new
-					filename: aFileReference fullName;
-					bbox_inches: 'tight';
-					transparent: true;
-					yourself);
-		executeOptimized
 ]
 
 { #category : #accessing }
@@ -124,13 +106,6 @@ MLBAbstractPlot >> initialize [
 		annotations: OrderedCollection new;
 		xAxis: MLBXAxis new;
 		yAxis: MLBYAxis new
-]
-
-{ #category : #showing }
-MLBAbstractPlot >> show [
-	self commandsList
-		add: MLBShowCommand new;
-		executeOptimized
 ]
 
 { #category : #grid }

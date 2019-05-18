@@ -29,7 +29,7 @@ BaselineOfMatplotLibBridge >> defineDependencies: spec [
 { #category : #baseline }
 BaselineOfMatplotLibBridge >> defineGroups: spec [
 	spec
-		group: 'default' with: #('MatplotLibBridge');
+		group: 'default' with: #('MatplotLibBridge' 'MatplotLibBridge-Commands');
 		group: 'atlas' with: #('default' 'MatplotLibBridge-Atlas')
 ]
 
@@ -37,6 +37,7 @@ BaselineOfMatplotLibBridge >> defineGroups: spec [
 BaselineOfMatplotLibBridge >> definePackages: spec [
 	^ spec
 		package: 'MatplotLibBridge' with: [ spec requires: #('Python3Generator') ];
+		package: 'MatplotLibBridge-Commands' with: [ spec requires: #('MatplotLibBridge' 'Python3Generator') ];
 		package: 'MatplotLibBridge-Atlas' with: [ spec requires: #('Atlas' 'MatplotLibBridge') ];
 		yourself
 ]
