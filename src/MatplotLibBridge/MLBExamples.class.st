@@ -230,7 +230,7 @@ MLBExamples class >> generatePlotsForExamplesIn: aDirectoryFileReference [
 	self assert: aDirectoryFileReference isDirectory.
 	
 	self methodsWithExamplePragma do: [ :selector |
-		(selector value: self class) generateIn: aDirectoryFileReference / (selector , '.png') ]
+		(selector value: self) generateIn: aDirectoryFileReference / (selector , '.png') ]
 ]
 
 { #category : #samples }
