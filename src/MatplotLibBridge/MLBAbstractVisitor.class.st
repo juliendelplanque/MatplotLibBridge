@@ -1,3 +1,8 @@
+"
+I am an abstract visitor.
+
+I describe the method to be implemented by my subclasses.
+"
 Class {
 	#name : #MLBAbstractVisitor,
 	#superclass : #Object,
