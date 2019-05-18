@@ -62,29 +62,6 @@ MLBCommandListGenerator >> initialize [
 ]
 
 { #category : #visiting }
-MLBCommandListGenerator >> visitMLBAbstractAxis: aMLBAbstractAxis [
-	|tempTicks|
-	self commandList
-		add: (aMLBAbstractAxis labelCommandClass new
-					s: aMLBAbstractAxis title;
-					yourself).
-	tempTicks := aMLBAbstractAxis ticksCommandClass new
-					rotation: aMLBAbstractAxis labelsRotation;
-					yourself.
-	aMLBAbstractAxis labels ifNotNil: [ 
-		tempTicks
-			ticks: (aMLBAbstractAxis ticks ifNil: [ (0 to: aMLBAbstractAxis labels size - 1) asArray ]);
-			labels: aMLBAbstractAxis labels ].
-	self commandList
-		add: tempTicks.
-	aMLBAbstractAxis scale ifNotNil: [ 
-		self commandList
-			add: (aMLBAbstractAxis scaleCommandClass new
-						scale: aMLBAbstractAxis scale;
-						yourself) ]
-]
-
-{ #category : #visiting }
 MLBCommandListGenerator >> visitMLBAnnotation: aMLBAnnotation [
 	aMLBAnnotation position ifNil: [ 
 		MLBConfigurationUnfinished new
@@ -100,6 +77,29 @@ MLBCommandListGenerator >> visitMLBAnnotation: aMLBAnnotation [
 								arrowprops: aMLBAnnotation arrowProperties;
 								annotation_clip: aMLBAnnotation onlyVisibleInsideAxes;
 								yourself)
+]
+
+{ #category : #visiting }
+MLBCommandListGenerator >> visitMLBAxis: aMLBAbstractAxis usingLabelCommandClass: labelCommandClass ticksCommandClass: ticksCommandClass scaleCommandClass: scaleCommandClass [
+	|tempTicks|
+	self commandList
+		add: (labelCommandClass new
+					s: aMLBAbstractAxis title;
+					yourself).
+	tempTicks := ticksCommandClass new
+					rotation: aMLBAbstractAxis labelsRotation;
+					yourself.
+	aMLBAbstractAxis labels ifNotNil: [ 
+		tempTicks
+			ticks: (aMLBAbstractAxis ticks ifNil: [ (0 to: aMLBAbstractAxis labels size - 1) asArray ]);
+			labels: aMLBAbstractAxis labels ].
+	self commandList
+		add: tempTicks.
+	aMLBAbstractAxis scale ifNotNil: [ 
+		self commandList
+			add: (scaleCommandClass new
+						scale: aMLBAbstractAxis scale;
+						yourself) ]
 ]
 
 { #category : #visiting }
@@ -295,9 +295,9 @@ MLBCommandListGenerator >> visitMLBStyleSheet: aMLBStyleSheet [
 
 { #category : #visiting }
 MLBCommandListGenerator >> visitMLBXAxis: aMLBXAxis [
-	self visitMLBAbstractAxis: aMLBXAxis.
+	self visitMLBAxis: aMLBXAxis usingLabelCommandClass: MLBXLabelCommand ticksCommandClass: MLBXTicksCommand scaleCommandClass: MLBXScaleCommand.
 	self commandList
-		add: (aMLBXAxis limCommandClass new
+		add: (MLBXLimCommand new
 				xmin: aMLBXAxis min;
 				xmax: aMLBXAxis max;
 				yourself)
@@ -310,9 +310,9 @@ MLBCommandListGenerator >> visitMLBXBlockLine: aMLBXBlockLine [
 
 { #category : #visiting }
 MLBCommandListGenerator >> visitMLBYAxis: aMLBYAxis [
-	self visitMLBAbstractAxis: aMLBYAxis.
+	self visitMLBAxis: aMLBYAxis usingLabelCommandClass: MLBYLabelCommand ticksCommandClass: MLBYTicksCommand scaleCommandClass: MLBYScaleCommand.
 	self commandList
-		add: (aMLBYAxis limCommandClass new
+		add: (MLBYLimCommand new
 				ymin: aMLBYAxis min;
 				ymax: aMLBYAxis max;
 				yourself)

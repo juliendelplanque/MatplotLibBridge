@@ -11,23 +11,3 @@ Class {
 MLBXAxis >> acceptVisitor: visitor [
 	^ visitor visitMLBXAxis: self
 ]
-
-{ #category : #private }
-MLBXAxis >> labelCommandClass [
-	^ MLBXLabelCommand
-]
-
-{ #category : #private }
-MLBXAxis >> limCommandClass [
-	^ MLBXLimCommand
-]
-
-{ #category : #private }
-MLBXAxis >> scaleCommandClass [
-	^ MLBXScaleCommand
-]
-
-{ #category : #private }
-MLBXAxis >> ticksCommandClass [
-	^ MLBXTicksCommand
-]

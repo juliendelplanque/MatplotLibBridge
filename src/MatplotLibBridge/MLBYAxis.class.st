@@ -11,23 +11,3 @@ Class {
 MLBYAxis >> acceptVisitor: visitor [
 	^ visitor visitMLBYAxis: self
 ]
-
-{ #category : #private }
-MLBYAxis >> labelCommandClass [
-	^ MLBYLabelCommand
-]
-
-{ #category : #private }
-MLBYAxis >> limCommandClass [
-	^ MLBYLimCommand
-]
-
-{ #category : #private }
-MLBYAxis >> scaleCommandClass [
-	^ MLBYScaleCommand
-]
-
-{ #category : #private }
-MLBYAxis >> ticksCommandClass [
-	^ MLBYTicksCommand
-]

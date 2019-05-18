@@ -35,11 +35,6 @@ MLBAbstractAxis >> initialize [
 		title: ''
 ]
 
-{ #category : #private }
-MLBAbstractAxis >> labelCommandClass [
-	^ self subclassResponsibility
-]
-
 { #category : #accessing }
 MLBAbstractAxis >> labels [
 	^ labels
@@ -58,11 +53,6 @@ MLBAbstractAxis >> labelsRotation [
 { #category : #accessing }
 MLBAbstractAxis >> labelsRotation: anObject [
 	labelsRotation := anObject
-]
-
-{ #category : #private }
-MLBAbstractAxis >> limCommandClass [
-	^ self subclassResponsibility
 ]
 
 { #category : #scale }
@@ -113,11 +103,6 @@ MLBAbstractAxis >> scale: aString [
 	scale := aString
 ]
 
-{ #category : #private }
-MLBAbstractAxis >> scaleCommandClass [
-	^ self subclassResponsibility
-]
-
 { #category : #scale }
 MLBAbstractAxis >> symlogScale [
 	self scale: 'symlog'
@@ -131,11 +116,6 @@ MLBAbstractAxis >> ticks [
 { #category : #accessing }
 MLBAbstractAxis >> ticks: anObject [
 	ticks := anObject
-]
-
-{ #category : #private }
-MLBAbstractAxis >> ticksCommandClass [
-	^ self subclassResponsibility
 ]
 
 { #category : #accessing }
