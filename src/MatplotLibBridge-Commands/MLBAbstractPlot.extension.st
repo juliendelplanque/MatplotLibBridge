@@ -19,6 +19,17 @@ MLBAbstractPlot >> generateIn: aFileReference [
 ]
 
 { #category : #'*MatplotLibBridge-Commands' }
+MLBAbstractPlot >> gtInspectorPython3CodeIn: composite [
+	<gtInspectorPresentationOrder: -10>
+	composite text
+		title: 'Python 3 code';
+		display: [ 
+			(self commandsList)
+				optimizeGeneratedInstructions
+					generate ]
+]
+
+{ #category : #'*MatplotLibBridge-Commands' }
 MLBAbstractPlot >> show [
 	self commandsList
 		add: MLBShowCommand new;
