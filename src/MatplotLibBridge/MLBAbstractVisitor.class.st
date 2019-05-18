@@ -75,6 +75,11 @@ MLBAbstractVisitor >> visitMLBXBlockLine: aMLBXBlockLine [
 ]
 
 { #category : #visiting }
+MLBAbstractVisitor >> visitMLBXKCDStyleSheet: aMLBXKCDStyleSheet [
+	^ self subclassResponsibility
+]
+
+{ #category : #visiting }
 MLBAbstractVisitor >> visitMLBYAxis: aMLBYAxis [
 	^ self subclassResponsibility
 ]

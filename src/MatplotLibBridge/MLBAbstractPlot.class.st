@@ -198,9 +198,9 @@ MLBAbstractPlot >> xAxis: anObject [
 	xAxis := anObject
 ]
 
-{ #category : #style }
+{ #category : #'as yet unclassified' }
 MLBAbstractPlot >> xkcdStyle [
-	style := MLBXkcdCommand new
+	self style: MLBXKCDStyleSheet new
 ]
 
 { #category : #accessing }
