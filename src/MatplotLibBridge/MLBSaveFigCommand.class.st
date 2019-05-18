@@ -40,7 +40,6 @@ Class {
 	#name : #MLBSaveFigCommand,
 	#superclass : #MLBPyplotCommand,
 	#instVars : [
-		'filename',
 		'dpi',
 		'facecolor',
 		'edgecolor',
@@ -49,9 +48,10 @@ Class {
 		'transparent',
 		'frameon',
 		'bbox_inches',
-		'pad_inches'
+		'pad_inches',
+		'fname'
 	],
-	#category : 'MatplotLibBridge-Commands'
+	#category : #'MatplotLibBridge-Commands'
 }
 
 { #category : #accessing }
@@ -100,13 +100,25 @@ MLBSaveFigCommand >> facecolor: anObject [
 
 { #category : #accessing }
 MLBSaveFigCommand >> filename [
-	<mlbAttribute>
-	^ filename
+	"The argument has been renamed fname, this method is here for retro-compatibility purpose."
+	^ self fname
 ]
 
 { #category : #accessing }
 MLBSaveFigCommand >> filename: anObject [
-	filename := anObject
+	"The argument has been renamed fname, this method is here for retro-compatibility purpose."
+	self fname: anObject
+]
+
+{ #category : #accessing }
+MLBSaveFigCommand >> fname [
+	<mlbAttribute>
+	^ fname
+]
+
+{ #category : #accessing }
+MLBSaveFigCommand >> fname: anObject [
+	fname := anObject
 ]
 
 { #category : #accessing }

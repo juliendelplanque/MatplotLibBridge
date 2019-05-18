@@ -23,7 +23,6 @@ Class {
 	#name : #MLBBarCommand,
 	#superclass : #MLBPyplotCommand,
 	#instVars : [
-		'left',
 		'height',
 		'width',
 		'bottom',
@@ -38,9 +37,10 @@ Class {
 		'error_kw',
 		'align',
 		'orientation',
-		'log'
+		'log',
+		'x'
 	],
-	#category : 'MatplotLibBridge-Commands'
+	#category : #'MatplotLibBridge-Commands'
 }
 
 { #category : #accessing }
@@ -138,13 +138,14 @@ MLBBarCommand >> height: anObject [
 
 { #category : #accessing }
 MLBBarCommand >> left [
-	<mlbAttribute>
-	^ left
+	"The argument has been renamed x, this method is here for retro-compatibility purpose."
+	^ self x
 ]
 
 { #category : #accessing }
 MLBBarCommand >> left: anObject [
-	left := anObject
+	"The argument has been renamed x, this method is here for retro-compatibility purpose."
+	self x: anObject
 ]
 
 { #category : #accessing }
@@ -200,6 +201,17 @@ MLBBarCommand >> width [
 { #category : #accessing }
 MLBBarCommand >> width: anObject [
 	width := anObject
+]
+
+{ #category : #accessing }
+MLBBarCommand >> x [
+	<mlbAttribute>
+	^ x
+]
+
+{ #category : #accessing }
+MLBBarCommand >> x: anObject [
+	x := anObject
 ]
 
 { #category : #accessing }
