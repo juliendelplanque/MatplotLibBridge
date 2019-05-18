@@ -53,10 +53,8 @@ MLBScatterData >> marker [
 ]
 
 { #category : #accessing }
-MLBScatterData >> marker: aString [
-	(MLBConstants isValidMarker: aString)
-		ifFalse: [ self error: MLBConstants unknownMarkerErrorMessage ].
-	marker := aString
+MLBScatterData >> marker: anObject [
+	marker := anObject asMLBMarkerStyle
 ]
 
 { #category : #accessing }

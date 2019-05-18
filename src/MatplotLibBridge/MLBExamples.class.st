@@ -381,7 +381,7 @@ MLBExamples class >> scatterplot2Sample [
 		data: ((1 to: 20) collect: [ :i | 
 			(MLBScatterData position: (1 to: 15) atRandom @ (1 to: 15) atRandom size: (20 to: 500) atRandom)
 				color: Color random;
-				marker: MLBConstants markers atRandom;
+				marker: MLBMarkerStyle random;
 				yourself ]);
 		yourself
 ]

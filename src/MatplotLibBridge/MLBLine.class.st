@@ -85,12 +85,8 @@ MLBLine >> marker [
 ]
 
 { #category : #accessing }
-MLBLine >> marker: aString [
-	(MLBConstants isValidMarker: aString)
-		ifFalse: [ 
-			self error: MLBConstants unknownMarkerErrorMessage ].
-	
-	marker := aString
+MLBLine >> marker: anObject [
+	marker := anObject asMLBMarkerStyle
 ]
 
 { #category : #accessing }
@@ -99,13 +95,8 @@ MLBLine >> style [
 ]
 
 { #category : #accessing }
-MLBLine >> style: aString [
-	(MLBConstants isValidLineStyle: aString)
-		ifFalse: [
-			self error: ('Unknown line style. Please use one of the following: {1}'
-								format: { MLBConstants lineStyles fold: [ :a :b | a,',',b ] }) ].
-		
-		style := aString
+MLBLine >> style: anObject [
+	style := anObject asMLBLineStyle
 ]
 
 { #category : #accessing }
