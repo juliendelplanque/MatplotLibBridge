@@ -11,7 +11,7 @@ Class {
 		'label',
 		'width'
 	],
-	#category : #'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #'instance creation' }

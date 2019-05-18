@@ -19,7 +19,7 @@ Class {
 		'axis',
 		'gridOnAxis'
 	],
-	#category : #'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #accessing }

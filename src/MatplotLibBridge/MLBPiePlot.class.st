@@ -14,7 +14,7 @@ Class {
 		'isCounterClock',
 		'colors'
 	],
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #example }

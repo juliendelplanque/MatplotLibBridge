@@ -4,7 +4,7 @@ I am the description of an Y axis of a plot.
 Class {
 	#name : #MLBYAxis,
 	#superclass : #MLBAbstractAxis,
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #visiting }

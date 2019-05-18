@@ -12,7 +12,7 @@ Class {
 		'data',
 		'markersOrder'
 	],
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #example }

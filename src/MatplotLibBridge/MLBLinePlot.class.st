@@ -8,7 +8,7 @@ Class {
 		'lines',
 		'legend'
 	],
-	#category : #'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #example }

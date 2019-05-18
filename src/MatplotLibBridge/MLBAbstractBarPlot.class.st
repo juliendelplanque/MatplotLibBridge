@@ -11,7 +11,7 @@ Class {
 		'labels',
 		'alignLabelRightEdge'
 	],
-	#category : #'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #accessing }

@@ -8,7 +8,7 @@ Class {
 		'x',
 		'yBlock'
 	],
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #visiting }

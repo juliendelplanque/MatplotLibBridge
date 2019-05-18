@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'rcCommands'
 	],
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #visiting }

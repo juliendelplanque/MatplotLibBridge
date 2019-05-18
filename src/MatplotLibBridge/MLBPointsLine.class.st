@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'points'
 	],
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #example }

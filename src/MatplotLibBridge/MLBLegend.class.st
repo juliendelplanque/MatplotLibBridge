@@ -13,7 +13,7 @@ Class {
 		'frameTransparency',
 		'title'
 	],
-	#category : #'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #visiting }

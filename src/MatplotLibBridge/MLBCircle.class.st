@@ -9,7 +9,7 @@ Class {
 		'size',
 		'color'
 	],
-	#category : #'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #'instance creation' }

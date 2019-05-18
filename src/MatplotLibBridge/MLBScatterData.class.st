@@ -10,7 +10,7 @@ Class {
 		'size',
 		'marker'
 	],
-	#category : #'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #'instance creation' }

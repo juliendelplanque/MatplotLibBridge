@@ -15,7 +15,7 @@ Class {
 		'title',
 		'scale'
 	],
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #testing }

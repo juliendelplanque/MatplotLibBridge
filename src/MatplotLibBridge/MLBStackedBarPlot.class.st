@@ -10,7 +10,7 @@ Class {
 		'errorBarsList',
 		'errorBarsColorList'
 	],
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #example }

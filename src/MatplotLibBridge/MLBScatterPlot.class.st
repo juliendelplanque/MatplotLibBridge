@@ -8,7 +8,7 @@ Class {
 		'circles',
 		'marker'
 	],
-	#category : 'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #example }

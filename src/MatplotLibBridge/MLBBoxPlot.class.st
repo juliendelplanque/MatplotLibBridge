@@ -9,7 +9,7 @@ Class {
 		'labels',
 		'vertical'
 	],
-	#category : #'MatplotLibBridge-API'
+	#category : #'MatplotLibBridge-Model'
 }
 
 { #category : #example }
