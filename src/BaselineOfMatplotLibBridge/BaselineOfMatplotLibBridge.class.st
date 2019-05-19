@@ -29,7 +29,7 @@ BaselineOfMatplotLibBridge >> defineDependencies: spec [
 { #category : #baseline }
 BaselineOfMatplotLibBridge >> defineGroups: spec [
 	spec
-		group: 'default' with: #('MatplotLibBridge' 'MatplotLibBridge-Commands');
+		group: 'default' with: #('MatplotLibBridge' 'MatplotLibBridge-Commands' 'MatplotLibBridge-Tests');
 		group: 'atlas' with: #('default' 'MatplotLibBridge-Atlas')
 ]
 
