@@ -1,0 +1,9 @@
+SmalltalkCISpec {
+    #loading : [
+        SCIMetacelloLoadSpec {
+            #baseline : 'MatplotLibBridge',
+            #directory : 'src',
+            #platforms : [ #pharo ]
+        }
+    ]
+}
