@@ -79,12 +79,12 @@ MLBCommandListGenerator >> visitMLBAnnotation: aMLBAnnotation [
 	aMLBAnnotation verifyArrowProperties: aMLBAnnotation arrowProperties.
 	self commandList
 		add: (MLBAnnotateCommand new
-								s: aMLBAnnotation content;
-								xy: {aMLBAnnotation position x . aMLBAnnotation position y};
-								xytext: {aMLBAnnotation textPosition x . aMLBAnnotation textPosition y};
-								arrowprops: aMLBAnnotation arrowProperties;
-								annotation_clip: aMLBAnnotation onlyVisibleInsideAxes;
-								yourself)
+					s: aMLBAnnotation content;
+					xy: {aMLBAnnotation position x . aMLBAnnotation position y};
+					xytext: {aMLBAnnotation textPosition x . aMLBAnnotation textPosition y};
+					arrowprops: aMLBAnnotation arrowProperties;
+					annotation_clip: aMLBAnnotation onlyVisibleInsideAxes;
+					yourself)
 ]
 
 { #category : #visiting }
