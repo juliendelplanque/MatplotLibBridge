@@ -13,23 +13,10 @@ Class {
 		'max',
 		'min',
 		'title',
-		'scale',
-		'twinAxis'
+		'scale'
 	],
 	#category : #'MatplotLibBridge-Model'
 }
-
-{ #category : #twin }
-MLBAbstractAxis >> createTwin: aBlock [
-	self twinAxis: self copy.
-	aBlock value: self twinAxis
-	
-]
-
-{ #category : #testing }
-MLBAbstractAxis >> hasTwinAxis [
-	^ self twinAxis isNotNil
-]
 
 { #category : #initialization }
 MLBAbstractAxis >> initialize [
@@ -126,14 +113,4 @@ MLBAbstractAxis >> title [
 { #category : #accessing }
 MLBAbstractAxis >> title: anObject [
 	title := anObject
-]
-
-{ #category : #accessing }
-MLBAbstractAxis >> twinAxis [
-	^ twinAxis
-]
-
-{ #category : #accessing }
-MLBAbstractAxis >> twinAxis: anObject [
-	twinAxis := anObject
 ]

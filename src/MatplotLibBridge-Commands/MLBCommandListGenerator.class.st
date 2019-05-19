@@ -20,8 +20,16 @@ MLBCommandListGenerator >> afterBuildingPlot: aMLBAbstractPlot [
 					yourself).
 	aMLBAbstractPlot xAxis
 		acceptVisitor: self.
+	aMLBAbstractPlot hasXAxisTwin
+		ifTrue: [ 
+			self commandList add: MLBTwinY new.
+			aMLBAbstractPlot xAxisTwin acceptVisitor: self ].
 	aMLBAbstractPlot yAxis
 		acceptVisitor: self.
+	aMLBAbstractPlot hasYAxisTwin
+		ifTrue: [ 
+			self commandList add: MLBTwinX new.
+			aMLBAbstractPlot yAxisTwin acceptVisitor: self ].
 	aMLBAbstractPlot annotations do: [ :annotation |
 		annotation acceptVisitor: self ].
 	aMLBAbstractPlot gridOnAxis ifNotNil: [ 
@@ -338,12 +346,7 @@ MLBCommandListGenerator >> visitMLBXAxis: aMLBXAxis [
 		add: (MLBXLimCommand new
 				xmin: aMLBXAxis min;
 				xmax: aMLBXAxis max;
-				yourself).
-	
-	aMLBXAxis hasTwinAxis
-		ifFalse: [ ^ self ].
-	self commandList add: MLBTwinY new.
-	aMLBXAxis twinAxis acceptVisitor: self
+				yourself)
 ]
 
 { #category : #visiting }
@@ -363,12 +366,7 @@ MLBCommandListGenerator >> visitMLBYAxis: aMLBYAxis [
 		add: (MLBYLimCommand new
 				ymin: aMLBYAxis min;
 				ymax: aMLBYAxis max;
-				yourself).
-				
-	aMLBYAxis hasTwinAxis
-		ifFalse: [ ^ self ].
-	self commandList add: MLBTwinX new.
-	aMLBYAxis twinAxis acceptVisitor: self
+				yourself)
 ]
 
 { #category : #visiting }

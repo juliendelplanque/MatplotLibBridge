@@ -17,7 +17,9 @@ Class {
 		'style',
 		'annotations',
 		'axis',
-		'gridOnAxis'
+		'gridOnAxis',
+		'xAxisTwin',
+		'yAxisTwin'
 	],
 	#category : #'MatplotLibBridge-Model'
 }
@@ -65,6 +67,18 @@ MLBAbstractPlot >> configYAxis: aBlock [
 	aBlock value: self yAxis
 ]
 
+{ #category : #'axis configuration' }
+MLBAbstractPlot >> createXAxisTwin: configurationBlock [
+	self xAxisTwin: self xAxis copy.
+	configurationBlock value: self xAxisTwin
+]
+
+{ #category : #'axis configuration' }
+MLBAbstractPlot >> createYAxisTwin: configurationBlock [
+	self yAxisTwin: self yAxis copy.
+	configurationBlock value: self yAxisTwin
+]
+
 { #category : #accessing }
 MLBAbstractPlot >> gridOnAxis [
 	^ gridOnAxis
@@ -73,6 +87,16 @@ MLBAbstractPlot >> gridOnAxis [
 { #category : #accessing }
 MLBAbstractPlot >> gridOnAxis: anObject [
 	gridOnAxis := anObject asMLBGridStyle
+]
+
+{ #category : #testing }
+MLBAbstractPlot >> hasXAxisTwin [
+	^ self xAxisTwin isNotNil
+]
+
+{ #category : #testing }
+MLBAbstractPlot >> hasYAxisTwin [
+	^ self yAxisTwin isNotNil
 ]
 
 { #category : #initialization }
@@ -150,6 +174,16 @@ MLBAbstractPlot >> xAxis: anObject [
 	xAxis := anObject
 ]
 
+{ #category : #accessing }
+MLBAbstractPlot >> xAxisTwin [
+	^ xAxisTwin
+]
+
+{ #category : #accessing }
+MLBAbstractPlot >> xAxisTwin: anObject [
+	xAxisTwin := anObject
+]
+
 { #category : #styling }
 MLBAbstractPlot >> xkcdStyle [
 	self style: MLBXKCDStyleSheet new
@@ -163,4 +197,14 @@ MLBAbstractPlot >> yAxis [
 { #category : #accessing }
 MLBAbstractPlot >> yAxis: anObject [
 	yAxis := anObject
+]
+
+{ #category : #accessing }
+MLBAbstractPlot >> yAxisTwin [
+	^ yAxisTwin
+]
+
+{ #category : #accessing }
+MLBAbstractPlot >> yAxisTwin: anObject [
+	yAxisTwin := anObject
 ]
