@@ -111,35 +111,6 @@ MLBCommandListGenerator >> visitMLBAxis: aMLBAbstractAxis usingLabelCommandClass
 ]
 
 { #category : #visiting }
-MLBCommandListGenerator >> visitMLBAxis: aMLBAbstractAxis usingLabelCommandClass: labelCommandClass ticksCommandClass: ticksCommandClass scaleCommandClass: scaleCommandClass twinClass: twinClass [
-	|tempTicks|
-	self commandList
-		add: (labelCommandClass new
-					s: aMLBAbstractAxis title;
-					yourself).
-	tempTicks := ticksCommandClass new
-					rotation: aMLBAbstractAxis labelsRotation;
-					yourself.
-	aMLBAbstractAxis labels ifNotNil: [ 
-		tempTicks
-			ticks: (aMLBAbstractAxis ticks ifNil: [ (0 to: aMLBAbstractAxis labels size - 1) asArray ]);
-			labels: aMLBAbstractAxis labels ].
-	self commandList
-		add: tempTicks.
-	aMLBAbstractAxis scale ifNotNil: [ 
-		self commandList
-			add: (scaleCommandClass new
-						scale: aMLBAbstractAxis scale;
-						yourself) ].
-					
-	aMLBAbstractAxis hasTwinAxis
-		ifFalse: [ ^ self ].
-	
-	self commandList add: twinClass new.
-	aMLBAbstractAxis twinAxis acceptVisitor: self
-]
-
-{ #category : #visiting }
 MLBCommandListGenerator >> visitMLBBarPlot: aMLBBarPlot [
 	self buildPlot: aMLBBarPlot withBeforeAfterHooks: [ :plot |
 		self commandList
