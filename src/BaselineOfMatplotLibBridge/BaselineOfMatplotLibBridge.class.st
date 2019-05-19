@@ -38,6 +38,7 @@ BaselineOfMatplotLibBridge >> definePackages: spec [
 	^ spec
 		package: 'MatplotLibBridge' with: [ spec requires: #('Python3Generator') ];
 		package: 'MatplotLibBridge-Commands' with: [ spec requires: #('MatplotLibBridge' 'Python3Generator') ];
+		package: 'MatplotLibBridge-Tests' with: [ spec requires: #('MatplotLibBridge' 'MatplotLibBridge-Commands') ];
 		package: 'MatplotLibBridge-Atlas' with: [ spec requires: #('Atlas' 'MatplotLibBridge') ];
 		yourself
 ]
